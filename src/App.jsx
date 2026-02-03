@@ -295,7 +295,7 @@ function App() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center"><Zap size={20} className="text-twilight-950 fill-current" /></div>
             <div className="flex flex-col">
               <h1 className="text-lg sm:text-2xl font-black tracking-tighter uppercase italic leading-none">SHINY<span className="text-amber-500">DEX</span></h1>
-              <span className="text-[7px] font-bold text-twilight-600 uppercase tracking-widest leading-none mt-0.5">Version 1.3</span>
+              <span className="text-[7px] font-bold text-twilight-600 uppercase tracking-widest leading-none mt-0.5">Version 1.4</span>
             </div>
           </div>
           
