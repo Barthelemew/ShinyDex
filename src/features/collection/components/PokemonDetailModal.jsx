@@ -8,8 +8,6 @@ const PokemonDetailModal = ({ pokemon, onClose, onSave, onDelete }) => {
   const { trigger } = useHapticFeedback();
   const [selectedEntryId, setSelectedEntryId] = useState(null);
   
-  // Utilisation d'un composant interne pour gérer l'état du formulaire
-  // Cela permet de reset le formulaire quand selectedEntryId change grâce à la prop key
   return (
     <AnimatePresence>
       <div 
@@ -23,7 +21,7 @@ const PokemonDetailModal = ({ pokemon, onClose, onSave, onDelete }) => {
           className="bg-twilight-900 w-full max-w-xl max-h-[90vh] rounded-3xl border border-twilight-800 shadow-2xl overflow-y-auto scrollbar-hide"
         >
           <PokemonForm 
-            key={selectedEntryId || 'new'} // CLE MAGIQUE : Force le remontage du composant
+            key={selectedEntryId || 'new'} 
             pokemon={pokemon}
             selectedEntryId={selectedEntryId}
             setSelectedEntryId={setSelectedEntryId}
@@ -38,14 +36,12 @@ const PokemonDetailModal = ({ pokemon, onClose, onSave, onDelete }) => {
   );
 };
 
-// Sous-composant pour isoler l'état du formulaire et éviter les useEffects complexes
 const PokemonForm = ({ pokemon, selectedEntryId, setSelectedEntryId, onClose, onSave, onDelete, trigger }) => {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const currentEntry = selectedEntryId 
     ? pokemon.entries?.find(e => e.id === selectedEntryId) 
     : null;
 
-  // Initialisation directe basée sur les props (plus de useEffect pour sync)
   const [encounters, setEncounters] = useState(currentEntry?.count || 0);
   const [selectedVersion, setSelectedVersion] = useState(currentEntry?.game_id || '');
   const [method, setMethod] = useState(currentEntry?.method_id || 'Masuda');
@@ -73,10 +69,8 @@ const PokemonForm = ({ pokemon, selectedEntryId, setSelectedEntryId, onClose, on
 
   return (
     <>
-  return (
-    <>
       <div className="p-4 sm:p-6 flex flex-col items-center bg-twilight-800/50 relative">
-        <button onClick={onClose} className="absolute top-4 right-4 text-twilight-400 hover:text-white transition-colors"><X size={20} sm:size={24} /></button>
+        <button onClick={onClose} className="absolute top-4 right-4 text-twilight-400 hover:text-white transition-colors"><X size={20} /></button>
         <img src={shinySpriteUrl} alt={pokemon.name} className="w-20 h-20 sm:w-32 sm:h-32 object-contain" />
         <h2 className="text-xl sm:text-2xl font-black text-white mt-1 sm:mt-2 uppercase italic">{pokemon.name}</h2>
       </div>
@@ -90,7 +84,7 @@ const PokemonForm = ({ pokemon, selectedEntryId, setSelectedEntryId, onClose, on
                 onClick={() => setSelectedEntryId(null)}
                 className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl border flex items-center gap-2 flex-shrink-0 transition-all text-[10px] sm:text-xs ${!selectedEntryId ? 'bg-amber-500 border-amber-500 text-twilight-950' : 'bg-twilight-950 border-twilight-800 text-twilight-400'}`}
               >
-                <Plus size={12} sm:size={14} /> Nouveau
+                <Plus size={12} /> Nouveau
               </button>
               {pokemon.entries?.map((entry, idx) => (
                 <button 
@@ -141,7 +135,7 @@ const PokemonForm = ({ pokemon, selectedEntryId, setSelectedEntryId, onClose, on
             {selectedEntryId ? 'Enregistrer' : 'Valider'}
           </button>
           {selectedEntryId && (
-            <button onClick={() => { trigger('MEDIUM'); setShowDeleteConfirm(true); }} className="px-3 sm:px-4 py-3 sm:py-4 bg-red-500/10 text-red-500 rounded-xl border border-red-500/20"><Trash2 size={16} sm:size={18} /></button>
+            <button onClick={() => { trigger('MEDIUM'); setShowDeleteConfirm(true); }} className="px-3 sm:px-4 py-3 sm:py-4 bg-red-500/10 text-red-500 rounded-xl border border-red-500/20"><Trash2 size={16} /></button>
           )}
         </div>
       </div>
