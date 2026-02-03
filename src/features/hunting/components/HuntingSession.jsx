@@ -194,80 +194,70 @@ export default function HuntingSession({ onFound, userId, onNewHunt }) {
                   exit={{ opacity: 0, y: -20 }}
                   className="flex flex-col items-center w-full"
                 >
-                  <div className="relative mb-8 flex flex-col sm:flex-row items-center justify-center gap-8 w-full px-4">
-                    <div className="flex flex-col items-center gap-4 bg-twilight-900/40 p-6 rounded-[2.5rem] border border-twilight-800/50 flex-1 w-full sm:w-auto">
-                      <span className="text-[10px] font-black text-twilight-500 uppercase tracking-[0.2em]">Forme originale</span>
+                  <div className="relative mb-4 sm:mb-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 w-full px-2 sm:px-4">
+                    <div className="flex flex-col items-center gap-2 sm:gap-4 bg-twilight-900/40 p-3 sm:p-6 rounded-2xl sm:rounded-[2.5rem] border border-twilight-800/50 flex-1 w-full sm:w-auto">
+                      <span className="text-[8px] sm:text-[10px] font-black text-twilight-500 uppercase tracking-widest">Original</span>
                       <motion.img 
-                        animate={{ y: [0, -10, 0] }}
+                        animate={{ y: [0, -5, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                         src={normalSpriteUrl} 
                         alt="Normal"
-                        className="w-64 h-64 object-contain drop-shadow-[0_0_20px_rgba(255,255,255,0.05)]"
+                        className="w-32 h-32 sm:w-64 sm:h-64 object-contain opacity-80"
                         onError={(e) => { e.target.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'; }}
                       />
                     </div>
                     
-                    <div className="flex flex-col items-center gap-4 bg-amber-500/5 p-6 rounded-[2.5rem] border border-amber-500/20 flex-1 w-full sm:w-auto">
-                      <span className="text-[10px] font-black text-amber-500 uppercase tracking-[0.2em]">Forme Chromatique</span>
+                    <div className="flex flex-col items-center gap-2 sm:gap-4 bg-amber-500/5 p-3 sm:p-6 rounded-2xl sm:rounded-[2.5rem] border border-amber-500/20 flex-1 w-full sm:w-auto">
+                      <span className="text-[8px] sm:text-[10px] font-black text-amber-500 uppercase tracking-widest">Chromatique</span>
                       <motion.img 
                         animate={{ 
-                          y: [0, -10, 0],
+                          y: [0, -5, 0],
                           scale: [1, 1.02, 1]
                         }}
                         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                         src={spriteUrl} 
                         alt={activeSession.pokemonName}
-                        className="relative w-64 h-64 object-contain drop-shadow-[0_0_30px_rgba(245,158,11,0.3)]"
+                        className="relative w-40 h-40 sm:w-64 sm:h-64 object-contain drop-shadow-[0_0_30px_rgba(245,158,11,0.3)]"
                         onError={(e) => { e.target.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'; }}
                       />
                     </div>
                   </div>
 
-                  <h2 className="text-5xl font-black text-white tracking-tighter uppercase italic mb-8">
+                  <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tighter uppercase italic mb-4 sm:mb-8">
                     {activeSession.pokemonName}
                   </h2>
 
-                  <div className="relative flex flex-col items-center mb-8 text-center">
-                    <span className="text-9xl font-black text-white tabular-nums tracking-tighter leading-none">
+                  <div className="relative flex flex-col items-center mb-4 sm:mb-8 text-center">
+                    <span className="text-7xl sm:text-9xl font-black text-white tabular-nums tracking-tighter leading-none">
                       {activeSession.isGroupHunt ? totalCount : activeSession.count}
                     </span>
-                    <span className="text-[12px] font-black text-twilight-500 uppercase tracking-[0.5em] mt-4">
-                      {activeSession.isGroupHunt ? 'Rencontres Totales' : 'Rencontres'}
+                    <span className="text-[10px] sm:text-[12px] font-black text-twilight-500 uppercase tracking-[0.5em] mt-2 sm:mt-4">
+                      {activeSession.isGroupHunt ? 'Total' : 'Rencontres'}
                     </span>
-                    {activeSession.isGroupHunt && (
-                      <span className="text-[10px] font-bold text-twilight-600 uppercase tracking-widest mt-2">
-                        Votre part : {activeSession.count}
-                      </span>
-                    )}
                   </div>
 
-                  <div className="w-full bg-twilight-950/50 border border-twilight-800 rounded-2xl p-4 mb-8">
+                  <div className="w-full bg-twilight-950/50 border border-twilight-800 rounded-xl sm:rounded-2xl p-3 sm:p-4 mb-4 sm:mb-8">
                     <div className="flex justify-between items-end mb-2">
-                      <span className="text-[9px] font-black text-twilight-600 uppercase tracking-widest">Facteur de Chance</span>
-                      <span className={`text-sm font-black italic ${getLuckColor(luckFactor)}`}>x{luckFactor}</span>
+                      <span className="text-[8px] sm:text-[9px] font-black text-twilight-600 uppercase tracking-widest">Chance</span>
+                      <span className={`text-xs sm:text-sm font-black italic ${getLuckColor(luckFactor)}`}>x{luckFactor}</span>
                     </div>
-                    <div className="h-2 bg-twilight-900 rounded-full overflow-hidden">
+                    <div className="h-1.5 sm:h-2 bg-twilight-900 rounded-full overflow-hidden">
                       <motion.div 
                         initial={{ width: 0 }}
                         animate={{ width: `${Math.min(luckFactor * 50, 100)}%` }}
                         className={`h-full ${parseFloat(luckFactor) > 1 ? 'bg-red-500' : 'bg-gold-champagne'}`}
                       ></motion.div>
                     </div>
-                    <div className="flex justify-between mt-1">
-                      <span className="text-[8px] font-bold text-twilight-700 uppercase">Très Chanceux</span>
-                      <span className="text-[8px] font-bold text-twilight-700 uppercase">Seuil (Odds)</span>
-                      <span className="text-[8px] font-bold text-twilight-700 uppercase">Over-odds</span>
-                    </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 w-full mb-8">
-                    <div className="bg-twilight-950/50 border border-twilight-800 p-4 rounded-3xl text-center">
-                      <span className="block text-[9px] font-black text-twilight-600 uppercase tracking-widest mb-1 text-center">Taux Actuel</span>
-                      <span className="text-xl font-black text-gold-champagne italic text-center">1 / {currentRate}</span>
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full mb-4 sm:mb-8">
+                    <div className="bg-twilight-950/50 border border-twilight-800 p-2.5 sm:p-4 rounded-2xl sm:rounded-3xl text-center">
+                      <span className="block text-[8px] sm:text-[9px] font-black text-twilight-600 uppercase tracking-widest mb-0.5">Taux</span>
+                      <span className="text-sm sm:text-xl font-black text-gold-champagne italic">1/{currentRate}</span>
                     </div>
-                    <div className="bg-twilight-950/50 border border-twilight-800 p-4 rounded-3xl text-center">
-                      <span className="block text-[9px] font-black text-twilight-600 uppercase tracking-widest mb-1 text-center">Chance Cumulée</span>
-                      <span className="text-xl font-black text-amber-500 italic text-center">{cumulativeProb}%</span>
+                    <div className="bg-twilight-950/50 border border-twilight-800 p-2.5 sm:p-4 rounded-2xl sm:rounded-3xl text-center">
+                      <span className="block text-[8px] sm:text-[9px] font-black text-twilight-600 uppercase tracking-widest mb-0.5">Probabilité</span>
+                      <span className="text-sm sm:text-xl font-black text-amber-500 italic">{cumulativeProb}%</span>
                     </div>
                   </div>
                 </motion.div>
