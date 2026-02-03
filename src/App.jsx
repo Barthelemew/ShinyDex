@@ -293,7 +293,10 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 py-2 sm:py-3 flex items-center gap-3 sm:gap-4">
           <div className="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0" onClick={() => { setView('dex'); setIsConfiguringNewHunt(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center"><Zap size={20} className="text-twilight-950 fill-current" /></div>
-            <h1 className="text-lg sm:text-2xl font-black tracking-tighter uppercase italic leading-none">SHINY<span className="text-amber-500">DEX</span></h1>
+            <div className="flex flex-col">
+              <h1 className="text-lg sm:text-2xl font-black tracking-tighter uppercase italic leading-none">SHINY<span className="text-amber-500">DEX</span></h1>
+              <span className="text-[7px] font-bold text-twilight-600 uppercase tracking-widest leading-none mt-0.5">Version 1.2</span>
+            </div>
           </div>
           
           <div className="relative flex-1 max-w-2xl">
@@ -364,7 +367,7 @@ function App() {
       </AnimatePresence>
 
       {/* BOTTOM NAVIGATION MOBILE */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-twilight-900/90 backdrop-blur-xl border-t border-twilight-800 px-6 py-3 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-10 bg-twilight-900/90 backdrop-blur-xl border-t border-twilight-800 px-6 py-3 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
         <button onClick={() => { setView('dex'); setIsConfiguringNewHunt(false); }} className={`flex flex-col items-center gap-1 ${view === 'dex' ? 'text-amber-500' : 'text-twilight-500'}`}>
           <LayoutGrid size={20} />
           <span className="text-[9px] font-black uppercase tracking-tighter">Dex</span>

@@ -12,7 +12,7 @@ const PokemonDetailModal = ({ pokemon, onClose, onSave, onDelete }) => {
     <AnimatePresence>
       <div 
         onClick={() => { trigger('LIGHT'); onClose(); }}
-        className="fixed inset-0 bg-twilight-950/90 backdrop-blur-md z-[100] flex items-center justify-center p-4"
+        className="fixed inset-0 bg-twilight-950/90 backdrop-blur-md z-[9999] flex items-center justify-center p-4"
       >
         <motion.div 
           onClick={(e) => e.stopPropagation()}
