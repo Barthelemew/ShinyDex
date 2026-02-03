@@ -184,7 +184,7 @@ function App() {
   };
 
   const mainContent = () => {
-    if (authLoading) return <div className="min-h-screen bg-twilight-950 flex items-center justify-center text-amber-500 font-black tracking-tighter italic animate-pulse">CHARGEMENT SHINYDEX...</div>;
+    if (authLoading) return <div className="min-h-screen bg-twilight-950 flex items-center justify-center text-amber-500 font-black tracking-tighter italic animate-pulse text-2xl">MISE À JOUR v1.4 EN COURS...</div>;
     if (showAuth && !user) return <AuthForm onBack={() => setShowAuth(false)} />;
 
     if (view === 'hunting' && user) {
