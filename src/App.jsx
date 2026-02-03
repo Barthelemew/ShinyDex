@@ -295,7 +295,7 @@ function App() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center"><Zap size={20} className="text-twilight-950 fill-current" /></div>
             <div className="flex flex-col">
               <h1 className="text-lg sm:text-2xl font-black tracking-tighter uppercase italic leading-none">SHINY<span className="text-amber-500">DEX</span></h1>
-              <span className="text-[7px] font-bold text-twilight-600 uppercase tracking-widest leading-none mt-0.5">Version 1.2</span>
+              <span className="text-[7px] font-bold text-twilight-600 uppercase tracking-widest leading-none mt-0.5">Version 1.3</span>
             </div>
           </div>
           
@@ -367,28 +367,30 @@ function App() {
       </AnimatePresence>
 
       {/* BOTTOM NAVIGATION MOBILE */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-10 bg-twilight-900/90 backdrop-blur-xl border-t border-twilight-800 px-6 py-3 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
-        <button onClick={() => { setView('dex'); setIsConfiguringNewHunt(false); }} className={`flex flex-col items-center gap-1 ${view === 'dex' ? 'text-amber-500' : 'text-twilight-500'}`}>
-          <LayoutGrid size={20} />
-          <span className="text-[9px] font-black uppercase tracking-tighter">Dex</span>
-        </button>
-        <button onClick={() => handleRestrictedAction('hunting')} className={`flex flex-col items-center gap-1 ${view === 'hunting' ? 'text-amber-500' : 'text-twilight-500'}`}>
-          <Zap size={20} className={sessions.length > 0 ? 'animate-pulse fill-current' : ''} />
-          <span className="text-[9px] font-black uppercase tracking-tighter">Compteur</span>
-        </button>
-        <button onClick={() => handleRestrictedAction('stats')} className={`flex flex-col items-center gap-1 ${view === 'stats' ? 'text-amber-500' : 'text-twilight-500'}`}>
-          <BarChart3 size={20} />
-          <span className="text-[9px] font-black uppercase tracking-tighter">Stats</span>
-        </button>
-        <button onClick={() => handleRestrictedAction('collaboration')} className={`flex flex-col items-center gap-1 ${view === 'collaboration' ? 'text-amber-500' : 'text-twilight-500'}`}>
-          <Users size={20} />
-          <span className="text-[9px] font-black uppercase tracking-tighter">Équipe</span>
-        </button>
-        <button onClick={() => user ? setSelectionMode(!selectionMode) : handleRestrictedAction()} className={`flex flex-col items-center gap-1 ${selectionMode ? 'text-amber-500' : 'text-twilight-500'}`}>
-          <SquareStack size={20} />
-          <span className="text-[9px] font-black uppercase tracking-tighter">Sél.</span>
-        </button>
-      </div>
+      {!selectedPokemonId && !selectionMode && (
+        <div className="sm:hidden fixed bottom-0 left-0 right-0 z-10 bg-twilight-900/90 backdrop-blur-xl border-t border-twilight-800 px-6 py-3 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+          <button onClick={() => { setView('dex'); setIsConfiguringNewHunt(false); }} className={`flex flex-col items-center gap-1 ${view === 'dex' ? 'text-amber-500' : 'text-twilight-500'}`}>
+            <LayoutGrid size={20} />
+            <span className="text-[9px] font-black uppercase tracking-tighter">Dex</span>
+          </button>
+          <button onClick={() => handleRestrictedAction('hunting')} className={`flex flex-col items-center gap-1 ${view === 'hunting' ? 'text-amber-500' : 'text-twilight-500'}`}>
+            <Zap size={20} className={sessions.length > 0 ? 'animate-pulse fill-current' : ''} />
+            <span className="text-[9px] font-black uppercase tracking-tighter">Compteur</span>
+          </button>
+          <button onClick={() => handleRestrictedAction('stats')} className={`flex flex-col items-center gap-1 ${view === 'stats' ? 'text-amber-500' : 'text-twilight-500'}`}>
+            <BarChart3 size={20} />
+            <span className="text-[9px] font-black uppercase tracking-tighter">Stats</span>
+          </button>
+          <button onClick={() => handleRestrictedAction('collaboration')} className={`flex flex-col items-center gap-1 ${view === 'collaboration' ? 'text-amber-500' : 'text-twilight-500'}`}>
+            <Users size={20} />
+            <span className="text-[9px] font-black uppercase tracking-tighter">Équipe</span>
+          </button>
+          <button onClick={() => user ? setSelectionMode(!selectionMode) : handleRestrictedAction()} className={`flex flex-col items-center gap-1 ${selectionMode ? 'text-amber-500' : 'text-twilight-500'}`}>
+            <SquareStack size={20} />
+            <span className="text-[9px] font-black uppercase tracking-tighter">Sél.</span>
+          </button>
+        </div>
+      )}
 
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </div>
