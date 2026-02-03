@@ -113,7 +113,7 @@ export default function PokemonCard({ pokemon, viewMode, isSelected, onClick }) 
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       onClick={onClick}
-      className={`group relative p-3 rounded-2xl cursor-pointer transition-all duration-300 border ${
+      className={`group relative p-2 sm:p-3 rounded-xl sm:rounded-2xl cursor-pointer transition-all duration-300 border ${
         isSelected ? 'border-gold-champagne bg-gold-champagne/10 shadow-[0_0_20px_rgba(247,231,206,0.2)] scale-[1.02]' :
         pokemon.captured 
         ? 'bg-twilight-800 border-amber-500/40 shadow-lg' 
@@ -121,11 +121,11 @@ export default function PokemonCard({ pokemon, viewMode, isSelected, onClick }) 
       }`}
     >
       {pokemon.totalCount > 1 && (
-        <div className="absolute top-3 left-3 z-10 bg-amber-500 text-twilight-950 text-[10px] font-black px-2 py-0.5 rounded-lg italic shadow-lg">
+        <div className="absolute top-2 left-2 z-10 bg-amber-500 text-twilight-950 text-[8px] sm:text-[10px] font-black px-1.5 sm:px-2 py-0.5 rounded-md sm:rounded-lg italic shadow-lg">
           x{pokemon.totalCount}
         </div>
       )}
-      <div className="aspect-square flex items-center justify-center mb-2 p-2 relative">
+      <div className="aspect-square flex items-center justify-center mb-1 sm:mb-2 p-1 sm:p-2 relative">
         <img 
           src={pokemon.captured ? sUrl : rUrl} 
           alt={pokemon.name}
@@ -139,30 +139,30 @@ export default function PokemonCard({ pokemon, viewMode, isSelected, onClick }) 
         />
         {isSelected && (
           <div className="absolute top-0 right-0 p-1">
-            <CheckCircle2 size={18} className="text-gold-champagne fill-twilight-900" />
+            <CheckCircle2 size={16} sm:size={18} className="text-gold-champagne fill-twilight-900" />
           </div>
         )}
         {trainer && (
-          <div className="absolute bottom-0 right-0 px-2 py-0.5 bg-twilight-950/80 backdrop-blur-sm border border-twilight-800 rounded-lg shadow-lg">
-            <p className="text-[8px] font-black text-gold-champagne uppercase truncate max-w-[60px]">{trainer.username}</p>
+          <div className="absolute bottom-0 right-0 px-1.5 sm:px-2 py-0.5 bg-twilight-950/80 backdrop-blur-sm border border-twilight-800 rounded-lg shadow-lg">
+            <p className="text-[7px] sm:text-[8px] font-black text-gold-champagne uppercase truncate max-w-[40px] sm:max-w-[60px]">{trainer.username}</p>
           </div>
         )}
       </div>
       <div className="text-center">
-        <p className={`font-black text-[10px] sm:text-xs truncate uppercase tracking-tighter ${
+        <p className={`font-black text-[9px] sm:text-[11px] truncate uppercase tracking-tighter ${
           isSelected ? 'text-gold-champagne' : pokemon.captured ? 'text-amber-400' : 'text-twilight-400'
         }`}>
           {pokemon.name}
         </p>
-        <p className="text-[9px] text-twilight-600 font-mono font-bold italic">#{String(vId).padStart(3, '0')}</p>
+        <p className="text-[8px] sm:text-[9px] text-twilight-600 font-mono font-bold italic leading-none">#{String(vId).padStart(3, '0')}</p>
         {pokemon.captured && (
           <div className="mt-1 flex flex-col items-center">
-             <span className={`text-[8px] font-black uppercase tracking-tighter italic leading-none ${getVersionColor(pokemon.details?.version)}`}>
+             <span className={`text-[7px] sm:text-[8px] font-black uppercase tracking-tighter italic leading-none ${getVersionColor(pokemon.details?.version)}`}>
               {pokemon.details?.version !== 'Multi-ajout' && pokemon.details?.version}
             </span>
             {pokemon.details?.encounters > 0 && (
-              <span className="text-[7px] font-bold text-twilight-500 uppercase tracking-widest mt-0.5">
-                {pokemon.details.encounters} {pokemon.details.encounters > 1 ? 'rencontres' : 'rencontre'}
+              <span className="text-[6px] sm:text-[7px] font-bold text-twilight-500 uppercase tracking-widest mt-0.5">
+                {pokemon.details.encounters} rencontres
               </span>
             )}
           </div>

@@ -183,73 +183,42 @@ function App() {
     }
   };
 
-  if (authLoading) return <div className="min-h-screen bg-twilight-950 flex items-center justify-center text-amber-500 font-black tracking-tighter italic animate-pulse">CHARGEMENT SHINYDEX...</div>;
-  if (showAuth && !user) return <AuthForm onBack={() => setShowAuth(false)} />;
+  const mainContent = () => {
+    if (authLoading) return <div className="min-h-screen bg-twilight-950 flex items-center justify-center text-amber-500 font-black tracking-tighter italic animate-pulse">CHARGEMENT SHINYDEX...</div>;
+    if (showAuth && !user) return <AuthForm onBack={() => setShowAuth(false)} />;
 
-  if (view === 'hunting' && user) {
-    if (sessions.length > 0 && !isConfiguringNewHunt) {
-      return (
-        <HuntingSession 
-          userId={user.id}
-          onNewHunt={() => setIsConfiguringNewHunt(true)}
-          onFound={async (session) => {
-            upsertPokemon({ pokemon_id: session.pokemonId, is_shiny: true, count: session.count, game_id: session.gameId, method_id: session.methodId });
-            confetti({ particleCount: 200, spread: 90 });
-            setToast({ message: `${session.pokemonName} trouvé !`, type: 'success' });
-            stopSession(session.id);
-            if (sessions.length <= 1) setView('dex');
-          }} 
-        />
-      );
+    if (view === 'hunting' && user) {
+      if (sessions.length > 0 && !isConfiguringNewHunt) {
+        return (
+          <HuntingSession 
+            userId={user.id}
+            onNewHunt={() => setIsConfiguringNewHunt(true)}
+            onFound={async (session) => {
+              upsertPokemon({ pokemon_id: session.pokemonId, is_shiny: true, count: session.count, game_id: session.gameId, method_id: session.methodId });
+              confetti({ particleCount: 200, spread: 90 });
+              setToast({ message: `${session.pokemonName} trouvé !`, type: 'success' });
+              stopSession(session.id);
+              if (sessions.length <= 1) setView('dex');
+            }} 
+          />
+        );
+      }
+      return <HuntingConfig onBack={() => { if (sessions.length > 0) setIsConfiguringNewHunt(false); else setView('dex'); }} userId={user.id} />;
     }
-    return <HuntingConfig onBack={() => { if (sessions.length > 0) setIsConfiguringNewHunt(false); else setView('dex'); }} userId={user.id} />;
-  }
 
-  if (view === 'profile' && user) return <ProfileSettings userId={user.id} onBack={() => setView('dex')} />;
-  if (view === 'stats' && user) return <StatsDashboard fullCollection={fullCollection} onBack={() => setView('dex')} />;
-  if (view === 'achievements' && user) return <AchievementsGallery userId={user.id} onBack={() => setView('dex')} />;
-  if (view === 'collaboration' && user) return (
-    <div className="min-h-screen bg-twilight-950 p-4">
-      <div className="max-w-4xl mx-auto space-y-8">
-        <button onClick={() => setView('dex')} className="flex items-center gap-2 text-twilight-400 hover:text-white uppercase font-black text-xs transition-colors mb-4"><Zap size={16} /> Retour</button>
-        <TeamManager userId={user.id} onToast={setToast} />
-      </div>
-    </div>
-  );
-
-  return (
-    <div className="min-h-screen bg-twilight-950 text-white font-sans selection:bg-amber-500">
-      <div className="sticky top-0 z-40 bg-twilight-900/95 backdrop-blur-md border-b border-twilight-800 shadow-2xl">
-        <div className="max-w-7xl mx-auto px-4 py-2 sm:py-3 flex items-center gap-3 sm:gap-4">
-          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0" onClick={() => { setView('dex'); setIsConfiguringNewHunt(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center"><Zap size={20} className="text-twilight-950 fill-current" /></div>
-            <h1 className="text-lg sm:text-2xl font-black tracking-tighter uppercase italic leading-none">SHINY<span className="text-amber-500">DEX</span></h1>
-          </div>
-          
-          <div className="relative flex-1 max-w-2xl">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-twilight-500" size={16} />
-            <input type="text" placeholder="Chercher..." className="w-full pl-9 pr-3 py-2 sm:py-3 rounded-xl bg-twilight-800/50 border border-twilight-700 outline-none focus:border-amber-500 font-bold text-xs sm:text-sm" onChange={(e) => setSearchQuery(e.target.value)} />
-          </div>
-
-          <div className="hidden sm:flex items-center gap-2">
-            {user && <SyncStatus isSyncing={isSyncing} isOffline={isOffline} />}
-            <button onClick={() => user ? setSelectionMode(!selectionMode) : handleRestrictedAction()} className={`p-3 rounded-xl border transition-all ${selectionMode ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Multi-sélection"><SquareStack size={20} /></button>
-            <button onClick={() => handleRestrictedAction('achievements')} className={`p-3 rounded-xl border transition-all ${view === 'achievements' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Succès"><Trophy size={20} /></button>
-            <button onClick={() => handleRestrictedAction('stats')} className={`p-3 rounded-xl border transition-all ${view === 'stats' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Stats"><BarChart3 size={20} /></button>
-            <button onClick={() => handleRestrictedAction('collaboration')} className={`p-3 rounded-xl border transition-all ${view === 'collaboration' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Équipe"><Users size={20} /></button>
-            <button onClick={() => handleRestrictedAction('hunting')} className={`p-3 rounded-xl border transition-all ${view === 'hunting' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Compteur"><Zap size={20} className={sessions.length > 0 ? 'animate-pulse fill-current' : ''} /></button>
-          </div>
-
-          <div className="flex items-center gap-2">
-            {user ? (
-              <button onClick={() => setView('profile')} className="p-2 sm:p-3 bg-twilight-800 border border-twilight-700 rounded-lg sm:rounded-xl hover:text-amber-500"><User size={18} /></button>
-            ) : (
-              <button onClick={() => setShowAuth(true)} className="px-4 py-2 sm:px-6 sm:py-3 bg-amber-500 text-twilight-950 rounded-lg sm:rounded-xl font-black uppercase text-[10px] sm:text-xs">Connexion</button>
-            )}
-          </div>
+    if (view === 'profile' && user) return <ProfileSettings userId={user.id} onBack={() => setView('dex')} />;
+    if (view === 'stats' && user) return <StatsDashboard fullCollection={fullCollection} onBack={() => setView('dex')} />;
+    if (view === 'achievements' && user) return <AchievementsGallery userId={user.id} onBack={() => setView('dex')} />;
+    if (view === 'collaboration' && user) return (
+      <div className="min-h-screen bg-twilight-950 p-4">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <button onClick={() => setView('dex')} className="flex items-center gap-2 text-twilight-400 hover:text-white uppercase font-black text-xs transition-colors mb-4"><Zap size={16} /> Retour</button>
+          <TeamManager userId={user.id} onToast={setToast} />
         </div>
       </div>
+    );
 
+    return (
       <div className="max-w-7xl mx-auto p-4 space-y-6 sm:space-y-8">
         {/* BARRE D'ACTIONS (IMPORT/EXPORT + VIEW TOGGLE) */}
         <div className="flex flex-col gap-4 bg-twilight-900/50 p-4 sm:p-6 rounded-3xl sm:rounded-[2rem] border border-twilight-800 shadow-xl backdrop-blur-sm">
@@ -299,7 +268,7 @@ function App() {
                 </span>
               </div>
 
-              <div className={`grid gap-4 ${viewMode === 'grid' ? 'grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
+              <div className={`grid gap-2 sm:gap-4 ${viewMode === 'grid' ? 'grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
                 {pokemons.map((p) => (
                   <PokemonCard 
                     key={p.id} 
@@ -315,6 +284,43 @@ function App() {
           ))}
         </div>
       </div>
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-twilight-950 text-white font-sans selection:bg-amber-500">
+      <div className="sticky top-0 z-40 bg-twilight-900/95 backdrop-blur-md border-b border-twilight-800 shadow-2xl">
+        <div className="max-w-7xl mx-auto px-4 py-2 sm:py-3 flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0" onClick={() => { setView('dex'); setIsConfiguringNewHunt(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center"><Zap size={20} className="text-twilight-950 fill-current" /></div>
+            <h1 className="text-lg sm:text-2xl font-black tracking-tighter uppercase italic leading-none">SHINY<span className="text-amber-500">DEX</span></h1>
+          </div>
+          
+          <div className="relative flex-1 max-w-2xl">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-twilight-500" size={16} />
+            <input type="text" placeholder="Chercher..." className="w-full pl-9 pr-3 py-2 sm:py-3 rounded-xl bg-twilight-800/50 border border-twilight-700 outline-none focus:border-amber-500 font-bold text-xs sm:text-sm" onChange={(e) => setSearchQuery(e.target.value)} />
+          </div>
+
+          <div className="hidden sm:flex items-center gap-2">
+            {user && <SyncStatus isSyncing={isSyncing} isOffline={isOffline} />}
+            <button onClick={() => user ? setSelectionMode(!selectionMode) : handleRestrictedAction()} className={`p-3 rounded-xl border transition-all ${selectionMode ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Multi-sélection"><SquareStack size={20} /></button>
+            <button onClick={() => handleRestrictedAction('achievements')} className={`p-3 rounded-xl border transition-all ${view === 'achievements' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Succès"><Trophy size={20} /></button>
+            <button onClick={() => handleRestrictedAction('stats')} className={`p-3 rounded-xl border transition-all ${view === 'stats' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Stats"><BarChart3 size={20} /></button>
+            <button onClick={() => handleRestrictedAction('collaboration')} className={`p-3 rounded-xl border transition-all ${view === 'collaboration' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Équipe"><Users size={20} /></button>
+            <button onClick={() => handleRestrictedAction('hunting')} className={`p-3 rounded-xl border transition-all ${view === 'hunting' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Compteur"><Zap size={20} className={sessions.length > 0 ? 'animate-pulse fill-current' : ''} /></button>
+          </div>
+
+          <div className="flex items-center gap-2">
+            {user ? (
+              <button onClick={() => setView('profile')} className="p-2 sm:p-3 bg-twilight-800 border border-twilight-700 rounded-lg sm:rounded-xl hover:text-amber-500"><User size={18} /></button>
+            ) : (
+              <button onClick={() => setShowAuth(true)} className="px-4 py-2 sm:px-6 sm:py-3 bg-amber-500 text-twilight-950 rounded-lg sm:rounded-xl font-black uppercase text-[10px] sm:text-xs">Connexion</button>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {mainContent()}
 
       {/* BOUTON SCROLL TO TOP */}
       <AnimatePresence>
@@ -345,7 +351,7 @@ function App() {
 
       <AnimatePresence>
         {selectionMode && selectedIds.length > 0 && (
-          <motion.div initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }} className="fixed bottom-0 left-0 right-0 z-50 p-4 flex justify-center">
+          <motion.div initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }} className="fixed bottom-20 sm:bottom-0 left-0 right-0 z-50 p-4 flex justify-center">
             <div className="bg-twilight-900 border border-amber-500/50 rounded-3xl px-8 py-6 shadow-2xl flex items-center gap-8 backdrop-blur-xl">
               <p className="text-3xl font-black text-white italic">{selectedIds.length}</p>
               <div className="flex gap-3">
@@ -359,13 +365,13 @@ function App() {
 
       {/* BOTTOM NAVIGATION MOBILE */}
       <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-twilight-900/90 backdrop-blur-xl border-t border-twilight-800 px-6 py-3 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
-        <button onClick={() => setView('dex')} className={`flex flex-col items-center gap-1 ${view === 'dex' ? 'text-amber-500' : 'text-twilight-500'}`}>
+        <button onClick={() => { setView('dex'); setIsConfiguringNewHunt(false); }} className={`flex flex-col items-center gap-1 ${view === 'dex' ? 'text-amber-500' : 'text-twilight-500'}`}>
           <LayoutGrid size={20} />
           <span className="text-[9px] font-black uppercase tracking-tighter">Dex</span>
         </button>
         <button onClick={() => handleRestrictedAction('hunting')} className={`flex flex-col items-center gap-1 ${view === 'hunting' ? 'text-amber-500' : 'text-twilight-500'}`}>
           <Zap size={20} className={sessions.length > 0 ? 'animate-pulse fill-current' : ''} />
-          <span className="text-[9px] font-black uppercase tracking-tighter">Chasse</span>
+          <span className="text-[9px] font-black uppercase tracking-tighter">Compteur</span>
         </button>
         <button onClick={() => handleRestrictedAction('stats')} className={`flex flex-col items-center gap-1 ${view === 'stats' ? 'text-amber-500' : 'text-twilight-500'}`}>
           <BarChart3 size={20} />
@@ -385,5 +391,7 @@ function App() {
     </div>
   );
 }
+
+export default App;
 
 export default App;
