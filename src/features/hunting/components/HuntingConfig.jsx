@@ -54,7 +54,7 @@ export default function HuntingConfig({ onBack, userId }) {
     }
 
     startSession(config);
-    onBack(); // Retourne à la vue des sessions actives ou au Dex
+    onBack(); 
   };
 
   return (
@@ -75,7 +75,6 @@ export default function HuntingConfig({ onBack, userId }) {
           </div>
 
           <div className="space-y-4 sm:space-y-6">
-            {/* Group Hunt Option */}
             {team && (
               <div 
                 className={`flex items-center gap-3 p-3 sm:p-4 rounded-xl sm:rounded-2xl cursor-pointer transition-all border ${isGroupHunt ? 'bg-amber-500/10 border-amber-500' : 'bg-twilight-950 border-twilight-800'}`}
@@ -91,7 +90,6 @@ export default function HuntingConfig({ onBack, userId }) {
               </div>
             )}
 
-            {/* Pokemon Selection */}
             <div>
               <label className="block text-twilight-300 text-[8px] sm:text-[10px] uppercase font-black mb-2 ml-1 tracking-widest">Pokémon Cible</label>
               <div className="relative mb-3 sm:mb-4">
@@ -156,7 +154,6 @@ export default function HuntingConfig({ onBack, userId }) {
               </div>
             </div>
 
-            {/* Contextual Modifiers */}
             <div className="grid grid-cols-2 sm:grid-cols-1 gap-2 sm:space-y-2">
               <div className="flex items-center gap-2 p-3 bg-twilight-950 border border-twilight-800 rounded-xl cursor-pointer" onClick={() => setHasCharm(!hasCharm)}>
                 <div className={`w-5 h-5 rounded-md border-2 flex items-center justify-center transition-all ${hasCharm ? 'bg-amber-500 border-amber-500' : 'border-twilight-700'}`}>
@@ -187,7 +184,6 @@ export default function HuntingConfig({ onBack, userId }) {
               <Play size={18} sm:size={20} fill="currentColor" /> Lancer
             </button>
           </div>
-        </div>
         </div>
       </div>
     </div>
