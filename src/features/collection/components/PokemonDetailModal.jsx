@@ -69,8 +69,6 @@ const PokemonForm = ({ pokemon, selectedEntryId, setSelectedEntryId, onClose, on
 
   return (
     <>
-  return (
-    <>
       <div className="p-3 sm:p-6 flex items-center gap-4 bg-twilight-800/50 relative">
         <button onClick={onClose} className="absolute top-2 right-2 text-twilight-400 hover:text-white transition-colors p-1"><X size={18} /></button>
         <img src={shinySpriteUrl} alt={pokemon.name} className="w-12 h-12 sm:w-32 sm:h-32 object-contain" />
