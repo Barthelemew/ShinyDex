@@ -20,7 +20,7 @@ const PokemonDetailModal = ({ pokemon, onClose, onSave, onDelete }) => {
           onClick={(e) => e.stopPropagation()}
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          className="bg-twilight-900 w-full max-w-xl rounded-3xl border border-twilight-800 shadow-2xl overflow-hidden"
+          className="bg-twilight-900 w-full max-w-xl max-h-[90vh] rounded-3xl border border-twilight-800 shadow-2xl overflow-y-auto scrollbar-hide"
         >
           <PokemonForm 
             key={selectedEntryId || 'new'} // CLE MAGIQUE : Force le remontage du composant

@@ -220,58 +220,59 @@ function App() {
   return (
     <div className="min-h-screen bg-twilight-950 text-white font-sans selection:bg-amber-500">
       <div className="sticky top-0 z-40 bg-twilight-900/95 backdrop-blur-md border-b border-twilight-800 shadow-2xl">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center gap-4">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => { setView('dex'); setIsConfiguringNewHunt(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-            <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-orange-600 rounded-xl flex items-center justify-center"><Zap size={24} className="text-twilight-950 fill-current" /></div>
-            <h1 className="text-2xl font-black tracking-tighter uppercase italic leading-none">SHINY<span className="text-amber-500">DEX</span></h1>
+        <div className="max-w-7xl mx-auto px-4 py-2 sm:py-3 flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer shrink-0" onClick={() => { setView('dex'); setIsConfiguringNewHunt(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center"><Zap size={20} className="text-twilight-950 fill-current" /></div>
+            <h1 className="text-lg sm:text-2xl font-black tracking-tighter uppercase italic leading-none">SHINY<span className="text-amber-500">DEX</span></h1>
           </div>
           
-          {user && team && (
-            <div className="flex bg-twilight-950 p-1 rounded-xl border border-twilight-800">
-              <button onClick={() => setDexMode('personal')} className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase transition-all ${dexMode === 'personal' ? 'bg-amber-500 text-twilight-950' : 'text-twilight-500'}`}>Moi</button>
-              <button onClick={() => setDexMode('team')} className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase transition-all ${dexMode === 'team' ? 'bg-amber-500 text-twilight-950' : 'text-twilight-500'}`}>Équipe</button>
-            </div>
-          )}
-
-          <div className="relative flex-1 w-full max-w-2xl">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-twilight-500" size={18} />
-            <input type="text" placeholder="Rechercher un Pokémon..." className="w-full pl-10 pr-4 py-3 rounded-xl bg-twilight-800/50 border border-twilight-700 outline-none focus:border-amber-500 font-bold text-sm" onChange={(e) => setSearchQuery(e.target.value)} />
+          <div className="relative flex-1 max-w-2xl">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-twilight-500" size={16} />
+            <input type="text" placeholder="Chercher..." className="w-full pl-9 pr-3 py-2 sm:py-3 rounded-xl bg-twilight-800/50 border border-twilight-700 outline-none focus:border-amber-500 font-bold text-xs sm:text-sm" onChange={(e) => setSearchQuery(e.target.value)} />
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="hidden sm:flex items-center gap-2">
             {user && <SyncStatus isSyncing={isSyncing} isOffline={isOffline} />}
             <button onClick={() => user ? setSelectionMode(!selectionMode) : handleRestrictedAction()} className={`p-3 rounded-xl border transition-all ${selectionMode ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Multi-sélection"><SquareStack size={20} /></button>
             <button onClick={() => handleRestrictedAction('achievements')} className={`p-3 rounded-xl border transition-all ${view === 'achievements' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Succès"><Trophy size={20} /></button>
             <button onClick={() => handleRestrictedAction('stats')} className={`p-3 rounded-xl border transition-all ${view === 'stats' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Stats"><BarChart3 size={20} /></button>
             <button onClick={() => handleRestrictedAction('collaboration')} className={`p-3 rounded-xl border transition-all ${view === 'collaboration' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Équipe"><Users size={20} /></button>
             <button onClick={() => handleRestrictedAction('hunting')} className={`p-3 rounded-xl border transition-all ${view === 'hunting' ? 'bg-amber-500 text-twilight-950' : 'bg-twilight-800 border-twilight-700'}`} title="Compteur"><Zap size={20} className={sessions.length > 0 ? 'animate-pulse fill-current' : ''} /></button>
-            
+          </div>
+
+          <div className="flex items-center gap-2">
             {user ? (
-              <>
-                <button onClick={() => setView('profile')} className="p-3 bg-twilight-800 border border-twilight-700 rounded-xl hover:text-amber-500"><User size={20} /></button>
-                <button onClick={handleLogout} className="p-3 bg-twilight-800 border border-twilight-700 rounded-xl hover:text-red-500"><LogOut size={20} /></button>
-              </>
+              <button onClick={() => setView('profile')} className="p-2 sm:p-3 bg-twilight-800 border border-twilight-700 rounded-lg sm:rounded-xl hover:text-amber-500"><User size={18} /></button>
             ) : (
-              <button onClick={() => setShowAuth(true)} className="px-6 py-3 bg-amber-500 text-twilight-950 rounded-xl font-black uppercase text-xs">Connexion</button>
+              <button onClick={() => setShowAuth(true)} className="px-4 py-2 sm:px-6 sm:py-3 bg-amber-500 text-twilight-950 rounded-lg sm:rounded-xl font-black uppercase text-[10px] sm:text-xs">Connexion</button>
             )}
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto p-4 space-y-8">
+      <div className="max-w-7xl mx-auto p-4 space-y-6 sm:space-y-8">
         {/* BARRE D'ACTIONS (IMPORT/EXPORT + VIEW TOGGLE) */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-twilight-900/50 p-6 rounded-[2rem] border border-twilight-800 shadow-xl backdrop-blur-sm">
-          <div className="flex items-center gap-4">
-             <button onClick={toggleViewMode} className="flex items-center gap-3 px-6 py-3 bg-twilight-800 border border-twilight-700 rounded-2xl hover:border-amber-500 transition-all font-black uppercase text-[10px] tracking-widest text-twilight-300">
-               {viewMode === 'grid' ? <><List size={18} /> Mode Liste</> : <><LayoutGrid size={18} /> Mode Grille</>}
-             </button>
-             <div className="h-8 w-px bg-twilight-800 hidden sm:block"></div>
-             <ImportExportActions collection={dbCollection} onImport={importCollection} />
+        <div className="flex flex-col gap-4 bg-twilight-900/50 p-4 sm:p-6 rounded-3xl sm:rounded-[2rem] border border-twilight-800 shadow-xl backdrop-blur-sm">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-2 sm:gap-4 overflow-x-auto pb-2 sm:pb-0 scrollbar-hide">
+              <button onClick={toggleViewMode} className="shrink-0 flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-twilight-800 border border-twilight-700 rounded-xl sm:rounded-2xl hover:border-amber-500 transition-all font-black uppercase text-[9px] sm:text-[10px] tracking-widest text-twilight-300">
+                {viewMode === 'grid' ? <><List size={16} /> Liste</> : <><LayoutGrid size={16} /> Grille</>}
+              </button>
+              <div className="h-6 w-px bg-twilight-800 hidden sm:block"></div>
+              <ImportExportActions collection={dbCollection} onImport={importCollection} />
+            </div>
+
+            {user && team && (
+              <div className="flex bg-twilight-950 p-1 rounded-xl border border-twilight-800 shrink-0">
+                <button onClick={() => setDexMode('personal')} className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase transition-all ${dexMode === 'personal' ? 'bg-amber-500 text-twilight-950' : 'text-twilight-500'}`}>Moi</button>
+                <button onClick={() => setDexMode('team')} className={`px-4 py-1.5 rounded-lg text-[10px] font-black uppercase transition-all ${dexMode === 'team' ? 'bg-amber-500 text-twilight-950' : 'text-twilight-500'}`}>Équipe</button>
+              </div>
+            )}
           </div>
           
-          <div className="flex-1 flex flex-col items-end gap-1 max-w-xs">
+          <div className="flex flex-col gap-1 w-full sm:max-w-xs sm:ml-auto">
              <div className="flex justify-between w-full text-[10px] font-black uppercase tracking-widest italic">
-               <span className="text-twilight-500">Progression Totale</span>
+               <span className="text-twilight-500">Progression {dexMode === 'personal' ? 'Perso' : 'Équipe'}</span>
                <span className="text-amber-500">{fullCollection.filter(p => p.captured).length} / {fullCollection.length}</span>
              </div>
              <div className="w-full h-1.5 bg-twilight-950 rounded-full overflow-hidden border border-twilight-800">
@@ -288,8 +289,8 @@ function App() {
         <div className="space-y-12 pb-32">
           {Object.entries(pokemonByGen).sort((a, b) => a[0] - b[0]).map(([gen, pokemons]) => (
             <div key={gen} className="space-y-6">
-              <div className="sticky top-[73px] z-30 py-4 -mx-4 px-4 bg-twilight-950/80 backdrop-blur-md border-y border-twilight-800/50 flex items-center justify-between">
-                <h2 className="text-3xl font-black text-white italic uppercase tracking-tighter">
+              <div className="sticky top-[57px] sm:top-[73px] z-30 py-4 -mx-4 px-4 bg-twilight-950/80 backdrop-blur-md border-y border-twilight-800/50 flex items-center justify-between">
+                <h2 className="text-xl sm:text-3xl font-black text-white italic uppercase tracking-tighter">
                   Génération <span className="text-amber-500">{gen}</span>
                 </h2>
                 <div className="h-px flex-1 bg-gradient-to-r from-amber-500/20 to-transparent ml-8 hidden md:block"></div>
@@ -355,6 +356,30 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* BOTTOM NAVIGATION MOBILE */}
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-twilight-900/90 backdrop-blur-xl border-t border-twilight-800 px-6 py-3 flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+        <button onClick={() => setView('dex')} className={`flex flex-col items-center gap-1 ${view === 'dex' ? 'text-amber-500' : 'text-twilight-500'}`}>
+          <LayoutGrid size={20} />
+          <span className="text-[9px] font-black uppercase tracking-tighter">Dex</span>
+        </button>
+        <button onClick={() => handleRestrictedAction('hunting')} className={`flex flex-col items-center gap-1 ${view === 'hunting' ? 'text-amber-500' : 'text-twilight-500'}`}>
+          <Zap size={20} className={sessions.length > 0 ? 'animate-pulse fill-current' : ''} />
+          <span className="text-[9px] font-black uppercase tracking-tighter">Chasse</span>
+        </button>
+        <button onClick={() => handleRestrictedAction('stats')} className={`flex flex-col items-center gap-1 ${view === 'stats' ? 'text-amber-500' : 'text-twilight-500'}`}>
+          <BarChart3 size={20} />
+          <span className="text-[9px] font-black uppercase tracking-tighter">Stats</span>
+        </button>
+        <button onClick={() => handleRestrictedAction('collaboration')} className={`flex flex-col items-center gap-1 ${view === 'collaboration' ? 'text-amber-500' : 'text-twilight-500'}`}>
+          <Users size={20} />
+          <span className="text-[9px] font-black uppercase tracking-tighter">Équipe</span>
+        </button>
+        <button onClick={() => user ? setSelectionMode(!selectionMode) : handleRestrictedAction()} className={`flex flex-col items-center gap-1 ${selectionMode ? 'text-amber-500' : 'text-twilight-500'}`}>
+          <SquareStack size={20} />
+          <span className="text-[9px] font-black uppercase tracking-tighter">Sél.</span>
+        </button>
+      </div>
 
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </div>
