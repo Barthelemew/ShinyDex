@@ -351,7 +351,7 @@ function App() {
 
       <AnimatePresence>
         {selectionMode && selectedIds.length > 0 && (
-          <motion.div initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }} className="fixed bottom-20 sm:bottom-0 left-0 right-0 z-50 p-4 flex justify-center">
+          <motion.div initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }} className="fixed bottom-24 left-0 right-0 z-[60] p-4 flex justify-center">
             <div className="bg-twilight-900 border border-amber-500/50 rounded-3xl px-8 py-6 shadow-2xl flex items-center gap-8 backdrop-blur-xl">
               <p className="text-3xl font-black text-white italic">{selectedIds.length}</p>
               <div className="flex gap-3">

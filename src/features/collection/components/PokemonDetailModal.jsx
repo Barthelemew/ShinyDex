@@ -12,13 +12,13 @@ const PokemonDetailModal = ({ pokemon, onClose, onSave, onDelete }) => {
     <AnimatePresence>
       <div 
         onClick={() => { trigger('LIGHT'); onClose(); }}
-        className="fixed inset-0 bg-twilight-950/90 backdrop-blur-md z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 bg-twilight-950/90 backdrop-blur-md z-[100] flex items-center justify-center p-4"
       >
         <motion.div 
           onClick={(e) => e.stopPropagation()}
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          className="bg-twilight-900 w-full max-w-xl max-h-[90vh] rounded-3xl border border-twilight-800 shadow-2xl overflow-y-auto scrollbar-hide"
+          className="bg-twilight-900 w-full max-w-xl max-h-[90vh] rounded-3xl border border-twilight-800 shadow-2xl overflow-y-auto scrollbar-hide pb-20 sm:pb-6"
         >
           <PokemonForm 
             key={selectedEntryId || 'new'} 

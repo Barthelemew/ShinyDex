@@ -88,7 +88,7 @@ export default function HuntingSession({ onFound, userId, onNewHunt }) {
   const normalSpriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${activeSession.pokemonId}.png`;
 
   return (
-    <div className="min-h-screen bg-twilight-950 flex flex-col items-center justify-start p-4 relative overflow-y-auto select-none pt-4">
+    <div className="min-h-screen bg-twilight-950 flex flex-col items-center justify-start p-4 pb-32 relative overflow-y-auto select-none pt-4">
       {/* BARRE DE NAVIGATION SUPÉRIEURE */}
       <div className="w-full max-w-2xl mb-6 z-20 flex items-center gap-4">
         <button 
