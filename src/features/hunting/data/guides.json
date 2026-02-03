@@ -1,0 +1,39 @@
+{
+  "methods": {
+    "Masuda": {
+      "tips": [
+        "Utilisez un Pokémon étranger (autre langue) pour augmenter les chances.",
+        "Ayez un Pokémon avec le talent Corps Ardent ou Armumagma en tête d'équipe pour éclore plus vite.",
+        "Le Charme Chroma est cumulable avec cette méthode."
+      ]
+    },
+    "Rencontres": {
+      "tips": [
+        "Prévoyez beaucoup de Poké Balls et de Soins.",
+        "Utilisez un Pokémon avec Faux-Chage et une capacité de statut (Sommeil/Paralysie).",
+        "Certains talents comme Statik ou Magnépiège peuvent attirer certains types."
+      ]
+    },
+    "SOS Battle": {
+      "tips": [
+        "Utilisez l'Orbe Frourousse pour augmenter les chances d'appel à l'aide.",
+        "La capacité Récolte combinée avec une Baie Mepo et Échange permet des chaînes infinies.",
+        "Le taux maximal est atteint à partir d'une chaîne de 31."
+      ]
+    },
+    "Sandwich": {
+      "tips": [
+        "L'Aura Brillance Niveau 3 est essentielle pour maximiser les chances.",
+        "Cherchez les Apparitions Massives pour cumuler les bonus.",
+        "Sauvegardez avant de faire votre sandwich pour ne pas gâcher d'épices secrètes."
+      ]
+    },
+    "Recherche": {
+      "tips": [
+        "Atteignez le niveau 10 de recherche pour un premier bonus.",
+        "Le niveau 'Parfait' offre encore plus de rolls shiny.",
+        "Les Mégapparitions sont le meilleur moment pour chasser dans Hisui."
+      ]
+    }
+  }
+}

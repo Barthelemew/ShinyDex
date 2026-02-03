@@ -1,0 +1,5446 @@
+[
+  {
+    "id": "bulbasaur",
+    "pokedexId": 1,
+    "name": "Bulbizarre"
+  },
+  {
+    "id": "ivysaur",
+    "pokedexId": 2,
+    "name": "Herbizarre"
+  },
+  {
+    "id": "venusaur",
+    "pokedexId": 3,
+    "name": "Florizarre"
+  },
+  {
+    "id": "charmander",
+    "pokedexId": 4,
+    "name": "Salamèche"
+  },
+  {
+    "id": "charmeleon",
+    "pokedexId": 5,
+    "name": "Reptincel"
+  },
+  {
+    "id": "charizard",
+    "pokedexId": 6,
+    "name": "Dracaufeu"
+  },
+  {
+    "id": "squirtle",
+    "pokedexId": 7,
+    "name": "Carapuce"
+  },
+  {
+    "id": "wartortle",
+    "pokedexId": 8,
+    "name": "Carabaffe"
+  },
+  {
+    "id": "blastoise",
+    "pokedexId": 9,
+    "name": "Tortank"
+  },
+  {
+    "id": "caterpie",
+    "pokedexId": 10,
+    "name": "Chenipan"
+  },
+  {
+    "id": "metapod",
+    "pokedexId": 11,
+    "name": "Chrysacier"
+  },
+  {
+    "id": "butterfree",
+    "pokedexId": 12,
+    "name": "Papilusion"
+  },
+  {
+    "id": "weedle",
+    "pokedexId": 13,
+    "name": "Aspicot"
+  },
+  {
+    "id": "kakuna",
+    "pokedexId": 14,
+    "name": "Coconfort"
+  },
+  {
+    "id": "beedrill",
+    "pokedexId": 15,
+    "name": "Dardargnan"
+  },
+  {
+    "id": "pidgey",
+    "pokedexId": 16,
+    "name": "Roucool"
+  },
+  {
+    "id": "pidgeotto",
+    "pokedexId": 17,
+    "name": "Roucoups"
+  },
+  {
+    "id": "pidgeot",
+    "pokedexId": 18,
+    "name": "Roucarnage"
+  },
+  {
+    "id": "rattata",
+    "pokedexId": 19,
+    "name": "Rattata"
+  },
+  {
+    "id": "rattata-alola",
+    "pokedexId": 19,
+    "apiId": 10091,
+    "name": "Rattata d'Alola"
+  },
+  {
+    "id": "raticate",
+    "pokedexId": 20,
+    "name": "Rattatac"
+  },
+  {
+    "id": "raticate-alola",
+    "pokedexId": 20,
+    "apiId": 10092,
+    "name": "Rattatac d'Alola"
+  },
+  {
+    "id": "spearow",
+    "pokedexId": 21,
+    "name": "Piafabec"
+  },
+  {
+    "id": "fearow",
+    "pokedexId": 22,
+    "name": "Rapasdepic"
+  },
+  {
+    "id": "ekans",
+    "pokedexId": 23,
+    "name": "Abo"
+  },
+  {
+    "id": "arbok",
+    "pokedexId": 24,
+    "name": "Arbok"
+  },
+  {
+    "id": "pikachu",
+    "pokedexId": 25,
+    "name": "Pikachu"
+  },
+  {
+    "id": "raichu",
+    "pokedexId": 26,
+    "name": "Raichu"
+  },
+  {
+    "id": "raichu-alola",
+    "pokedexId": 26,
+    "apiId": 10100,
+    "name": "Raichu d'Alola"
+  },
+  {
+    "id": "sandshrew",
+    "pokedexId": 27,
+    "name": "Sabelette"
+  },
+  {
+    "id": "sandshrew-alola",
+    "pokedexId": 27,
+    "apiId": 10101,
+    "name": "Sabelette d'Alola"
+  },
+  {
+    "id": "sandslash",
+    "pokedexId": 28,
+    "name": "Sablaireau"
+  },
+  {
+    "id": "sandslash-alola",
+    "pokedexId": 28,
+    "apiId": 10102,
+    "name": "Sablaireau d'Alola"
+  },
+  {
+    "id": "nidoran-f",
+    "pokedexId": 29,
+    "name": "Nidoran♀"
+  },
+  {
+    "id": "nidorina",
+    "pokedexId": 30,
+    "name": "Nidorina"
+  },
+  {
+    "id": "nidoqueen",
+    "pokedexId": 31,
+    "name": "Nidoqueen"
+  },
+  {
+    "id": "nidoran-m",
+    "pokedexId": 32,
+    "name": "Nidoran♂"
+  },
+  {
+    "id": "nidorino",
+    "pokedexId": 33,
+    "name": "Nidorino"
+  },
+  {
+    "id": "nidoking",
+    "pokedexId": 34,
+    "name": "Nidoking"
+  },
+  {
+    "id": "clefairy",
+    "pokedexId": 35,
+    "name": "Mélofée"
+  },
+  {
+    "id": "clefable",
+    "pokedexId": 36,
+    "name": "Mélodelfe"
+  },
+  {
+    "id": "vulpix",
+    "pokedexId": 37,
+    "name": "Goupix"
+  },
+  {
+    "id": "vulpix-alola",
+    "pokedexId": 37,
+    "apiId": 10103,
+    "name": "Goupix d'Alola"
+  },
+  {
+    "id": "ninetales",
+    "pokedexId": 38,
+    "name": "Feunard"
+  },
+  {
+    "id": "ninetales-alola",
+    "pokedexId": 38,
+    "apiId": 10104,
+    "name": "Feunard d'Alola"
+  },
+  {
+    "id": "jigglypuff",
+    "pokedexId": 39,
+    "name": "Rondoudou"
+  },
+  {
+    "id": "wigglytuff",
+    "pokedexId": 40,
+    "name": "Grodoudou"
+  },
+  {
+    "id": "zubat",
+    "pokedexId": 41,
+    "name": "Nosferapti"
+  },
+  {
+    "id": "golbat",
+    "pokedexId": 42,
+    "name": "Nosferalto"
+  },
+  {
+    "id": "oddish",
+    "pokedexId": 43,
+    "name": "Mystherbe"
+  },
+  {
+    "id": "gloom",
+    "pokedexId": 44,
+    "name": "Ortide"
+  },
+  {
+    "id": "vileplume",
+    "pokedexId": 45,
+    "name": "Rafflesia"
+  },
+  {
+    "id": "paras",
+    "pokedexId": 46,
+    "name": "Paras"
+  },
+  {
+    "id": "parasect",
+    "pokedexId": 47,
+    "name": "Parasect"
+  },
+  {
+    "id": "venonat",
+    "pokedexId": 48,
+    "name": "Mimitoss"
+  },
+  {
+    "id": "venomoth",
+    "pokedexId": 49,
+    "name": "Aéromite"
+  },
+  {
+    "id": "diglett",
+    "pokedexId": 50,
+    "name": "Taupiqueur"
+  },
+  {
+    "id": "diglett-alola",
+    "pokedexId": 50,
+    "apiId": 10105,
+    "name": "Taupiqueur d'Alola"
+  },
+  {
+    "id": "dugtrio",
+    "pokedexId": 51,
+    "name": "Triopikeur"
+  },
+  {
+    "id": "dugtrio-alola",
+    "pokedexId": 51,
+    "apiId": 10106,
+    "name": "Triopikeur d'Alola"
+  },
+  {
+    "id": "meowth",
+    "pokedexId": 52,
+    "name": "Miaouss"
+  },
+  {
+    "id": "meowth-alola",
+    "pokedexId": 52,
+    "apiId": 10107,
+    "name": "Miaouss d'Alola"
+  },
+  {
+    "id": "meowth-galar",
+    "pokedexId": 52,
+    "apiId": 10161,
+    "name": "Miaouss de Galar"
+  },
+  {
+    "id": "persian",
+    "pokedexId": 53,
+    "name": "Persian"
+  },
+  {
+    "id": "persian-alola",
+    "pokedexId": 53,
+    "apiId": 10108,
+    "name": "Persian d'Alola"
+  },
+  {
+    "id": "psyduck",
+    "pokedexId": 54,
+    "name": "Psykokwak"
+  },
+  {
+    "id": "golduck",
+    "pokedexId": 55,
+    "name": "Akwakwak"
+  },
+  {
+    "id": "mankey",
+    "pokedexId": 56,
+    "name": "Férosinge"
+  },
+  {
+    "id": "primeape",
+    "pokedexId": 57,
+    "name": "Colossinge"
+  },
+  {
+    "id": "growlithe",
+    "pokedexId": 58,
+    "name": "Caninos"
+  },
+  {
+    "id": "growlithe-hisui",
+    "pokedexId": 58,
+    "apiId": 10229,
+    "name": "Caninos d'Hisui"
+  },
+  {
+    "id": "arcanine",
+    "pokedexId": 59,
+    "name": "Arcanin"
+  },
+  {
+    "id": "arcanine-hisui",
+    "pokedexId": 59,
+    "apiId": 10230,
+    "name": "Arcanin d'Hisui"
+  },
+  {
+    "id": "poliwag",
+    "pokedexId": 60,
+    "name": "Ptitard"
+  },
+  {
+    "id": "poliwhirl",
+    "pokedexId": 61,
+    "name": "Têtarte"
+  },
+  {
+    "id": "poliwrath",
+    "pokedexId": 62,
+    "name": "Tartard"
+  },
+  {
+    "id": "abra",
+    "pokedexId": 63,
+    "name": "Abra"
+  },
+  {
+    "id": "kadabra",
+    "pokedexId": 64,
+    "name": "Kadabra"
+  },
+  {
+    "id": "alakazam",
+    "pokedexId": 65,
+    "name": "Alakazam"
+  },
+  {
+    "id": "machop",
+    "pokedexId": 66,
+    "name": "Machoc"
+  },
+  {
+    "id": "machoke",
+    "pokedexId": 67,
+    "name": "Machopeur"
+  },
+  {
+    "id": "machamp",
+    "pokedexId": 68,
+    "name": "Mackogneur"
+  },
+  {
+    "id": "bellsprout",
+    "pokedexId": 69,
+    "name": "Chétiflor"
+  },
+  {
+    "id": "weepinbell",
+    "pokedexId": 70,
+    "name": "Boustiflor"
+  },
+  {
+    "id": "victreebel",
+    "pokedexId": 71,
+    "name": "Empiflor"
+  },
+  {
+    "id": "tentacool",
+    "pokedexId": 72,
+    "name": "Tentacool"
+  },
+  {
+    "id": "tentacruel",
+    "pokedexId": 73,
+    "name": "Tentacruel"
+  },
+  {
+    "id": "geodude",
+    "pokedexId": 74,
+    "name": "Racaillou"
+  },
+  {
+    "id": "geodude-alola",
+    "pokedexId": 74,
+    "apiId": 10109,
+    "name": "Racaillou d'Alola"
+  },
+  {
+    "id": "graveler",
+    "pokedexId": 75,
+    "name": "Gravalanch"
+  },
+  {
+    "id": "graveler-alola",
+    "pokedexId": 75,
+    "apiId": 10110,
+    "name": "Gravalanch d'Alola"
+  },
+  {
+    "id": "golem",
+    "pokedexId": 76,
+    "name": "Grolem"
+  },
+  {
+    "id": "golem-alola",
+    "pokedexId": 76,
+    "apiId": 10111,
+    "name": "Grolem d'Alola"
+  },
+  {
+    "id": "ponyta",
+    "pokedexId": 77,
+    "name": "Ponyta"
+  },
+  {
+    "id": "ponyta-galar",
+    "pokedexId": 77,
+    "apiId": 10162,
+    "name": "Ponyta de Galar"
+  },
+  {
+    "id": "rapidash",
+    "pokedexId": 78,
+    "name": "Galopa"
+  },
+  {
+    "id": "rapidash-galar",
+    "pokedexId": 78,
+    "apiId": 10163,
+    "name": "Galopa de Galar"
+  },
+  {
+    "id": "slowpoke",
+    "pokedexId": 79,
+    "name": "Ramoloss"
+  },
+  {
+    "id": "slowpoke-galar",
+    "pokedexId": 79,
+    "apiId": 10164,
+    "name": "Ramoloss de Galar"
+  },
+  {
+    "id": "slowbro",
+    "pokedexId": 80,
+    "name": "Flagadoss"
+  },
+  {
+    "id": "slowbro-galar",
+    "pokedexId": 80,
+    "apiId": 10165,
+    "name": "Flagadoss de Galar"
+  },
+  {
+    "id": "magnemite",
+    "pokedexId": 81,
+    "name": "Magnéti"
+  },
+  {
+    "id": "magneton",
+    "pokedexId": 82,
+    "name": "Magnéton"
+  },
+  {
+    "id": "farfetchd",
+    "pokedexId": 83,
+    "name": "Canarticho"
+  },
+  {
+    "id": "doduo",
+    "pokedexId": 84,
+    "name": "Doduo"
+  },
+  {
+    "id": "dodrio",
+    "pokedexId": 85,
+    "name": "Dodrio"
+  },
+  {
+    "id": "seel",
+    "pokedexId": 86,
+    "name": "Otaria"
+  },
+  {
+    "id": "dewgong",
+    "pokedexId": 87,
+    "name": "Lamantine"
+  },
+  {
+    "id": "grimer",
+    "pokedexId": 88,
+    "name": "Tadmorv"
+  },
+  {
+    "id": "grimer-alola",
+    "pokedexId": 88,
+    "apiId": 10112,
+    "name": "Tas de Morve d'Alola"
+  },
+  {
+    "id": "muk",
+    "pokedexId": 89,
+    "name": "Grotadmorv"
+  },
+  {
+    "id": "muk-alola",
+    "pokedexId": 89,
+    "apiId": 10113,
+    "name": "Grotadmorv d'Alola"
+  },
+  {
+    "id": "shellder",
+    "pokedexId": 90,
+    "name": "Kokiyas"
+  },
+  {
+    "id": "cloyster",
+    "pokedexId": 91,
+    "name": "Crustabri"
+  },
+  {
+    "id": "gastly",
+    "pokedexId": 92,
+    "name": "Fantominus"
+  },
+  {
+    "id": "haunter",
+    "pokedexId": 93,
+    "name": "Spectrum"
+  },
+  {
+    "id": "gengar",
+    "pokedexId": 94,
+    "name": "Ectoplasma"
+  },
+  {
+    "id": "onix",
+    "pokedexId": 95,
+    "name": "Onix"
+  },
+  {
+    "id": "drowzee",
+    "pokedexId": 96,
+    "name": "Soporifik"
+  },
+  {
+    "id": "hypno",
+    "pokedexId": 97,
+    "name": "Hypnomade"
+  },
+  {
+    "id": "krabby",
+    "pokedexId": 98,
+    "name": "Krabby"
+  },
+  {
+    "id": "kingler",
+    "pokedexId": 99,
+    "name": "Krabboss"
+  },
+  {
+    "id": "voltorb",
+    "pokedexId": 100,
+    "name": "Voltorbe"
+  },
+  {
+    "id": "voltorb-hisui",
+    "pokedexId": 100,
+    "apiId": 10231,
+    "name": "Voltorbe d'Hisui"
+  },
+  {
+    "id": "electrode",
+    "pokedexId": 101,
+    "name": "Électrode"
+  },
+  {
+    "id": "electrode-hisui",
+    "pokedexId": 101,
+    "apiId": 10232,
+    "name": "Électrode d'Hisui"
+  },
+  {
+    "id": "exeggcute",
+    "pokedexId": 102,
+    "name": "Noeunoeuf"
+  },
+  {
+    "id": "exeggutor",
+    "pokedexId": 103,
+    "name": "Noadkoko"
+  },
+  {
+    "id": "exeggutor-alola",
+    "pokedexId": 103,
+    "apiId": 10114,
+    "name": "Noadkoko d'Alola"
+  },
+  {
+    "id": "cubone",
+    "pokedexId": 104,
+    "name": "Osselait"
+  },
+  {
+    "id": "marowak",
+    "pokedexId": 105,
+    "name": "Ossatueur"
+  },
+  {
+    "id": "marowak-alola",
+    "pokedexId": 105,
+    "apiId": 10115,
+    "name": "Ossatueur d'Alola"
+  },
+  {
+    "id": "hitmonlee",
+    "pokedexId": 106,
+    "name": "Kicklee"
+  },
+  {
+    "id": "hitmonchan",
+    "pokedexId": 107,
+    "name": "Tygnon"
+  },
+  {
+    "id": "lickitung",
+    "pokedexId": 108,
+    "name": "Excelangue"
+  },
+  {
+    "id": "koffing",
+    "pokedexId": 109,
+    "name": "Smogo"
+  },
+  {
+    "id": "weezing",
+    "pokedexId": 110,
+    "name": "Smogogo"
+  },
+  {
+    "id": "weezing-galar",
+    "pokedexId": 110,
+    "apiId": 10167,
+    "name": "Smogogo de Galar"
+  },
+  {
+    "id": "rhyhorn",
+    "pokedexId": 111,
+    "name": "Rhinocorne"
+  },
+  {
+    "id": "rhydon",
+    "pokedexId": 112,
+    "name": "Rhinoféros"
+  },
+  {
+    "id": "chansey",
+    "pokedexId": 113,
+    "name": "Leveinard"
+  },
+  {
+    "id": "tangela",
+    "pokedexId": 114,
+    "name": "Saquedeneu"
+  },
+  {
+    "id": "kangaskhan",
+    "pokedexId": 115,
+    "name": "Kangourex"
+  },
+  {
+    "id": "horsea",
+    "pokedexId": 116,
+    "name": "Hypotrempe"
+  },
+  {
+    "id": "seadra",
+    "pokedexId": 117,
+    "name": "Hypocéan"
+  },
+  {
+    "id": "goldeen",
+    "pokedexId": 118,
+    "name": "Poissirène"
+  },
+  {
+    "id": "seaking",
+    "pokedexId": 119,
+    "name": "Poissoroy"
+  },
+  {
+    "id": "staryu",
+    "pokedexId": 120,
+    "name": "Stari"
+  },
+  {
+    "id": "starmie",
+    "pokedexId": 121,
+    "name": "Staross"
+  },
+  {
+    "id": "mr-mime",
+    "pokedexId": 122,
+    "name": "M. Mime"
+  },
+  {
+    "id": "mrmime-galar",
+    "pokedexId": 122,
+    "apiId": 10168,
+    "name": "M. Mime de Galar"
+  },
+  {
+    "id": "scyther",
+    "pokedexId": 123,
+    "name": "Insécateur"
+  },
+  {
+    "id": "jynx",
+    "pokedexId": 124,
+    "name": "Lippoutou"
+  },
+  {
+    "id": "electabuzz",
+    "pokedexId": 125,
+    "name": "Élektek"
+  },
+  {
+    "id": "magmar",
+    "pokedexId": 126,
+    "name": "Magmar"
+  },
+  {
+    "id": "pinsir",
+    "pokedexId": 127,
+    "name": "Scarabrute"
+  },
+  {
+    "id": "tauros",
+    "pokedexId": 128,
+    "name": "Tauros"
+  },
+  {
+    "id": "tauros-paldea",
+    "pokedexId": 128,
+    "apiId": 10250,
+    "name": "Tauros de Paldea"
+  },
+  {
+    "id": "magikarp",
+    "pokedexId": 129,
+    "name": "Magicarpe"
+  },
+  {
+    "id": "gyarados",
+    "pokedexId": 130,
+    "name": "Léviator"
+  },
+  {
+    "id": "lapras",
+    "pokedexId": 131,
+    "name": "Lokhlass"
+  },
+  {
+    "id": "ditto",
+    "pokedexId": 132,
+    "name": "Métamorph"
+  },
+  {
+    "id": "eevee",
+    "pokedexId": 133,
+    "name": "Évoli"
+  },
+  {
+    "id": "vaporeon",
+    "pokedexId": 134,
+    "name": "Aquali"
+  },
+  {
+    "id": "jolteon",
+    "pokedexId": 135,
+    "name": "Voltali"
+  },
+  {
+    "id": "flareon",
+    "pokedexId": 136,
+    "name": "Pyroli"
+  },
+  {
+    "id": "porygon",
+    "pokedexId": 137,
+    "name": "Porygon"
+  },
+  {
+    "id": "omanyte",
+    "pokedexId": 138,
+    "name": "Amonita"
+  },
+  {
+    "id": "omastar",
+    "pokedexId": 139,
+    "name": "Amonistar"
+  },
+  {
+    "id": "kabuto",
+    "pokedexId": 140,
+    "name": "Kabuto"
+  },
+  {
+    "id": "kabutops",
+    "pokedexId": 141,
+    "name": "Kabutops"
+  },
+  {
+    "id": "aerodactyl",
+    "pokedexId": 142,
+    "name": "Ptéra"
+  },
+  {
+    "id": "snorlax",
+    "pokedexId": 143,
+    "name": "Ronflex"
+  },
+  {
+    "id": "articuno",
+    "pokedexId": 144,
+    "name": "Artikodin"
+  },
+  {
+    "id": "articuno-galar",
+    "pokedexId": 144,
+    "apiId": 10169,
+    "name": "Artikodin de Galar"
+  },
+  {
+    "id": "zapdos",
+    "pokedexId": 145,
+    "name": "Électhor"
+  },
+  {
+    "id": "zapdos-galar",
+    "pokedexId": 145,
+    "apiId": 10170,
+    "name": "Électhor de Galar"
+  },
+  {
+    "id": "moltres",
+    "pokedexId": 146,
+    "name": "Sulfura"
+  },
+  {
+    "id": "moltres-galar",
+    "pokedexId": 146,
+    "apiId": 10171,
+    "name": "Sulfura de Galar"
+  },
+  {
+    "id": "dratini",
+    "pokedexId": 147,
+    "name": "Minidraco"
+  },
+  {
+    "id": "dragonair",
+    "pokedexId": 148,
+    "name": "Draco"
+  },
+  {
+    "id": "dragonite",
+    "pokedexId": 149,
+    "name": "Dracolosse"
+  },
+  {
+    "id": "mewtwo",
+    "pokedexId": 150,
+    "name": "Mewtwo"
+  },
+  {
+    "id": "mew",
+    "pokedexId": 151,
+    "name": "Mew"
+  },
+  {
+    "id": "chikorita",
+    "pokedexId": 152,
+    "name": "Germignon"
+  },
+  {
+    "id": "bayleef",
+    "pokedexId": 153,
+    "name": "Macronium"
+  },
+  {
+    "id": "meganium",
+    "pokedexId": 154,
+    "name": "Méganium"
+  },
+  {
+    "id": "cyndaquil",
+    "pokedexId": 155,
+    "name": "Héricendre"
+  },
+  {
+    "id": "quilava",
+    "pokedexId": 156,
+    "name": "Feurisson"
+  },
+  {
+    "id": "typhlosion",
+    "pokedexId": 157,
+    "name": "Typhlosion"
+  },
+  {
+    "id": "typhlosion-hisui",
+    "pokedexId": 157,
+    "apiId": 10233,
+    "name": "Typhlosion d'Hisui"
+  },
+  {
+    "id": "totodile",
+    "pokedexId": 158,
+    "name": "Kaiminus"
+  },
+  {
+    "id": "croconaw",
+    "pokedexId": 159,
+    "name": "Crocrodil"
+  },
+  {
+    "id": "feraligatr",
+    "pokedexId": 160,
+    "name": "Aligatueur"
+  },
+  {
+    "id": "sentret",
+    "pokedexId": 161,
+    "name": "Fouinette"
+  },
+  {
+    "id": "furret",
+    "pokedexId": 162,
+    "name": "Fouinar"
+  },
+  {
+    "id": "hoothoot",
+    "pokedexId": 163,
+    "name": "Hoothoot"
+  },
+  {
+    "id": "noctowl",
+    "pokedexId": 164,
+    "name": "Noarfang"
+  },
+  {
+    "id": "ledyba",
+    "pokedexId": 165,
+    "name": "Coxy"
+  },
+  {
+    "id": "ledian",
+    "pokedexId": 166,
+    "name": "Coxyclaque"
+  },
+  {
+    "id": "spinarak",
+    "pokedexId": 167,
+    "name": "Mimigal"
+  },
+  {
+    "id": "ariados",
+    "pokedexId": 168,
+    "name": "Migalos"
+  },
+  {
+    "id": "crobat",
+    "pokedexId": 169,
+    "name": "Nostenfer"
+  },
+  {
+    "id": "chinchou",
+    "pokedexId": 170,
+    "name": "Loupio"
+  },
+  {
+    "id": "lanturn",
+    "pokedexId": 171,
+    "name": "Lanturn"
+  },
+  {
+    "id": "pichu",
+    "pokedexId": 172,
+    "name": "Pichu"
+  },
+  {
+    "id": "cleffa",
+    "pokedexId": 173,
+    "name": "Mélo"
+  },
+  {
+    "id": "igglybuff",
+    "pokedexId": 174,
+    "name": "Toudoudou"
+  },
+  {
+    "id": "togepi",
+    "pokedexId": 175,
+    "name": "Togepi"
+  },
+  {
+    "id": "togetic",
+    "pokedexId": 176,
+    "name": "Togetic"
+  },
+  {
+    "id": "natu",
+    "pokedexId": 177,
+    "name": "Natu"
+  },
+  {
+    "id": "xatu",
+    "pokedexId": 178,
+    "name": "Xatu"
+  },
+  {
+    "id": "mareep",
+    "pokedexId": 179,
+    "name": "Wattouat"
+  },
+  {
+    "id": "flaaffy",
+    "pokedexId": 180,
+    "name": "Lainergie"
+  },
+  {
+    "id": "ampharos",
+    "pokedexId": 181,
+    "name": "Pharamp"
+  },
+  {
+    "id": "bellossom",
+    "pokedexId": 182,
+    "name": "Joliflor"
+  },
+  {
+    "id": "marill",
+    "pokedexId": 183,
+    "name": "Marill"
+  },
+  {
+    "id": "azumarill",
+    "pokedexId": 184,
+    "name": "Azumarill"
+  },
+  {
+    "id": "sudowoodo",
+    "pokedexId": 185,
+    "name": "Simularbre"
+  },
+  {
+    "id": "politoed",
+    "pokedexId": 186,
+    "name": "Tarpaud"
+  },
+  {
+    "id": "hoppip",
+    "pokedexId": 187,
+    "name": "Granivol"
+  },
+  {
+    "id": "skiploom",
+    "pokedexId": 188,
+    "name": "Floravol"
+  },
+  {
+    "id": "jumpluff",
+    "pokedexId": 189,
+    "name": "Cotovol"
+  },
+  {
+    "id": "aipom",
+    "pokedexId": 190,
+    "name": "Capumain"
+  },
+  {
+    "id": "sunkern",
+    "pokedexId": 191,
+    "name": "Tournegrin"
+  },
+  {
+    "id": "sunflora",
+    "pokedexId": 192,
+    "name": "Héliatronc"
+  },
+  {
+    "id": "yanma",
+    "pokedexId": 193,
+    "name": "Yanma"
+  },
+  {
+    "id": "wooper",
+    "pokedexId": 194,
+    "name": "Axoloto"
+  },
+  {
+    "id": "wooper-paldea",
+    "pokedexId": 194,
+    "apiId": 10253,
+    "name": "Axoloto de Paldea"
+  },
+  {
+    "id": "quagsire",
+    "pokedexId": 195,
+    "name": "Maraiste"
+  },
+  {
+    "id": "espeon",
+    "pokedexId": 196,
+    "name": "Mentali"
+  },
+  {
+    "id": "umbreon",
+    "pokedexId": 197,
+    "name": "Noctali"
+  },
+  {
+    "id": "murkrow",
+    "pokedexId": 198,
+    "name": "Cornèbre"
+  },
+  {
+    "id": "slowking",
+    "pokedexId": 199,
+    "name": "Roigada"
+  },
+  {
+    "id": "slowking-galar",
+    "pokedexId": 199,
+    "apiId": 10172,
+    "name": "Roigada de Galar"
+  },
+  {
+    "id": "misdreavus",
+    "pokedexId": 200,
+    "name": "Feuforêve"
+  },
+  {
+    "id": "unown",
+    "pokedexId": 201,
+    "name": "Zarbi"
+  },
+  {
+    "id": "wobbuffet",
+    "pokedexId": 202,
+    "name": "Qulbutoké"
+  },
+  {
+    "id": "girafarig",
+    "pokedexId": 203,
+    "name": "Girafarig"
+  },
+  {
+    "id": "pineco",
+    "pokedexId": 204,
+    "name": "Pomdepik"
+  },
+  {
+    "id": "forretress",
+    "pokedexId": 205,
+    "name": "Foretress"
+  },
+  {
+    "id": "dunsparce",
+    "pokedexId": 206,
+    "name": "Insolourdo"
+  },
+  {
+    "id": "gligar",
+    "pokedexId": 207,
+    "name": "Scorplane"
+  },
+  {
+    "id": "steelix",
+    "pokedexId": 208,
+    "name": "Steelix"
+  },
+  {
+    "id": "snubbull",
+    "pokedexId": 209,
+    "name": "Snubbull"
+  },
+  {
+    "id": "granbull",
+    "pokedexId": 210,
+    "name": "Granbull"
+  },
+  {
+    "id": "qwilfish",
+    "pokedexId": 211,
+    "name": "Qwilfish"
+  },
+  {
+    "id": "qwilfish-hisui",
+    "pokedexId": 211,
+    "apiId": 10234,
+    "name": "Qwilfish d'Hisui"
+  },
+  {
+    "id": "scizor",
+    "pokedexId": 212,
+    "name": "Cizayox"
+  },
+  {
+    "id": "shuckle",
+    "pokedexId": 213,
+    "name": "Caratroc"
+  },
+  {
+    "id": "heracross",
+    "pokedexId": 214,
+    "name": "Scarhino"
+  },
+  {
+    "id": "sneasel",
+    "pokedexId": 215,
+    "name": "Farfuret"
+  },
+  {
+    "id": "sneasel-hisui",
+    "pokedexId": 215,
+    "apiId": 10235,
+    "name": "Farfuret d'Hisui"
+  },
+  {
+    "id": "teddiursa",
+    "pokedexId": 216,
+    "name": "Teddiursa"
+  },
+  {
+    "id": "ursaring",
+    "pokedexId": 217,
+    "name": "Ursaring"
+  },
+  {
+    "id": "slugma",
+    "pokedexId": 218,
+    "name": "Limagma"
+  },
+  {
+    "id": "magcargo",
+    "pokedexId": 219,
+    "name": "Volcaropod"
+  },
+  {
+    "id": "swinub",
+    "pokedexId": 220,
+    "name": "Marcacrin"
+  },
+  {
+    "id": "piloswine",
+    "pokedexId": 221,
+    "name": "Cochignon"
+  },
+  {
+    "id": "corsola",
+    "pokedexId": 222,
+    "name": "Corayon"
+  },
+  {
+    "id": "corsola-galar",
+    "pokedexId": 222,
+    "apiId": 10173,
+    "name": "Corayon de Galar"
+  },
+  {
+    "id": "remoraid",
+    "pokedexId": 223,
+    "name": "Rémoraid"
+  },
+  {
+    "id": "octillery",
+    "pokedexId": 224,
+    "name": "Octillery"
+  },
+  {
+    "id": "delibird",
+    "pokedexId": 225,
+    "name": "Cadoizo"
+  },
+  {
+    "id": "mantine",
+    "pokedexId": 226,
+    "name": "Démanta"
+  },
+  {
+    "id": "skarmory",
+    "pokedexId": 227,
+    "name": "Airmure"
+  },
+  {
+    "id": "houndour",
+    "pokedexId": 228,
+    "name": "Malosse"
+  },
+  {
+    "id": "houndoom",
+    "pokedexId": 229,
+    "name": "Démolosse"
+  },
+  {
+    "id": "kingdra",
+    "pokedexId": 230,
+    "name": "Hyporoi"
+  },
+  {
+    "id": "phanpy",
+    "pokedexId": 231,
+    "name": "Phanpy"
+  },
+  {
+    "id": "donphan",
+    "pokedexId": 232,
+    "name": "Donphan"
+  },
+  {
+    "id": "porygon2",
+    "pokedexId": 233,
+    "name": "Porygon2"
+  },
+  {
+    "id": "stantler",
+    "pokedexId": 234,
+    "name": "Cerfrousse"
+  },
+  {
+    "id": "smeargle",
+    "pokedexId": 235,
+    "name": "Queulorior"
+  },
+  {
+    "id": "tyrogue",
+    "pokedexId": 236,
+    "name": "Debugant"
+  },
+  {
+    "id": "hitmontop",
+    "pokedexId": 237,
+    "name": "Kapoera"
+  },
+  {
+    "id": "smoochum",
+    "pokedexId": 238,
+    "name": "Lippouti"
+  },
+  {
+    "id": "elekid",
+    "pokedexId": 239,
+    "name": "Élekid"
+  },
+  {
+    "id": "magby",
+    "pokedexId": 240,
+    "name": "Magby"
+  },
+  {
+    "id": "miltank",
+    "pokedexId": 241,
+    "name": "Écrémeuh"
+  },
+  {
+    "id": "blissey",
+    "pokedexId": 242,
+    "name": "Leuphorie"
+  },
+  {
+    "id": "raikou",
+    "pokedexId": 243,
+    "name": "Raikou"
+  },
+  {
+    "id": "entei",
+    "pokedexId": 244,
+    "name": "Entei"
+  },
+  {
+    "id": "suicune",
+    "pokedexId": 245,
+    "name": "Suicune"
+  },
+  {
+    "id": "larvitar",
+    "pokedexId": 246,
+    "name": "Embrylex"
+  },
+  {
+    "id": "pupitar",
+    "pokedexId": 247,
+    "name": "Ymphect"
+  },
+  {
+    "id": "tyranitar",
+    "pokedexId": 248,
+    "name": "Tyranocif"
+  },
+  {
+    "id": "lugia",
+    "pokedexId": 249,
+    "name": "Lugia"
+  },
+  {
+    "id": "ho-oh",
+    "pokedexId": 250,
+    "name": "Ho-Oh"
+  },
+  {
+    "id": "celebi",
+    "pokedexId": 251,
+    "name": "Celebi"
+  },
+  {
+    "id": "treecko",
+    "pokedexId": 252,
+    "name": "Arcko"
+  },
+  {
+    "id": "grovyle",
+    "pokedexId": 253,
+    "name": "Massko"
+  },
+  {
+    "id": "sceptile",
+    "pokedexId": 254,
+    "name": "Jungko"
+  },
+  {
+    "id": "torchic",
+    "pokedexId": 255,
+    "name": "Poussifeu"
+  },
+  {
+    "id": "combusken",
+    "pokedexId": 256,
+    "name": "Galifeu"
+  },
+  {
+    "id": "blaziken",
+    "pokedexId": 257,
+    "name": "Braségali"
+  },
+  {
+    "id": "mudkip",
+    "pokedexId": 258,
+    "name": "Gobou"
+  },
+  {
+    "id": "marshtomp",
+    "pokedexId": 259,
+    "name": "Flobio"
+  },
+  {
+    "id": "swampert",
+    "pokedexId": 260,
+    "name": "Laggron"
+  },
+  {
+    "id": "poochyena",
+    "pokedexId": 261,
+    "name": "Medhyèna"
+  },
+  {
+    "id": "mightyena",
+    "pokedexId": 262,
+    "name": "Grahyèna"
+  },
+  {
+    "id": "zigzagoon",
+    "pokedexId": 263,
+    "name": "Zigzaton"
+  },
+  {
+    "id": "zigzagoon-galar",
+    "pokedexId": 263,
+    "apiId": 10174,
+    "name": "Zigzaton de Galar"
+  },
+  {
+    "id": "linoone",
+    "pokedexId": 264,
+    "name": "Linéon"
+  },
+  {
+    "id": "linoone-galar",
+    "pokedexId": 264,
+    "apiId": 10175,
+    "name": "Linéon de Galar"
+  },
+  {
+    "id": "wurmple",
+    "pokedexId": 265,
+    "name": "Chenipotte"
+  },
+  {
+    "id": "silcoon",
+    "pokedexId": 266,
+    "name": "Armulys"
+  },
+  {
+    "id": "beautifly",
+    "pokedexId": 267,
+    "name": "Charmillon"
+  },
+  {
+    "id": "cascoon",
+    "pokedexId": 268,
+    "name": "Blindalys"
+  },
+  {
+    "id": "dustox",
+    "pokedexId": 269,
+    "name": "Papinox"
+  },
+  {
+    "id": "lotad",
+    "pokedexId": 270,
+    "name": "Nénupiot"
+  },
+  {
+    "id": "lombre",
+    "pokedexId": 271,
+    "name": "Lombre"
+  },
+  {
+    "id": "ludicolo",
+    "pokedexId": 272,
+    "name": "Ludicolo"
+  },
+  {
+    "id": "seedot",
+    "pokedexId": 273,
+    "name": "Grainipiot"
+  },
+  {
+    "id": "nuzleaf",
+    "pokedexId": 274,
+    "name": "Pifeuil"
+  },
+  {
+    "id": "shiftry",
+    "pokedexId": 275,
+    "name": "Tengalice"
+  },
+  {
+    "id": "taillow",
+    "pokedexId": 276,
+    "name": "Nirondelle"
+  },
+  {
+    "id": "swellow",
+    "pokedexId": 277,
+    "name": "Hélédelle"
+  },
+  {
+    "id": "wingull",
+    "pokedexId": 278,
+    "name": "Goélise"
+  },
+  {
+    "id": "pelipper",
+    "pokedexId": 279,
+    "name": "Bekipan"
+  },
+  {
+    "id": "ralts",
+    "pokedexId": 280,
+    "name": "Tarsal"
+  },
+  {
+    "id": "kirlia",
+    "pokedexId": 281,
+    "name": "Kirlia"
+  },
+  {
+    "id": "gardevoir",
+    "pokedexId": 282,
+    "name": "Gardevoir"
+  },
+  {
+    "id": "surskit",
+    "pokedexId": 283,
+    "name": "Arakdo"
+  },
+  {
+    "id": "masquerain",
+    "pokedexId": 284,
+    "name": "Maskadra"
+  },
+  {
+    "id": "shroomish",
+    "pokedexId": 285,
+    "name": "Balignon"
+  },
+  {
+    "id": "breloom",
+    "pokedexId": 286,
+    "name": "Chapignon"
+  },
+  {
+    "id": "slakoth",
+    "pokedexId": 287,
+    "name": "Parecool"
+  },
+  {
+    "id": "vigoroth",
+    "pokedexId": 288,
+    "name": "Vigoroth"
+  },
+  {
+    "id": "slaking",
+    "pokedexId": 289,
+    "name": "Monaflèmit"
+  },
+  {
+    "id": "nincada",
+    "pokedexId": 290,
+    "name": "Ningale"
+  },
+  {
+    "id": "ninjask",
+    "pokedexId": 291,
+    "name": "Ninjask"
+  },
+  {
+    "id": "shedinja",
+    "pokedexId": 292,
+    "name": "Munja"
+  },
+  {
+    "id": "whismur",
+    "pokedexId": 293,
+    "name": "Chuchmur"
+  },
+  {
+    "id": "loudred",
+    "pokedexId": 294,
+    "name": "Ramboum"
+  },
+  {
+    "id": "exploud",
+    "pokedexId": 295,
+    "name": "Brouhabam"
+  },
+  {
+    "id": "makuhita",
+    "pokedexId": 296,
+    "name": "Makuhita"
+  },
+  {
+    "id": "hariyama",
+    "pokedexId": 297,
+    "name": "Hariyama"
+  },
+  {
+    "id": "azurill",
+    "pokedexId": 298,
+    "name": "Azurill"
+  },
+  {
+    "id": "nosepass",
+    "pokedexId": 299,
+    "name": "Tarinor"
+  },
+  {
+    "id": "skitty",
+    "pokedexId": 300,
+    "name": "Skitty"
+  },
+  {
+    "id": "delcatty",
+    "pokedexId": 301,
+    "name": "Delcatty"
+  },
+  {
+    "id": "sableye",
+    "pokedexId": 302,
+    "name": "Ténéfix"
+  },
+  {
+    "id": "mawile",
+    "pokedexId": 303,
+    "name": "Mysdibule"
+  },
+  {
+    "id": "aron",
+    "pokedexId": 304,
+    "name": "Galekid"
+  },
+  {
+    "id": "lairon",
+    "pokedexId": 305,
+    "name": "Galegon"
+  },
+  {
+    "id": "aggron",
+    "pokedexId": 306,
+    "name": "Galeking"
+  },
+  {
+    "id": "meditite",
+    "pokedexId": 307,
+    "name": "Méditikka"
+  },
+  {
+    "id": "medicham",
+    "pokedexId": 308,
+    "name": "Charmina"
+  },
+  {
+    "id": "electrike",
+    "pokedexId": 309,
+    "name": "Dynavolt"
+  },
+  {
+    "id": "manectric",
+    "pokedexId": 310,
+    "name": "Élecsprint"
+  },
+  {
+    "id": "plusle",
+    "pokedexId": 311,
+    "name": "Posipi"
+  },
+  {
+    "id": "minun",
+    "pokedexId": 312,
+    "name": "Négapi"
+  },
+  {
+    "id": "volbeat",
+    "pokedexId": 313,
+    "name": "Muciole"
+  },
+  {
+    "id": "illumise",
+    "pokedexId": 314,
+    "name": "Lumivole"
+  },
+  {
+    "id": "roselia",
+    "pokedexId": 315,
+    "name": "Rosélia"
+  },
+  {
+    "id": "gulpin",
+    "pokedexId": 316,
+    "name": "Gloupti"
+  },
+  {
+    "id": "swalot",
+    "pokedexId": 317,
+    "name": "Avaltout"
+  },
+  {
+    "id": "carvanha",
+    "pokedexId": 318,
+    "name": "Carvanha"
+  },
+  {
+    "id": "sharpedo",
+    "pokedexId": 319,
+    "name": "Sharpedo"
+  },
+  {
+    "id": "wailmer",
+    "pokedexId": 320,
+    "name": "Wailmer"
+  },
+  {
+    "id": "wailord",
+    "pokedexId": 321,
+    "name": "Wailord"
+  },
+  {
+    "id": "numel",
+    "pokedexId": 322,
+    "name": "Chamallot"
+  },
+  {
+    "id": "camerupt",
+    "pokedexId": 323,
+    "name": "Camérupt"
+  },
+  {
+    "id": "torkoal",
+    "pokedexId": 324,
+    "name": "Chartor"
+  },
+  {
+    "id": "spoink",
+    "pokedexId": 325,
+    "name": "Spoink"
+  },
+  {
+    "id": "grumpig",
+    "pokedexId": 326,
+    "name": "Groret"
+  },
+  {
+    "id": "spinda",
+    "pokedexId": 327,
+    "name": "Spinda"
+  },
+  {
+    "id": "trapinch",
+    "pokedexId": 328,
+    "name": "Kraknoix"
+  },
+  {
+    "id": "vibrava",
+    "pokedexId": 329,
+    "name": "Vibraninf"
+  },
+  {
+    "id": "flygon",
+    "pokedexId": 330,
+    "name": "Libégon"
+  },
+  {
+    "id": "cacnea",
+    "pokedexId": 331,
+    "name": "Cacnea"
+  },
+  {
+    "id": "cacturne",
+    "pokedexId": 332,
+    "name": "Cacturne"
+  },
+  {
+    "id": "swablu",
+    "pokedexId": 333,
+    "name": "Tylton"
+  },
+  {
+    "id": "altaria",
+    "pokedexId": 334,
+    "name": "Altaria"
+  },
+  {
+    "id": "zangoose",
+    "pokedexId": 335,
+    "name": "Mangriff"
+  },
+  {
+    "id": "seviper",
+    "pokedexId": 336,
+    "name": "Séviper"
+  },
+  {
+    "id": "lunatone",
+    "pokedexId": 337,
+    "name": "Séléroc"
+  },
+  {
+    "id": "solrock",
+    "pokedexId": 338,
+    "name": "Solaroc"
+  },
+  {
+    "id": "barboach",
+    "pokedexId": 339,
+    "name": "Barloche"
+  },
+  {
+    "id": "whiscash",
+    "pokedexId": 340,
+    "name": "Barbicha"
+  },
+  {
+    "id": "corphish",
+    "pokedexId": 341,
+    "name": "Écrapince"
+  },
+  {
+    "id": "crawdaunt",
+    "pokedexId": 342,
+    "name": "Colhomard"
+  },
+  {
+    "id": "baltoy",
+    "pokedexId": 343,
+    "name": "Balbuto"
+  },
+  {
+    "id": "claydol",
+    "pokedexId": 344,
+    "name": "Kaorine"
+  },
+  {
+    "id": "lileep",
+    "pokedexId": 345,
+    "name": "Lilia"
+  },
+  {
+    "id": "cradily",
+    "pokedexId": 346,
+    "name": "Vacilys"
+  },
+  {
+    "id": "anorith",
+    "pokedexId": 347,
+    "name": "Anorith"
+  },
+  {
+    "id": "armaldo",
+    "pokedexId": 348,
+    "name": "Armaldo"
+  },
+  {
+    "id": "feebas",
+    "pokedexId": 349,
+    "name": "Barpau"
+  },
+  {
+    "id": "milotic",
+    "pokedexId": 350,
+    "name": "Milobellus"
+  },
+  {
+    "id": "castform",
+    "pokedexId": 351,
+    "name": "Morphéo"
+  },
+  {
+    "id": "kecleon",
+    "pokedexId": 352,
+    "name": "Kecleon"
+  },
+  {
+    "id": "shuppet",
+    "pokedexId": 353,
+    "name": "Polichombr"
+  },
+  {
+    "id": "banette",
+    "pokedexId": 354,
+    "name": "Branette"
+  },
+  {
+    "id": "duskull",
+    "pokedexId": 355,
+    "name": "Skelénox"
+  },
+  {
+    "id": "dusclops",
+    "pokedexId": 356,
+    "name": "Téraclope"
+  },
+  {
+    "id": "tropius",
+    "pokedexId": 357,
+    "name": "Tropius"
+  },
+  {
+    "id": "chimecho",
+    "pokedexId": 358,
+    "name": "Éoko"
+  },
+  {
+    "id": "absol",
+    "pokedexId": 359,
+    "name": "Absol"
+  },
+  {
+    "id": "wynaut",
+    "pokedexId": 360,
+    "name": "Okéoké"
+  },
+  {
+    "id": "snorunt",
+    "pokedexId": 361,
+    "name": "Stalgamin"
+  },
+  {
+    "id": "glalie",
+    "pokedexId": 362,
+    "name": "Oniglali"
+  },
+  {
+    "id": "spheal",
+    "pokedexId": 363,
+    "name": "Obalie"
+  },
+  {
+    "id": "sealeo",
+    "pokedexId": 364,
+    "name": "Phogleur"
+  },
+  {
+    "id": "walrein",
+    "pokedexId": 365,
+    "name": "Kaimorse"
+  },
+  {
+    "id": "clamperl",
+    "pokedexId": 366,
+    "name": "Coquiperl"
+  },
+  {
+    "id": "huntail",
+    "pokedexId": 367,
+    "name": "Serpang"
+  },
+  {
+    "id": "gorebyss",
+    "pokedexId": 368,
+    "name": "Rosabyss"
+  },
+  {
+    "id": "relicanth",
+    "pokedexId": 369,
+    "name": "Relicanth"
+  },
+  {
+    "id": "luvdisc",
+    "pokedexId": 370,
+    "name": "Lovdisc"
+  },
+  {
+    "id": "bagon",
+    "pokedexId": 371,
+    "name": "Draby"
+  },
+  {
+    "id": "shelgon",
+    "pokedexId": 372,
+    "name": "Drackhaus"
+  },
+  {
+    "id": "salamence",
+    "pokedexId": 373,
+    "name": "Drattak"
+  },
+  {
+    "id": "beldum",
+    "pokedexId": 374,
+    "name": "Terhal"
+  },
+  {
+    "id": "metang",
+    "pokedexId": 375,
+    "name": "Métang"
+  },
+  {
+    "id": "metagross",
+    "pokedexId": 376,
+    "name": "Métalosse"
+  },
+  {
+    "id": "regirock",
+    "pokedexId": 377,
+    "name": "Regirock"
+  },
+  {
+    "id": "regice",
+    "pokedexId": 378,
+    "name": "Regice"
+  },
+  {
+    "id": "registeel",
+    "pokedexId": 379,
+    "name": "Registeel"
+  },
+  {
+    "id": "latias",
+    "pokedexId": 380,
+    "name": "Latias"
+  },
+  {
+    "id": "latios",
+    "pokedexId": 381,
+    "name": "Latios"
+  },
+  {
+    "id": "kyogre",
+    "pokedexId": 382,
+    "name": "Kyogre"
+  },
+  {
+    "id": "groudon",
+    "pokedexId": 383,
+    "name": "Groudon"
+  },
+  {
+    "id": "rayquaza",
+    "pokedexId": 384,
+    "name": "Rayquaza"
+  },
+  {
+    "id": "jirachi",
+    "pokedexId": 385,
+    "name": "Jirachi"
+  },
+  {
+    "id": "deoxys",
+    "pokedexId": 386,
+    "name": "Deoxys"
+  },
+  {
+    "id": "turtwig",
+    "pokedexId": 387,
+    "name": "Tortipouss"
+  },
+  {
+    "id": "grotle",
+    "pokedexId": 388,
+    "name": "Boskara"
+  },
+  {
+    "id": "torterra",
+    "pokedexId": 389,
+    "name": "Torterra"
+  },
+  {
+    "id": "chimchar",
+    "pokedexId": 390,
+    "name": "Ouisticram"
+  },
+  {
+    "id": "monferno",
+    "pokedexId": 391,
+    "name": "Chimpenfeu"
+  },
+  {
+    "id": "infernape",
+    "pokedexId": 392,
+    "name": "Simiabraz"
+  },
+  {
+    "id": "piplup",
+    "pokedexId": 393,
+    "name": "Tiplouf"
+  },
+  {
+    "id": "prinplup",
+    "pokedexId": 394,
+    "name": "Prinplouf"
+  },
+  {
+    "id": "empoleon",
+    "pokedexId": 395,
+    "name": "Pingoléon"
+  },
+  {
+    "id": "starly",
+    "pokedexId": 396,
+    "name": "Étourmi"
+  },
+  {
+    "id": "staravia",
+    "pokedexId": 397,
+    "name": "Étourvol"
+  },
+  {
+    "id": "staraptor",
+    "pokedexId": 398,
+    "name": "Étouraptor"
+  },
+  {
+    "id": "bidoof",
+    "pokedexId": 399,
+    "name": "Keunotor"
+  },
+  {
+    "id": "bibarel",
+    "pokedexId": 400,
+    "name": "Castorno"
+  },
+  {
+    "id": "kricketot",
+    "pokedexId": 401,
+    "name": "Crikzik"
+  },
+  {
+    "id": "kricketune",
+    "pokedexId": 402,
+    "name": "Mélokrik"
+  },
+  {
+    "id": "shinx",
+    "pokedexId": 403,
+    "name": "Lixy"
+  },
+  {
+    "id": "luxio",
+    "pokedexId": 404,
+    "name": "Luxio"
+  },
+  {
+    "id": "luxray",
+    "pokedexId": 405,
+    "name": "Luxray"
+  },
+  {
+    "id": "budew",
+    "pokedexId": 406,
+    "name": "Rozbouton"
+  },
+  {
+    "id": "roserade",
+    "pokedexId": 407,
+    "name": "Roserade"
+  },
+  {
+    "id": "cranidos",
+    "pokedexId": 408,
+    "name": "Kranidos"
+  },
+  {
+    "id": "rampardos",
+    "pokedexId": 409,
+    "name": "Charkos"
+  },
+  {
+    "id": "shieldon",
+    "pokedexId": 410,
+    "name": "Dinoclier"
+  },
+  {
+    "id": "bastiodon",
+    "pokedexId": 411,
+    "name": "Bastiodon"
+  },
+  {
+    "id": "burmy",
+    "pokedexId": 412,
+    "name": "Cheniti"
+  },
+  {
+    "id": "wormadam",
+    "pokedexId": 413,
+    "name": "Cheniselle"
+  },
+  {
+    "id": "mothim",
+    "pokedexId": 414,
+    "name": "Papilord"
+  },
+  {
+    "id": "combee",
+    "pokedexId": 415,
+    "name": "Apitrini"
+  },
+  {
+    "id": "vespiquen",
+    "pokedexId": 416,
+    "name": "Apireine"
+  },
+  {
+    "id": "pachirisu",
+    "pokedexId": 417,
+    "name": "Pachirisu"
+  },
+  {
+    "id": "buizel",
+    "pokedexId": 418,
+    "name": "Mustébouée"
+  },
+  {
+    "id": "floatzel",
+    "pokedexId": 419,
+    "name": "Mustéflott"
+  },
+  {
+    "id": "cherubi",
+    "pokedexId": 420,
+    "name": "Ceribou"
+  },
+  {
+    "id": "cherrim",
+    "pokedexId": 421,
+    "name": "Ceriflor"
+  },
+  {
+    "id": "shellos",
+    "pokedexId": 422,
+    "name": "Sancoki"
+  },
+  {
+    "id": "gastrodon",
+    "pokedexId": 423,
+    "name": "Tritosor"
+  },
+  {
+    "id": "ambipom",
+    "pokedexId": 424,
+    "name": "Capidextre"
+  },
+  {
+    "id": "drifloon",
+    "pokedexId": 425,
+    "name": "Baudrive"
+  },
+  {
+    "id": "drifblim",
+    "pokedexId": 426,
+    "name": "Grodrive"
+  },
+  {
+    "id": "buneary",
+    "pokedexId": 427,
+    "name": "Laporeille"
+  },
+  {
+    "id": "lopunny",
+    "pokedexId": 428,
+    "name": "Lockpin"
+  },
+  {
+    "id": "mismagius",
+    "pokedexId": 429,
+    "name": "Magirêve"
+  },
+  {
+    "id": "honchkrow",
+    "pokedexId": 430,
+    "name": "Corboss"
+  },
+  {
+    "id": "glameow",
+    "pokedexId": 431,
+    "name": "Chaglam"
+  },
+  {
+    "id": "purugly",
+    "pokedexId": 432,
+    "name": "Chaffreux"
+  },
+  {
+    "id": "chingling",
+    "pokedexId": 433,
+    "name": "Korillon"
+  },
+  {
+    "id": "stunky",
+    "pokedexId": 434,
+    "name": "Moufouette"
+  },
+  {
+    "id": "skuntank",
+    "pokedexId": 435,
+    "name": "Moufflair"
+  },
+  {
+    "id": "bronzor",
+    "pokedexId": 436,
+    "name": "Archéomire"
+  },
+  {
+    "id": "bronzong",
+    "pokedexId": 437,
+    "name": "Archéodong"
+  },
+  {
+    "id": "bonsly",
+    "pokedexId": 438,
+    "name": "Manzaï"
+  },
+  {
+    "id": "mime-jr",
+    "pokedexId": 439,
+    "name": "Mime Jr."
+  },
+  {
+    "id": "happiny",
+    "pokedexId": 440,
+    "name": "Ptiravi"
+  },
+  {
+    "id": "chatot",
+    "pokedexId": 441,
+    "name": "Pijako"
+  },
+  {
+    "id": "spiritomb",
+    "pokedexId": 442,
+    "name": "Spiritomb"
+  },
+  {
+    "id": "gible",
+    "pokedexId": 443,
+    "name": "Griknot"
+  },
+  {
+    "id": "gabite",
+    "pokedexId": 444,
+    "name": "Carmache"
+  },
+  {
+    "id": "garchomp",
+    "pokedexId": 445,
+    "name": "Carchacrok"
+  },
+  {
+    "id": "munchlax",
+    "pokedexId": 446,
+    "name": "Goinfrex"
+  },
+  {
+    "id": "riolu",
+    "pokedexId": 447,
+    "name": "Riolu"
+  },
+  {
+    "id": "lucario",
+    "pokedexId": 448,
+    "name": "Lucario"
+  },
+  {
+    "id": "hippopotas",
+    "pokedexId": 449,
+    "name": "Hippopotas"
+  },
+  {
+    "id": "hippowdon",
+    "pokedexId": 450,
+    "name": "Hippodocus"
+  },
+  {
+    "id": "skorupi",
+    "pokedexId": 451,
+    "name": "Rapion"
+  },
+  {
+    "id": "drapion",
+    "pokedexId": 452,
+    "name": "Drascore"
+  },
+  {
+    "id": "croagunk",
+    "pokedexId": 453,
+    "name": "Cradopaud"
+  },
+  {
+    "id": "toxicroak",
+    "pokedexId": 454,
+    "name": "Coatox"
+  },
+  {
+    "id": "carnivine",
+    "pokedexId": 455,
+    "name": "Vortente"
+  },
+  {
+    "id": "finneon",
+    "pokedexId": 456,
+    "name": "Écayon"
+  },
+  {
+    "id": "lumineon",
+    "pokedexId": 457,
+    "name": "Luminéon"
+  },
+  {
+    "id": "mantyke",
+    "pokedexId": 458,
+    "name": "Babimanta"
+  },
+  {
+    "id": "snover",
+    "pokedexId": 459,
+    "name": "Blizzi"
+  },
+  {
+    "id": "abomasnow",
+    "pokedexId": 460,
+    "name": "Blizzaroi"
+  },
+  {
+    "id": "weavile",
+    "pokedexId": 461,
+    "name": "Dimoret"
+  },
+  {
+    "id": "magnezone",
+    "pokedexId": 462,
+    "name": "Magnézone"
+  },
+  {
+    "id": "lickilicky",
+    "pokedexId": 463,
+    "name": "Coudlangue"
+  },
+  {
+    "id": "rhyperior",
+    "pokedexId": 464,
+    "name": "Rhinastoc"
+  },
+  {
+    "id": "tangrowth",
+    "pokedexId": 465,
+    "name": "Bouldeneu"
+  },
+  {
+    "id": "electivire",
+    "pokedexId": 466,
+    "name": "Élekable"
+  },
+  {
+    "id": "magmortar",
+    "pokedexId": 467,
+    "name": "Maganon"
+  },
+  {
+    "id": "togekiss",
+    "pokedexId": 468,
+    "name": "Togekiss"
+  },
+  {
+    "id": "yanmega",
+    "pokedexId": 469,
+    "name": "Yanmega"
+  },
+  {
+    "id": "leafeon",
+    "pokedexId": 470,
+    "name": "Phyllali"
+  },
+  {
+    "id": "glaceon",
+    "pokedexId": 471,
+    "name": "Givrali"
+  },
+  {
+    "id": "gliscor",
+    "pokedexId": 472,
+    "name": "Scorvol"
+  },
+  {
+    "id": "mamoswine",
+    "pokedexId": 473,
+    "name": "Mammochon"
+  },
+  {
+    "id": "porygon-z",
+    "pokedexId": 474,
+    "name": "Porygon-Z"
+  },
+  {
+    "id": "gallade",
+    "pokedexId": 475,
+    "name": "Gallame"
+  },
+  {
+    "id": "probopass",
+    "pokedexId": 476,
+    "name": "Tarinorme"
+  },
+  {
+    "id": "dusknoir",
+    "pokedexId": 477,
+    "name": "Noctunoir"
+  },
+  {
+    "id": "froslass",
+    "pokedexId": 478,
+    "name": "Momartik"
+  },
+  {
+    "id": "rotom",
+    "pokedexId": 479,
+    "name": "Motisma"
+  },
+  {
+    "id": "uxie",
+    "pokedexId": 480,
+    "name": "Créhelf"
+  },
+  {
+    "id": "mesprit",
+    "pokedexId": 481,
+    "name": "Créfollet"
+  },
+  {
+    "id": "azelf",
+    "pokedexId": 482,
+    "name": "Créfadet"
+  },
+  {
+    "id": "dialga",
+    "pokedexId": 483,
+    "name": "Dialga"
+  },
+  {
+    "id": "palkia",
+    "pokedexId": 484,
+    "name": "Palkia"
+  },
+  {
+    "id": "heatran",
+    "pokedexId": 485,
+    "name": "Heatran"
+  },
+  {
+    "id": "regigigas",
+    "pokedexId": 486,
+    "name": "Regigigas"
+  },
+  {
+    "id": "giratina",
+    "pokedexId": 487,
+    "name": "Giratina"
+  },
+  {
+    "id": "cresselia",
+    "pokedexId": 488,
+    "name": "Cresselia"
+  },
+  {
+    "id": "phione",
+    "pokedexId": 489,
+    "name": "Phione"
+  },
+  {
+    "id": "manaphy",
+    "pokedexId": 490,
+    "name": "Manaphy"
+  },
+  {
+    "id": "darkrai",
+    "pokedexId": 491,
+    "name": "Darkrai"
+  },
+  {
+    "id": "shaymin",
+    "pokedexId": 492,
+    "name": "Shaymin"
+  },
+  {
+    "id": "arceus",
+    "pokedexId": 493,
+    "name": "Arceus"
+  },
+  {
+    "id": "victini",
+    "pokedexId": 494,
+    "name": "Victini"
+  },
+  {
+    "id": "snivy",
+    "pokedexId": 495,
+    "name": "Vipélierre"
+  },
+  {
+    "id": "servine",
+    "pokedexId": 496,
+    "name": "Lianaja"
+  },
+  {
+    "id": "serperior",
+    "pokedexId": 497,
+    "name": "Majaspic"
+  },
+  {
+    "id": "tepig",
+    "pokedexId": 498,
+    "name": "Gruikui"
+  },
+  {
+    "id": "pignite",
+    "pokedexId": 499,
+    "name": "Grotichon"
+  },
+  {
+    "id": "emboar",
+    "pokedexId": 500,
+    "name": "Roitiflam"
+  },
+  {
+    "id": "oshawott",
+    "pokedexId": 501,
+    "name": "Moustillon"
+  },
+  {
+    "id": "dewott",
+    "pokedexId": 502,
+    "name": "Mateloutre"
+  },
+  {
+    "id": "samurott",
+    "pokedexId": 503,
+    "name": "Clamiral"
+  },
+  {
+    "id": "samurott-hisui",
+    "pokedexId": 503,
+    "apiId": 10236,
+    "name": "Clamiral d'Hisui"
+  },
+  {
+    "id": "patrat",
+    "pokedexId": 504,
+    "name": "Ratentif"
+  },
+  {
+    "id": "watchog",
+    "pokedexId": 505,
+    "name": "Miradar"
+  },
+  {
+    "id": "lillipup",
+    "pokedexId": 506,
+    "name": "Ponchiot"
+  },
+  {
+    "id": "herdier",
+    "pokedexId": 507,
+    "name": "Ponchien"
+  },
+  {
+    "id": "stoutland",
+    "pokedexId": 508,
+    "name": "Mastouffe"
+  },
+  {
+    "id": "purrloin",
+    "pokedexId": 509,
+    "name": "Chacripan"
+  },
+  {
+    "id": "liepard",
+    "pokedexId": 510,
+    "name": "Léopardus"
+  },
+  {
+    "id": "pansage",
+    "pokedexId": 511,
+    "name": "Feuillajou"
+  },
+  {
+    "id": "simisage",
+    "pokedexId": 512,
+    "name": "Feuiloutan"
+  },
+  {
+    "id": "pansear",
+    "pokedexId": 513,
+    "name": "Flamajou"
+  },
+  {
+    "id": "simisear",
+    "pokedexId": 514,
+    "name": "Flamoutan"
+  },
+  {
+    "id": "panpour",
+    "pokedexId": 515,
+    "name": "Flotajou"
+  },
+  {
+    "id": "simipour",
+    "pokedexId": 516,
+    "name": "Flotoutan"
+  },
+  {
+    "id": "munna",
+    "pokedexId": 517,
+    "name": "Munna"
+  },
+  {
+    "id": "musharna",
+    "pokedexId": 518,
+    "name": "Mushana"
+  },
+  {
+    "id": "pidove",
+    "pokedexId": 519,
+    "name": "Poichigeon"
+  },
+  {
+    "id": "tranquill",
+    "pokedexId": 520,
+    "name": "Colombeau"
+  },
+  {
+    "id": "unfezant",
+    "pokedexId": 521,
+    "name": "Déflaisan"
+  },
+  {
+    "id": "blitzle",
+    "pokedexId": 522,
+    "name": "Zébibron"
+  },
+  {
+    "id": "zebstrika",
+    "pokedexId": 523,
+    "name": "Zéblitz"
+  },
+  {
+    "id": "roggenrola",
+    "pokedexId": 524,
+    "name": "Nodulithe"
+  },
+  {
+    "id": "boldore",
+    "pokedexId": 525,
+    "name": "Géolithe"
+  },
+  {
+    "id": "gigalith",
+    "pokedexId": 526,
+    "name": "Gigalithe"
+  },
+  {
+    "id": "woobat",
+    "pokedexId": 527,
+    "name": "Chovsourir"
+  },
+  {
+    "id": "swoobat",
+    "pokedexId": 528,
+    "name": "Rhinolove"
+  },
+  {
+    "id": "drilbur",
+    "pokedexId": 529,
+    "name": "Rototaupe"
+  },
+  {
+    "id": "excadrill",
+    "pokedexId": 530,
+    "name": "Minotaupe"
+  },
+  {
+    "id": "audino",
+    "pokedexId": 531,
+    "name": "Nanméouïe"
+  },
+  {
+    "id": "timburr",
+    "pokedexId": 532,
+    "name": "Charpenti"
+  },
+  {
+    "id": "gurdurr",
+    "pokedexId": 533,
+    "name": "Ouvrifier"
+  },
+  {
+    "id": "conkeldurr",
+    "pokedexId": 534,
+    "name": "Bétochef"
+  },
+  {
+    "id": "tympole",
+    "pokedexId": 535,
+    "name": "Tritonde"
+  },
+  {
+    "id": "palpitoad",
+    "pokedexId": 536,
+    "name": "Batracné"
+  },
+  {
+    "id": "seismitoad",
+    "pokedexId": 537,
+    "name": "Crapustule"
+  },
+  {
+    "id": "throh",
+    "pokedexId": 538,
+    "name": "Judokrak"
+  },
+  {
+    "id": "sawk",
+    "pokedexId": 539,
+    "name": "Karaclée"
+  },
+  {
+    "id": "sewaddle",
+    "pokedexId": 540,
+    "name": "Larveyette"
+  },
+  {
+    "id": "swadloon",
+    "pokedexId": 541,
+    "name": "Couverdure"
+  },
+  {
+    "id": "leavanny",
+    "pokedexId": 542,
+    "name": "Manternel"
+  },
+  {
+    "id": "venipede",
+    "pokedexId": 543,
+    "name": "Venipatte"
+  },
+  {
+    "id": "whirlipede",
+    "pokedexId": 544,
+    "name": "Scobolide"
+  },
+  {
+    "id": "scolipede",
+    "pokedexId": 545,
+    "name": "Brutapode"
+  },
+  {
+    "id": "cottonee",
+    "pokedexId": 546,
+    "name": "Doudouvet"
+  },
+  {
+    "id": "whimsicott",
+    "pokedexId": 547,
+    "name": "Farfaduvet"
+  },
+  {
+    "id": "petilil",
+    "pokedexId": 548,
+    "name": "Chlorobule"
+  },
+  {
+    "id": "lilligant",
+    "pokedexId": 549,
+    "name": "Fragilady"
+  },
+  {
+    "id": "lilligant-hisui",
+    "pokedexId": 549,
+    "apiId": 10237,
+    "name": "Fragilady d'Hisui"
+  },
+  {
+    "id": "basculin",
+    "pokedexId": 550,
+    "name": "Bargantua"
+  },
+  {
+    "id": "sandile",
+    "pokedexId": 551,
+    "name": "Mascaïman"
+  },
+  {
+    "id": "krokorok",
+    "pokedexId": 552,
+    "name": "Escroco"
+  },
+  {
+    "id": "krookodile",
+    "pokedexId": 553,
+    "name": "Crocorible"
+  },
+  {
+    "id": "darumaka",
+    "pokedexId": 554,
+    "name": "Darumarond"
+  },
+  {
+    "id": "darumaka-galar",
+    "pokedexId": 554,
+    "apiId": 10176,
+    "name": "Darumarond de Galar"
+  },
+  {
+    "id": "darmanitan",
+    "pokedexId": 555,
+    "name": "Darumacho"
+  },
+  {
+    "id": "darmanitan-galar",
+    "pokedexId": 555,
+    "apiId": 10177,
+    "name": "Darumacho de Galar"
+  },
+  {
+    "id": "maractus",
+    "pokedexId": 556,
+    "name": "Maracachi"
+  },
+  {
+    "id": "dwebble",
+    "pokedexId": 557,
+    "name": "Crabicoque"
+  },
+  {
+    "id": "crustle",
+    "pokedexId": 558,
+    "name": "Crabaraque"
+  },
+  {
+    "id": "scraggy",
+    "pokedexId": 559,
+    "name": "Baggiguane"
+  },
+  {
+    "id": "scrafty",
+    "pokedexId": 560,
+    "name": "Baggaïd"
+  },
+  {
+    "id": "sigilyph",
+    "pokedexId": 561,
+    "name": "Cryptéro"
+  },
+  {
+    "id": "yamask",
+    "pokedexId": 562,
+    "name": "Tutafeh"
+  },
+  {
+    "id": "yamask-galar",
+    "pokedexId": 562,
+    "apiId": 10179,
+    "name": "Tutafeh de Galar"
+  },
+  {
+    "id": "cofagrigus",
+    "pokedexId": 563,
+    "name": "Tutankafer"
+  },
+  {
+    "id": "tirtouga",
+    "pokedexId": 564,
+    "name": "Carapagos"
+  },
+  {
+    "id": "carracosta",
+    "pokedexId": 565,
+    "name": "Mégapagos"
+  },
+  {
+    "id": "archen",
+    "pokedexId": 566,
+    "name": "Arkéapti"
+  },
+  {
+    "id": "archeops",
+    "pokedexId": 567,
+    "name": "Aéroptéryx"
+  },
+  {
+    "id": "trubbish",
+    "pokedexId": 568,
+    "name": "Miamiasme"
+  },
+  {
+    "id": "garbodor",
+    "pokedexId": 569,
+    "name": "Miasmax"
+  },
+  {
+    "id": "zorua",
+    "pokedexId": 570,
+    "name": "Zorua"
+  },
+  {
+    "id": "zorua-hisui",
+    "pokedexId": 570,
+    "apiId": 10238,
+    "name": "Zorua d'Hisui"
+  },
+  {
+    "id": "zoroark",
+    "pokedexId": 571,
+    "name": "Zoroark"
+  },
+  {
+    "id": "zoroark-hisui",
+    "pokedexId": 571,
+    "apiId": 10239,
+    "name": "Zoroark d'Hisui"
+  },
+  {
+    "id": "minccino",
+    "pokedexId": 572,
+    "name": "Chinchidou"
+  },
+  {
+    "id": "cinccino",
+    "pokedexId": 573,
+    "name": "Pashmilla"
+  },
+  {
+    "id": "gothita",
+    "pokedexId": 574,
+    "name": "Scrutella"
+  },
+  {
+    "id": "gothorita",
+    "pokedexId": 575,
+    "name": "Mesmérella"
+  },
+  {
+    "id": "gothitelle",
+    "pokedexId": 576,
+    "name": "Sidérella"
+  },
+  {
+    "id": "solosis",
+    "pokedexId": 577,
+    "name": "Nucléos"
+  },
+  {
+    "id": "duosion",
+    "pokedexId": 578,
+    "name": "Méios"
+  },
+  {
+    "id": "reuniclus",
+    "pokedexId": 579,
+    "name": "Symbios"
+  },
+  {
+    "id": "ducklett",
+    "pokedexId": 580,
+    "name": "Couaneton"
+  },
+  {
+    "id": "swanna",
+    "pokedexId": 581,
+    "name": "Lakmécygne"
+  },
+  {
+    "id": "vanillite",
+    "pokedexId": 582,
+    "name": "Sorbébé"
+  },
+  {
+    "id": "vanillish",
+    "pokedexId": 583,
+    "name": "Sorboul"
+  },
+  {
+    "id": "vanilluxe",
+    "pokedexId": 584,
+    "name": "Sorbouboul"
+  },
+  {
+    "id": "deerling",
+    "pokedexId": 585,
+    "name": "Vivaldaim"
+  },
+  {
+    "id": "sawsbuck",
+    "pokedexId": 586,
+    "name": "Haydaim"
+  },
+  {
+    "id": "emolga",
+    "pokedexId": 587,
+    "name": "Emolga"
+  },
+  {
+    "id": "karrablast",
+    "pokedexId": 588,
+    "name": "Carabing"
+  },
+  {
+    "id": "escavalier",
+    "pokedexId": 589,
+    "name": "Lançargot"
+  },
+  {
+    "id": "foongus",
+    "pokedexId": 590,
+    "name": "Trompignon"
+  },
+  {
+    "id": "amoonguss",
+    "pokedexId": 591,
+    "name": "Gaulet"
+  },
+  {
+    "id": "frillish",
+    "pokedexId": 592,
+    "name": "Viskuse"
+  },
+  {
+    "id": "jellicent",
+    "pokedexId": 593,
+    "name": "Moyade"
+  },
+  {
+    "id": "alomomola",
+    "pokedexId": 594,
+    "name": "Mamanbo"
+  },
+  {
+    "id": "joltik",
+    "pokedexId": 595,
+    "name": "Statitik"
+  },
+  {
+    "id": "galvantula",
+    "pokedexId": 596,
+    "name": "Mygavolt"
+  },
+  {
+    "id": "ferroseed",
+    "pokedexId": 597,
+    "name": "Grindur"
+  },
+  {
+    "id": "ferrothorn",
+    "pokedexId": 598,
+    "name": "Noacier"
+  },
+  {
+    "id": "klink",
+    "pokedexId": 599,
+    "name": "Tic"
+  },
+  {
+    "id": "klang",
+    "pokedexId": 600,
+    "name": "Clic"
+  },
+  {
+    "id": "klinklang",
+    "pokedexId": 601,
+    "name": "Cliticlic"
+  },
+  {
+    "id": "tynamo",
+    "pokedexId": 602,
+    "name": "Anchwatt"
+  },
+  {
+    "id": "eelektrik",
+    "pokedexId": 603,
+    "name": "Lampéroie"
+  },
+  {
+    "id": "eelektross",
+    "pokedexId": 604,
+    "name": "Ohmassacre"
+  },
+  {
+    "id": "elgyem",
+    "pokedexId": 605,
+    "name": "Lewsor"
+  },
+  {
+    "id": "beheeyem",
+    "pokedexId": 606,
+    "name": "Neitram"
+  },
+  {
+    "id": "litwick",
+    "pokedexId": 607,
+    "name": "Funécire"
+  },
+  {
+    "id": "lampent",
+    "pokedexId": 608,
+    "name": "Mélancolux"
+  },
+  {
+    "id": "chandelure",
+    "pokedexId": 609,
+    "name": "Lugulabre"
+  },
+  {
+    "id": "axew",
+    "pokedexId": 610,
+    "name": "Coupenotte"
+  },
+  {
+    "id": "fraxure",
+    "pokedexId": 611,
+    "name": "Incisache"
+  },
+  {
+    "id": "haxorus",
+    "pokedexId": 612,
+    "name": "Tranchodon"
+  },
+  {
+    "id": "cubchoo",
+    "pokedexId": 613,
+    "name": "Polarhume"
+  },
+  {
+    "id": "beartic",
+    "pokedexId": 614,
+    "name": "Polagriffe"
+  },
+  {
+    "id": "cryogonal",
+    "pokedexId": 615,
+    "name": "Hexagel"
+  },
+  {
+    "id": "shelmet",
+    "pokedexId": 616,
+    "name": "Escargaume"
+  },
+  {
+    "id": "accelgor",
+    "pokedexId": 617,
+    "name": "Limaspeed"
+  },
+  {
+    "id": "stunfisk",
+    "pokedexId": 618,
+    "name": "Limonde"
+  },
+  {
+    "id": "stunfisk-galar",
+    "pokedexId": 618,
+    "apiId": 10180,
+    "name": "Limonde de Galar"
+  },
+  {
+    "id": "mienfoo",
+    "pokedexId": 619,
+    "name": "Kungfouine"
+  },
+  {
+    "id": "mienshao",
+    "pokedexId": 620,
+    "name": "Shaofouine"
+  },
+  {
+    "id": "druddigon",
+    "pokedexId": 621,
+    "name": "Drakkarmin"
+  },
+  {
+    "id": "golett",
+    "pokedexId": 622,
+    "name": "Gringolem"
+  },
+  {
+    "id": "golurk",
+    "pokedexId": 623,
+    "name": "Golemastoc"
+  },
+  {
+    "id": "pawniard",
+    "pokedexId": 624,
+    "name": "Scalpion"
+  },
+  {
+    "id": "bisharp",
+    "pokedexId": 625,
+    "name": "Scalproie"
+  },
+  {
+    "id": "bouffalant",
+    "pokedexId": 626,
+    "name": "Frison"
+  },
+  {
+    "id": "rufflet",
+    "pokedexId": 627,
+    "name": "Furaiglon"
+  },
+  {
+    "id": "braviary",
+    "pokedexId": 628,
+    "name": "Gueriaigle"
+  },
+  {
+    "id": "braviary-hisui",
+    "pokedexId": 628,
+    "apiId": 10240,
+    "name": "Gueriaigle d'Hisui"
+  },
+  {
+    "id": "vullaby",
+    "pokedexId": 629,
+    "name": "Vostourno"
+  },
+  {
+    "id": "mandibuzz",
+    "pokedexId": 630,
+    "name": "Vaututrice"
+  },
+  {
+    "id": "heatmor",
+    "pokedexId": 631,
+    "name": "Aflamanoir"
+  },
+  {
+    "id": "durant",
+    "pokedexId": 632,
+    "name": "Fermite"
+  },
+  {
+    "id": "deino",
+    "pokedexId": 633,
+    "name": "Solochi"
+  },
+  {
+    "id": "zweilous",
+    "pokedexId": 634,
+    "name": "Diamat"
+  },
+  {
+    "id": "hydreigon",
+    "pokedexId": 635,
+    "name": "Trioxhydre"
+  },
+  {
+    "id": "larvesta",
+    "pokedexId": 636,
+    "name": "Pyronille"
+  },
+  {
+    "id": "volcarona",
+    "pokedexId": 637,
+    "name": "Pyrax"
+  },
+  {
+    "id": "cobalion",
+    "pokedexId": 638,
+    "name": "Cobaltium"
+  },
+  {
+    "id": "terrakion",
+    "pokedexId": 639,
+    "name": "Terrakium"
+  },
+  {
+    "id": "virizion",
+    "pokedexId": 640,
+    "name": "Viridium"
+  },
+  {
+    "id": "tornadus",
+    "pokedexId": 641,
+    "name": "Boréas"
+  },
+  {
+    "id": "thundurus",
+    "pokedexId": 642,
+    "name": "Fulguris"
+  },
+  {
+    "id": "reshiram",
+    "pokedexId": 643,
+    "name": "Reshiram"
+  },
+  {
+    "id": "zekrom",
+    "pokedexId": 644,
+    "name": "Zekrom"
+  },
+  {
+    "id": "landorus",
+    "pokedexId": 645,
+    "name": "Démétéros"
+  },
+  {
+    "id": "kyurem",
+    "pokedexId": 646,
+    "name": "Kyurem"
+  },
+  {
+    "id": "keldeo",
+    "pokedexId": 647,
+    "name": "Keldeo"
+  },
+  {
+    "id": "meloetta",
+    "pokedexId": 648,
+    "name": "Meloetta"
+  },
+  {
+    "id": "genesect",
+    "pokedexId": 649,
+    "name": "Genesect"
+  },
+  {
+    "id": "chespin",
+    "pokedexId": 650,
+    "name": "Marisson"
+  },
+  {
+    "id": "quilladin",
+    "pokedexId": 651,
+    "name": "Boguérisse"
+  },
+  {
+    "id": "chesnaught",
+    "pokedexId": 652,
+    "name": "Blindépique"
+  },
+  {
+    "id": "fennekin",
+    "pokedexId": 653,
+    "name": "Feunnec"
+  },
+  {
+    "id": "braixen",
+    "pokedexId": 654,
+    "name": "Roussil"
+  },
+  {
+    "id": "delphox",
+    "pokedexId": 655,
+    "name": "Goupelin"
+  },
+  {
+    "id": "froakie",
+    "pokedexId": 656,
+    "name": "Grenousse"
+  },
+  {
+    "id": "frogadier",
+    "pokedexId": 657,
+    "name": "Croâporal"
+  },
+  {
+    "id": "greninja",
+    "pokedexId": 658,
+    "name": "Amphinobi"
+  },
+  {
+    "id": "bunnelby",
+    "pokedexId": 659,
+    "name": "Sapereau"
+  },
+  {
+    "id": "diggersby",
+    "pokedexId": 660,
+    "name": "Excavarenne"
+  },
+  {
+    "id": "fletchling",
+    "pokedexId": 661,
+    "name": "Passerouge"
+  },
+  {
+    "id": "fletchinder",
+    "pokedexId": 662,
+    "name": "Braisillon"
+  },
+  {
+    "id": "talonflame",
+    "pokedexId": 663,
+    "name": "Flambusard"
+  },
+  {
+    "id": "scatterbug",
+    "pokedexId": 664,
+    "name": "Lépidonille"
+  },
+  {
+    "id": "spewpa",
+    "pokedexId": 665,
+    "name": "Pérégrain"
+  },
+  {
+    "id": "vivillon",
+    "pokedexId": 666,
+    "name": "Prismillon"
+  },
+  {
+    "id": "litleo",
+    "pokedexId": 667,
+    "name": "Hélionceau"
+  },
+  {
+    "id": "pyroar",
+    "pokedexId": 668,
+    "name": "Némélios"
+  },
+  {
+    "id": "flabebe",
+    "pokedexId": 669,
+    "name": "Flabébé"
+  },
+  {
+    "id": "floette",
+    "pokedexId": 670,
+    "name": "Floette"
+  },
+  {
+    "id": "florges",
+    "pokedexId": 671,
+    "name": "Florges"
+  },
+  {
+    "id": "skiddo",
+    "pokedexId": 672,
+    "name": "Cabriolaine"
+  },
+  {
+    "id": "gogoat",
+    "pokedexId": 673,
+    "name": "Chevroum"
+  },
+  {
+    "id": "pancham",
+    "pokedexId": 674,
+    "name": "Pandespiègle"
+  },
+  {
+    "id": "pangoro",
+    "pokedexId": 675,
+    "name": "Pandarbare"
+  },
+  {
+    "id": "furfrou",
+    "pokedexId": 676,
+    "name": "Couafarel"
+  },
+  {
+    "id": "espurr",
+    "pokedexId": 677,
+    "name": "Psystigri"
+  },
+  {
+    "id": "meowstic",
+    "pokedexId": 678,
+    "name": "Mistigrix"
+  },
+  {
+    "id": "honedge",
+    "pokedexId": 679,
+    "name": "Monorpale"
+  },
+  {
+    "id": "doublade",
+    "pokedexId": 680,
+    "name": "Dimoclès"
+  },
+  {
+    "id": "aegislash",
+    "pokedexId": 681,
+    "name": "Exagide"
+  },
+  {
+    "id": "spritzee",
+    "pokedexId": 682,
+    "name": "Fluvetin"
+  },
+  {
+    "id": "aromatisse",
+    "pokedexId": 683,
+    "name": "Cocotine"
+  },
+  {
+    "id": "swirlix",
+    "pokedexId": 684,
+    "name": "Sucroquin"
+  },
+  {
+    "id": "slurpuff",
+    "pokedexId": 685,
+    "name": "Cupcanaille"
+  },
+  {
+    "id": "inkay",
+    "pokedexId": 686,
+    "name": "Sepiatop"
+  },
+  {
+    "id": "malamar",
+    "pokedexId": 687,
+    "name": "Sepiatroce"
+  },
+  {
+    "id": "binacle",
+    "pokedexId": 688,
+    "name": "Opermine"
+  },
+  {
+    "id": "barbaracle",
+    "pokedexId": 689,
+    "name": "Golgopathe"
+  },
+  {
+    "id": "skrelp",
+    "pokedexId": 690,
+    "name": "Venalgue"
+  },
+  {
+    "id": "dragalge",
+    "pokedexId": 691,
+    "name": "Kravarech"
+  },
+  {
+    "id": "clauncher",
+    "pokedexId": 692,
+    "name": "Flingouste"
+  },
+  {
+    "id": "clawitzer",
+    "pokedexId": 693,
+    "name": "Gamblast"
+  },
+  {
+    "id": "helioptile",
+    "pokedexId": 694,
+    "name": "Galvaran"
+  },
+  {
+    "id": "heliolisk",
+    "pokedexId": 695,
+    "name": "Iguolta"
+  },
+  {
+    "id": "tyrunt",
+    "pokedexId": 696,
+    "name": "Ptyranidur"
+  },
+  {
+    "id": "tyrantrum",
+    "pokedexId": 697,
+    "name": "Rexillius"
+  },
+  {
+    "id": "amaura",
+    "pokedexId": 698,
+    "name": "Amagara"
+  },
+  {
+    "id": "aurorus",
+    "pokedexId": 699,
+    "name": "Dragmara"
+  },
+  {
+    "id": "sylveon",
+    "pokedexId": 700,
+    "name": "Nymphali"
+  },
+  {
+    "id": "hawlucha",
+    "pokedexId": 701,
+    "name": "Brutalibré"
+  },
+  {
+    "id": "dedenne",
+    "pokedexId": 702,
+    "name": "Dedenne"
+  },
+  {
+    "id": "carbink",
+    "pokedexId": 703,
+    "name": "Strassie"
+  },
+  {
+    "id": "goomy",
+    "pokedexId": 704,
+    "name": "Mucuscule"
+  },
+  {
+    "id": "sliggoo",
+    "pokedexId": 705,
+    "name": "Colimucus"
+  },
+  {
+    "id": "sliggoo-hisui",
+    "pokedexId": 705,
+    "apiId": 10241,
+    "name": "Colimucus d'Hisui"
+  },
+  {
+    "id": "goodra",
+    "pokedexId": 706,
+    "name": "Muplodocus"
+  },
+  {
+    "id": "goodra-hisui",
+    "pokedexId": 706,
+    "apiId": 10242,
+    "name": "Muplodocus d'Hisui"
+  },
+  {
+    "id": "klefki",
+    "pokedexId": 707,
+    "name": "Trousselin"
+  },
+  {
+    "id": "phantump",
+    "pokedexId": 708,
+    "name": "Brocélôme"
+  },
+  {
+    "id": "trevenant",
+    "pokedexId": 709,
+    "name": "Desséliande"
+  },
+  {
+    "id": "pumpkaboo",
+    "pokedexId": 710,
+    "name": "Pitrouille"
+  },
+  {
+    "id": "gourgeist",
+    "pokedexId": 711,
+    "name": "Banshitrouye"
+  },
+  {
+    "id": "bergmite",
+    "pokedexId": 712,
+    "name": "Grelaçon"
+  },
+  {
+    "id": "avalugg",
+    "pokedexId": 713,
+    "name": "Séracrawl"
+  },
+  {
+    "id": "avalugg-hisui",
+    "pokedexId": 713,
+    "apiId": 10243,
+    "name": "Séracrawl d'Hisui"
+  },
+  {
+    "id": "noibat",
+    "pokedexId": 714,
+    "name": "Sonistrelle"
+  },
+  {
+    "id": "noivern",
+    "pokedexId": 715,
+    "name": "Bruyverne"
+  },
+  {
+    "id": "xerneas",
+    "pokedexId": 716,
+    "name": "Xerneas"
+  },
+  {
+    "id": "yveltal",
+    "pokedexId": 717,
+    "name": "Yveltal"
+  },
+  {
+    "id": "zygarde",
+    "pokedexId": 718,
+    "name": "Zygarde"
+  },
+  {
+    "id": "diancie",
+    "pokedexId": 719,
+    "name": "Diancie"
+  },
+  {
+    "id": "hoopa",
+    "pokedexId": 720,
+    "name": "Hoopa"
+  },
+  {
+    "id": "volcanion",
+    "pokedexId": 721,
+    "name": "Volcanion"
+  },
+  {
+    "id": "rowlet",
+    "pokedexId": 722,
+    "name": "Brindibou"
+  },
+  {
+    "id": "decidueye-hisui",
+    "pokedexId": 722,
+    "apiId": 10244,
+    "name": "Archéduc d'Hisui"
+  },
+  {
+    "id": "dartrix",
+    "pokedexId": 723,
+    "name": "Efflèche"
+  },
+  {
+    "id": "decidueye",
+    "pokedexId": 724,
+    "name": "Archéduc"
+  },
+  {
+    "id": "litten",
+    "pokedexId": 725,
+    "name": "Flamiaou"
+  },
+  {
+    "id": "torracat",
+    "pokedexId": 726,
+    "name": "Matoufeu"
+  },
+  {
+    "id": "incineroar",
+    "pokedexId": 727,
+    "name": "Félinferno"
+  },
+  {
+    "id": "popplio",
+    "pokedexId": 728,
+    "name": "Otaquin"
+  },
+  {
+    "id": "brionne",
+    "pokedexId": 729,
+    "name": "Otarlette"
+  },
+  {
+    "id": "primarina",
+    "pokedexId": 730,
+    "name": "Oratoria"
+  },
+  {
+    "id": "pikipek",
+    "pokedexId": 731,
+    "name": "Picassaut"
+  },
+  {
+    "id": "trumbeak",
+    "pokedexId": 732,
+    "name": "Piclairon"
+  },
+  {
+    "id": "toucannon",
+    "pokedexId": 733,
+    "name": "Bazoucan"
+  },
+  {
+    "id": "yungoos",
+    "pokedexId": 734,
+    "name": "Manglouton"
+  },
+  {
+    "id": "gumshoos",
+    "pokedexId": 735,
+    "name": "Argouste"
+  },
+  {
+    "id": "grubbin",
+    "pokedexId": 736,
+    "name": "Larvibule"
+  },
+  {
+    "id": "charjabug",
+    "pokedexId": 737,
+    "name": "Chrysapile"
+  },
+  {
+    "id": "vikavolt",
+    "pokedexId": 738,
+    "name": "Lucanon"
+  },
+  {
+    "id": "crabrawler",
+    "pokedexId": 739,
+    "name": "Crabagarre"
+  },
+  {
+    "id": "crabominable",
+    "pokedexId": 740,
+    "name": "Crabominable"
+  },
+  {
+    "id": "oricorio",
+    "pokedexId": 741,
+    "name": "Plumeline"
+  },
+  {
+    "id": "cutiefly",
+    "pokedexId": 742,
+    "name": "Bombydou"
+  },
+  {
+    "id": "ribombee",
+    "pokedexId": 743,
+    "name": "Rubombelle"
+  },
+  {
+    "id": "rockruff",
+    "pokedexId": 744,
+    "name": "Rocabot"
+  },
+  {
+    "id": "lycanroc",
+    "pokedexId": 745,
+    "name": "Lougaroc"
+  },
+  {
+    "id": "wishiwashi",
+    "pokedexId": 746,
+    "name": "Froussardine"
+  },
+  {
+    "id": "mareanie",
+    "pokedexId": 747,
+    "name": "Vorastérie"
+  },
+  {
+    "id": "toxapex",
+    "pokedexId": 748,
+    "name": "Prédastérie"
+  },
+  {
+    "id": "mudbray",
+    "pokedexId": 749,
+    "name": "Tiboudet"
+  },
+  {
+    "id": "mudsdale",
+    "pokedexId": 750,
+    "name": "Bourrinos"
+  },
+  {
+    "id": "dewpider",
+    "pokedexId": 751,
+    "name": "Araqua"
+  },
+  {
+    "id": "araquanid",
+    "pokedexId": 752,
+    "name": "Tarenbulle"
+  },
+  {
+    "id": "fomantis",
+    "pokedexId": 753,
+    "name": "Mimantis"
+  },
+  {
+    "id": "lurantis",
+    "pokedexId": 754,
+    "name": "Floramantis"
+  },
+  {
+    "id": "morelull",
+    "pokedexId": 755,
+    "name": "Spododo"
+  },
+  {
+    "id": "shiinotic",
+    "pokedexId": 756,
+    "name": "Lampignon"
+  },
+  {
+    "id": "salandit",
+    "pokedexId": 757,
+    "name": "Tritox"
+  },
+  {
+    "id": "salazzle",
+    "pokedexId": 758,
+    "name": "Malamandre"
+  },
+  {
+    "id": "stufful",
+    "pokedexId": 759,
+    "name": "Nounourson"
+  },
+  {
+    "id": "bewear",
+    "pokedexId": 760,
+    "name": "Chelours"
+  },
+  {
+    "id": "bounsweet",
+    "pokedexId": 761,
+    "name": "Croquine"
+  },
+  {
+    "id": "steenee",
+    "pokedexId": 762,
+    "name": "Candine"
+  },
+  {
+    "id": "tsareena",
+    "pokedexId": 763,
+    "name": "Sucreine"
+  },
+  {
+    "id": "comfey",
+    "pokedexId": 764,
+    "name": "Guérilande"
+  },
+  {
+    "id": "oranguru",
+    "pokedexId": 765,
+    "name": "Gouroutan"
+  },
+  {
+    "id": "passimian",
+    "pokedexId": 766,
+    "name": "Quartermac"
+  },
+  {
+    "id": "wimpod",
+    "pokedexId": 767,
+    "name": "Sovkipou"
+  },
+  {
+    "id": "golisopod",
+    "pokedexId": 768,
+    "name": "Sarmuraï"
+  },
+  {
+    "id": "sandygast",
+    "pokedexId": 769,
+    "name": "Bacabouh"
+  },
+  {
+    "id": "palossand",
+    "pokedexId": 770,
+    "name": "Trépassable"
+  },
+  {
+    "id": "pyukumuku",
+    "pokedexId": 771,
+    "name": "Concombaffe"
+  },
+  {
+    "id": "type-null",
+    "pokedexId": 772,
+    "name": "Type:0"
+  },
+  {
+    "id": "silvally",
+    "pokedexId": 773,
+    "name": "Silvallié"
+  },
+  {
+    "id": "minior",
+    "pokedexId": 774,
+    "name": "Météno"
+  },
+  {
+    "id": "komala",
+    "pokedexId": 775,
+    "name": "Dodoala"
+  },
+  {
+    "id": "turtonator",
+    "pokedexId": 776,
+    "name": "Boumata"
+  },
+  {
+    "id": "togedemaru",
+    "pokedexId": 777,
+    "name": "Togedemaru"
+  },
+  {
+    "id": "mimikyu",
+    "pokedexId": 778,
+    "name": "Mimiqui"
+  },
+  {
+    "id": "bruxish",
+    "pokedexId": 779,
+    "name": "Denticrisse"
+  },
+  {
+    "id": "drampa",
+    "pokedexId": 780,
+    "name": "Draïeul"
+  },
+  {
+    "id": "dhelmise",
+    "pokedexId": 781,
+    "name": "Sinistrail"
+  },
+  {
+    "id": "jangmo-o",
+    "pokedexId": 782,
+    "name": "Bébécaille"
+  },
+  {
+    "id": "hakamo-o",
+    "pokedexId": 783,
+    "name": "Écaïd"
+  },
+  {
+    "id": "kommo-o",
+    "pokedexId": 784,
+    "name": "Ékaïser"
+  },
+  {
+    "id": "tapu-koko",
+    "pokedexId": 785,
+    "name": "Tokorico"
+  },
+  {
+    "id": "tapu-lele",
+    "pokedexId": 786,
+    "name": "Tokopiyon"
+  },
+  {
+    "id": "tapu-bulu",
+    "pokedexId": 787,
+    "name": "Tokotoro"
+  },
+  {
+    "id": "tapu-fini",
+    "pokedexId": 788,
+    "name": "Tokopisco"
+  },
+  {
+    "id": "cosmog",
+    "pokedexId": 789,
+    "name": "Cosmog"
+  },
+  {
+    "id": "cosmoem",
+    "pokedexId": 790,
+    "name": "Cosmovum"
+  },
+  {
+    "id": "solgaleo",
+    "pokedexId": 791,
+    "name": "Solgaleo"
+  },
+  {
+    "id": "lunala",
+    "pokedexId": 792,
+    "name": "Lunala"
+  },
+  {
+    "id": "nihilego",
+    "pokedexId": 793,
+    "name": "Zéroïd"
+  },
+  {
+    "id": "buzzwole",
+    "pokedexId": 794,
+    "name": "Mouscoto"
+  },
+  {
+    "id": "pheromosa",
+    "pokedexId": 795,
+    "name": "Cancrelove"
+  },
+  {
+    "id": "xurkitree",
+    "pokedexId": 796,
+    "name": "Câblifère"
+  },
+  {
+    "id": "celesteela",
+    "pokedexId": 797,
+    "name": "Bamboiselle"
+  },
+  {
+    "id": "kartana",
+    "pokedexId": 798,
+    "name": "Katagami"
+  },
+  {
+    "id": "guzzlord",
+    "pokedexId": 799,
+    "name": "Engloutyran"
+  },
+  {
+    "id": "necrozma",
+    "pokedexId": 800,
+    "name": "Necrozma"
+  },
+  {
+    "id": "magearna",
+    "pokedexId": 801,
+    "name": "Magearna"
+  },
+  {
+    "id": "marshadow",
+    "pokedexId": 802,
+    "name": "Marshadow"
+  },
+  {
+    "id": "poipole",
+    "pokedexId": 803,
+    "name": "Vémini"
+  },
+  {
+    "id": "naganadel",
+    "pokedexId": 804,
+    "name": "Mandrillon"
+  },
+  {
+    "id": "stakataka",
+    "pokedexId": 805,
+    "name": "Ama-Ama"
+  },
+  {
+    "id": "blacephalon",
+    "pokedexId": 806,
+    "name": "Pierroteknik"
+  },
+  {
+    "id": "zeraora",
+    "pokedexId": 807,
+    "name": "Zeraora"
+  },
+  {
+    "id": "meltan",
+    "pokedexId": 808,
+    "name": "Meltan"
+  },
+  {
+    "id": "melmetal",
+    "pokedexId": 809,
+    "name": "Melmetal"
+  },
+  {
+    "id": "grookey",
+    "pokedexId": 810,
+    "name": "Ouistempo"
+  },
+  {
+    "id": "thwackey",
+    "pokedexId": 811,
+    "name": "Badabouin"
+  },
+  {
+    "id": "rillaboom",
+    "pokedexId": 812,
+    "name": "Gorythmic"
+  },
+  {
+    "id": "scorbunny",
+    "pokedexId": 813,
+    "name": "Flambino"
+  },
+  {
+    "id": "raboot",
+    "pokedexId": 814,
+    "name": "Lapyro"
+  },
+  {
+    "id": "cinderace",
+    "pokedexId": 815,
+    "name": "Pyrobut"
+  },
+  {
+    "id": "sobble",
+    "pokedexId": 816,
+    "name": "Larméléon"
+  },
+  {
+    "id": "drizzile",
+    "pokedexId": 817,
+    "name": "Arrozard"
+  },
+  {
+    "id": "inteleon",
+    "pokedexId": 818,
+    "name": "Lézargus"
+  },
+  {
+    "id": "skwovet",
+    "pokedexId": 819,
+    "name": "Rongourmand"
+  },
+  {
+    "id": "greedent",
+    "pokedexId": 820,
+    "name": "Rongrigou"
+  },
+  {
+    "id": "rookidee",
+    "pokedexId": 821,
+    "name": "Minisange"
+  },
+  {
+    "id": "corvisquire",
+    "pokedexId": 822,
+    "name": "Bleuseille"
+  },
+  {
+    "id": "corviknight",
+    "pokedexId": 823,
+    "name": "Corvaillus"
+  },
+  {
+    "id": "blipbug",
+    "pokedexId": 824,
+    "name": "Larvadar"
+  },
+  {
+    "id": "dottler",
+    "pokedexId": 825,
+    "name": "Coléodôme"
+  },
+  {
+    "id": "orbeetle",
+    "pokedexId": 826,
+    "name": "Astronelle"
+  },
+  {
+    "id": "nickit",
+    "pokedexId": 827,
+    "name": "Goupilou"
+  },
+  {
+    "id": "thievul",
+    "pokedexId": 828,
+    "name": "Roublenard"
+  },
+  {
+    "id": "gossifleur",
+    "pokedexId": 829,
+    "name": "Tournicoton"
+  },
+  {
+    "id": "eldegoss",
+    "pokedexId": 830,
+    "name": "Blancoton"
+  },
+  {
+    "id": "wooloo",
+    "pokedexId": 831,
+    "name": "Moumouton"
+  },
+  {
+    "id": "dubwool",
+    "pokedexId": 832,
+    "name": "Moumouflon"
+  },
+  {
+    "id": "chewtle",
+    "pokedexId": 833,
+    "name": "Khélocrok"
+  },
+  {
+    "id": "drednaw",
+    "pokedexId": 834,
+    "name": "Torgamord"
+  },
+  {
+    "id": "yamper",
+    "pokedexId": 835,
+    "name": "Voltoutou"
+  },
+  {
+    "id": "boltund",
+    "pokedexId": 836,
+    "name": "Fulgudog"
+  },
+  {
+    "id": "rolycoly",
+    "pokedexId": 837,
+    "name": "Charbi"
+  },
+  {
+    "id": "carkol",
+    "pokedexId": 838,
+    "name": "Wagomine"
+  },
+  {
+    "id": "coalossal",
+    "pokedexId": 839,
+    "name": "Monthracite"
+  },
+  {
+    "id": "applin",
+    "pokedexId": 840,
+    "name": "Verpom"
+  },
+  {
+    "id": "flapple",
+    "pokedexId": 841,
+    "name": "Pomdrapi"
+  },
+  {
+    "id": "appletun",
+    "pokedexId": 842,
+    "name": "Dratatin"
+  },
+  {
+    "id": "silicobra",
+    "pokedexId": 843,
+    "name": "Dunaja"
+  },
+  {
+    "id": "sandaconda",
+    "pokedexId": 844,
+    "name": "Dunaconda"
+  },
+  {
+    "id": "cramorant",
+    "pokedexId": 845,
+    "name": "Nigosier"
+  },
+  {
+    "id": "arrokuda",
+    "pokedexId": 846,
+    "name": "Embrochet"
+  },
+  {
+    "id": "barraskewda",
+    "pokedexId": 847,
+    "name": "Hastacuda"
+  },
+  {
+    "id": "toxel",
+    "pokedexId": 848,
+    "name": "Toxizap"
+  },
+  {
+    "id": "toxtricity",
+    "pokedexId": 849,
+    "name": "Salarsen"
+  },
+  {
+    "id": "sizzlipede",
+    "pokedexId": 850,
+    "name": "Grillepattes"
+  },
+  {
+    "id": "centiskorch",
+    "pokedexId": 851,
+    "name": "Scolocendre"
+  },
+  {
+    "id": "clobbopus",
+    "pokedexId": 852,
+    "name": "Poulpaf"
+  },
+  {
+    "id": "grapploct",
+    "pokedexId": 853,
+    "name": "Krakos"
+  },
+  {
+    "id": "sinistea",
+    "pokedexId": 854,
+    "name": "Théffroi"
+  },
+  {
+    "id": "polteageist",
+    "pokedexId": 855,
+    "name": "Polthégeist"
+  },
+  {
+    "id": "hatenna",
+    "pokedexId": 856,
+    "name": "Bibichut"
+  },
+  {
+    "id": "hattrem",
+    "pokedexId": 857,
+    "name": "Chapotus"
+  },
+  {
+    "id": "hatterene",
+    "pokedexId": 858,
+    "name": "Sorcilence"
+  },
+  {
+    "id": "impidimp",
+    "pokedexId": 859,
+    "name": "Grimalin"
+  },
+  {
+    "id": "morgrem",
+    "pokedexId": 860,
+    "name": "Fourbelin"
+  },
+  {
+    "id": "grimmsnarl",
+    "pokedexId": 861,
+    "name": "Angoliath"
+  },
+  {
+    "id": "obstagoon",
+    "pokedexId": 862,
+    "name": "Ixon"
+  },
+  {
+    "id": "perrserker",
+    "pokedexId": 863,
+    "name": "Berserkatt"
+  },
+  {
+    "id": "cursola",
+    "pokedexId": 864,
+    "name": "Corayôme"
+  },
+  {
+    "id": "sirfetchd",
+    "pokedexId": 865,
+    "name": "Palarticho"
+  },
+  {
+    "id": "mr-rime",
+    "pokedexId": 866,
+    "name": "M. Glaquette"
+  },
+  {
+    "id": "runerigus",
+    "pokedexId": 867,
+    "name": "Tutétékri"
+  },
+  {
+    "id": "milcery",
+    "pokedexId": 868,
+    "name": "Crèmy"
+  },
+  {
+    "id": "alcremie",
+    "pokedexId": 869,
+    "name": "Charmilly"
+  },
+  {
+    "id": "falinks",
+    "pokedexId": 870,
+    "name": "Hexadron"
+  },
+  {
+    "id": "pincurchin",
+    "pokedexId": 871,
+    "name": "Wattapik"
+  },
+  {
+    "id": "snom",
+    "pokedexId": 872,
+    "name": "Frissonille"
+  },
+  {
+    "id": "frosmoth",
+    "pokedexId": 873,
+    "name": "Beldeneige"
+  },
+  {
+    "id": "stonjourner",
+    "pokedexId": 874,
+    "name": "Dolman"
+  },
+  {
+    "id": "eiscue",
+    "pokedexId": 875,
+    "name": "Bekaglaçon"
+  },
+  {
+    "id": "indeedee",
+    "pokedexId": 876,
+    "name": "Wimessir"
+  },
+  {
+    "id": "morpeko",
+    "pokedexId": 877,
+    "name": "Morpeko"
+  },
+  {
+    "id": "cufant",
+    "pokedexId": 878,
+    "name": "Charibari"
+  },
+  {
+    "id": "copperajah",
+    "pokedexId": 879,
+    "name": "Pachyradjah"
+  },
+  {
+    "id": "dracozolt",
+    "pokedexId": 880,
+    "name": "Galvagon"
+  },
+  {
+    "id": "arctozolt",
+    "pokedexId": 881,
+    "name": "Galvagla"
+  },
+  {
+    "id": "dracovish",
+    "pokedexId": 882,
+    "name": "Hydragon"
+  },
+  {
+    "id": "arctovish",
+    "pokedexId": 883,
+    "name": "Hydragla"
+  },
+  {
+    "id": "duraludon",
+    "pokedexId": 884,
+    "name": "Duralugon"
+  },
+  {
+    "id": "dreepy",
+    "pokedexId": 885,
+    "name": "Fantyrm"
+  },
+  {
+    "id": "drakloak",
+    "pokedexId": 886,
+    "name": "Dispareptil"
+  },
+  {
+    "id": "dragapult",
+    "pokedexId": 887,
+    "name": "Lanssorien"
+  },
+  {
+    "id": "zacian",
+    "pokedexId": 888,
+    "name": "Zacian"
+  },
+  {
+    "id": "zamazenta",
+    "pokedexId": 889,
+    "name": "Zamazenta"
+  },
+  {
+    "id": "eternatus",
+    "pokedexId": 890,
+    "name": "Éthernatos"
+  },
+  {
+    "id": "kubfu",
+    "pokedexId": 891,
+    "name": "Wushours"
+  },
+  {
+    "id": "urshifu",
+    "pokedexId": 892,
+    "name": "Shifours"
+  },
+  {
+    "id": "zarude",
+    "pokedexId": 893,
+    "name": "Zarude"
+  },
+  {
+    "id": "regieleki",
+    "pokedexId": 894,
+    "name": "Regieleki"
+  },
+  {
+    "id": "regidrago",
+    "pokedexId": 895,
+    "name": "Regidrago"
+  },
+  {
+    "id": "glastrier",
+    "pokedexId": 896,
+    "name": "Blizzeval"
+  },
+  {
+    "id": "spectrier",
+    "pokedexId": 897,
+    "name": "Spectreval"
+  },
+  {
+    "id": "calyrex",
+    "pokedexId": 898,
+    "name": "Sylveroy"
+  },
+  {
+    "id": "wyrdeer",
+    "pokedexId": 899,
+    "name": "Cerbyllin"
+  },
+  {
+    "id": "kleavor",
+    "pokedexId": 900,
+    "name": "Hachécateur"
+  },
+  {
+    "id": "ursaluna",
+    "pokedexId": 901,
+    "name": "Ursaking"
+  },
+  {
+    "id": "basculegion",
+    "pokedexId": 902,
+    "name": "Paragruel"
+  },
+  {
+    "id": "sneasler",
+    "pokedexId": 903,
+    "name": "Farfurex"
+  },
+  {
+    "id": "overqwil",
+    "pokedexId": 904,
+    "name": "Qwilpik"
+  },
+  {
+    "id": "enamorus",
+    "pokedexId": 905,
+    "name": "Amovénus"
+  },
+  {
+    "id": "sprigatito",
+    "pokedexId": 906,
+    "name": "Poussacha"
+  },
+  {
+    "id": "floragato",
+    "pokedexId": 907,
+    "name": "Matourgeon"
+  },
+  {
+    "id": "meowscarada",
+    "pokedexId": 908,
+    "name": "Miascarade"
+  },
+  {
+    "id": "fuecoco",
+    "pokedexId": 909,
+    "name": "Chochodile"
+  },
+  {
+    "id": "crocalor",
+    "pokedexId": 910,
+    "name": "Crocogril"
+  },
+  {
+    "id": "skeledirge",
+    "pokedexId": 911,
+    "name": "Flâmigator"
+  },
+  {
+    "id": "quaxly",
+    "pokedexId": 912,
+    "name": "Coiffeton"
+  },
+  {
+    "id": "quaxwell",
+    "pokedexId": 913,
+    "name": "Canarbello"
+  },
+  {
+    "id": "quaquaval",
+    "pokedexId": 914,
+    "name": "Palmaval"
+  },
+  {
+    "id": "lechonk",
+    "pokedexId": 915,
+    "name": "Gourmelet"
+  },
+  {
+    "id": "oinkologne",
+    "pokedexId": 916,
+    "name": "Fragroin"
+  },
+  {
+    "id": "tarountula",
+    "pokedexId": 917,
+    "name": "Tissenboule"
+  },
+  {
+    "id": "spidops",
+    "pokedexId": 918,
+    "name": "Filentrappe"
+  },
+  {
+    "id": "nymble",
+    "pokedexId": 919,
+    "name": "Lilliterelle"
+  },
+  {
+    "id": "lokix",
+    "pokedexId": 920,
+    "name": "Gambex"
+  },
+  {
+    "id": "pawmi",
+    "pokedexId": 921,
+    "name": "Pohm"
+  },
+  {
+    "id": "pawmo",
+    "pokedexId": 922,
+    "name": "Pohmotte"
+  },
+  {
+    "id": "pawmot",
+    "pokedexId": 923,
+    "name": "Pohmarmotte"
+  },
+  {
+    "id": "tandemaus",
+    "pokedexId": 924,
+    "name": "Compagnol"
+  },
+  {
+    "id": "maushold",
+    "pokedexId": 925,
+    "name": "Famignol"
+  },
+  {
+    "id": "fidough",
+    "pokedexId": 926,
+    "name": "Pâtachiot"
+  },
+  {
+    "id": "dachsbun",
+    "pokedexId": 927,
+    "name": "Briochien"
+  },
+  {
+    "id": "smoliv",
+    "pokedexId": 928,
+    "name": "Olivini"
+  },
+  {
+    "id": "dolliv",
+    "pokedexId": 929,
+    "name": "Olivado"
+  },
+  {
+    "id": "arboliva",
+    "pokedexId": 930,
+    "name": "Arboliva"
+  },
+  {
+    "id": "squawkabilly",
+    "pokedexId": 931,
+    "name": "Tapatoès"
+  },
+  {
+    "id": "nacli",
+    "pokedexId": 932,
+    "name": "Selutin"
+  },
+  {
+    "id": "naclstack",
+    "pokedexId": 933,
+    "name": "Amassel"
+  },
+  {
+    "id": "garganacl",
+    "pokedexId": 934,
+    "name": "Gigansel"
+  },
+  {
+    "id": "charcadet",
+    "pokedexId": 935,
+    "name": "Charbambin"
+  },
+  {
+    "id": "armarouge",
+    "pokedexId": 936,
+    "name": "Carmadura"
+  },
+  {
+    "id": "ceruledge",
+    "pokedexId": 937,
+    "name": "Malvalame"
+  },
+  {
+    "id": "tadbulb",
+    "pokedexId": 938,
+    "name": "Têtampoule"
+  },
+  {
+    "id": "bellibolt",
+    "pokedexId": 939,
+    "name": "Ampibidou"
+  },
+  {
+    "id": "wattrel",
+    "pokedexId": 940,
+    "name": "Zapétrel"
+  },
+  {
+    "id": "kilowattrel",
+    "pokedexId": 941,
+    "name": "Fulgulairo"
+  },
+  {
+    "id": "maschiff",
+    "pokedexId": 942,
+    "name": "Grondogue"
+  },
+  {
+    "id": "mabosstiff",
+    "pokedexId": 943,
+    "name": "Dogrino"
+  },
+  {
+    "id": "shroodle",
+    "pokedexId": 944,
+    "name": "Gribouraigne"
+  },
+  {
+    "id": "grafaiai",
+    "pokedexId": 945,
+    "name": "Tag-Tag"
+  },
+  {
+    "id": "bramblin",
+    "pokedexId": 946,
+    "name": "Virovent"
+  },
+  {
+    "id": "brambleghast",
+    "pokedexId": 947,
+    "name": "Virevorreur"
+  },
+  {
+    "id": "toedscool",
+    "pokedexId": 948,
+    "name": "Terracool"
+  },
+  {
+    "id": "toedscruel",
+    "pokedexId": 949,
+    "name": "Terracruel"
+  },
+  {
+    "id": "klawf",
+    "pokedexId": 950,
+    "name": "Craparoi"
+  },
+  {
+    "id": "capsakid",
+    "pokedexId": 951,
+    "name": "Pimito"
+  },
+  {
+    "id": "scovillain",
+    "pokedexId": 952,
+    "name": "Scovilain"
+  },
+  {
+    "id": "rellor",
+    "pokedexId": 953,
+    "name": "Léboulérou"
+  },
+  {
+    "id": "rabsca",
+    "pokedexId": 954,
+    "name": "Bérasca"
+  },
+  {
+    "id": "flittle",
+    "pokedexId": 955,
+    "name": "Flotillon"
+  },
+  {
+    "id": "espathra",
+    "pokedexId": 956,
+    "name": "Cléopsytra"
+  },
+  {
+    "id": "tinkatink",
+    "pokedexId": 957,
+    "name": "Forgerette"
+  },
+  {
+    "id": "tinkatuff",
+    "pokedexId": 958,
+    "name": "Forgella"
+  },
+  {
+    "id": "tinkaton",
+    "pokedexId": 959,
+    "name": "Forgelina"
+  },
+  {
+    "id": "wiglett",
+    "pokedexId": 960,
+    "name": "Taupikeau"
+  },
+  {
+    "id": "wugtrio",
+    "pokedexId": 961,
+    "name": "Triopikeau"
+  },
+  {
+    "id": "bombirdier",
+    "pokedexId": 962,
+    "name": "Lestombaile"
+  },
+  {
+    "id": "finizen",
+    "pokedexId": 963,
+    "name": "Dofin"
+  },
+  {
+    "id": "palafin",
+    "pokedexId": 964,
+    "name": "Superdofin"
+  },
+  {
+    "id": "varoom",
+    "pokedexId": 965,
+    "name": "Vrombi"
+  },
+  {
+    "id": "revavroom",
+    "pokedexId": 966,
+    "name": "Vrombotor"
+  },
+  {
+    "id": "cyclizar",
+    "pokedexId": 967,
+    "name": "Motorizard"
+  },
+  {
+    "id": "orthworm",
+    "pokedexId": 968,
+    "name": "Ferdeter"
+  },
+  {
+    "id": "glimmet",
+    "pokedexId": 969,
+    "name": "Germéclat"
+  },
+  {
+    "id": "glimmora",
+    "pokedexId": 970,
+    "name": "Floréclat"
+  },
+  {
+    "id": "greavard",
+    "pokedexId": 971,
+    "name": "Toutombe"
+  },
+  {
+    "id": "houndstone",
+    "pokedexId": 972,
+    "name": "Tomberro"
+  },
+  {
+    "id": "flamigo",
+    "pokedexId": 973,
+    "name": "Flamenroule"
+  },
+  {
+    "id": "cetoddle",
+    "pokedexId": 974,
+    "name": "Piétacé"
+  },
+  {
+    "id": "cetitan",
+    "pokedexId": 975,
+    "name": "Balbalèze"
+  },
+  {
+    "id": "veluza",
+    "pokedexId": 976,
+    "name": "Délestin"
+  },
+  {
+    "id": "dondozo",
+    "pokedexId": 977,
+    "name": "Oyacata"
+  },
+  {
+    "id": "tatsugiri",
+    "pokedexId": 978,
+    "name": "Nigirigon"
+  },
+  {
+    "id": "annihilape",
+    "pokedexId": 979,
+    "name": "Courrousinge"
+  },
+  {
+    "id": "clodsire",
+    "pokedexId": 980,
+    "name": "Terraiste"
+  },
+  {
+    "id": "farigiraf",
+    "pokedexId": 981,
+    "name": "Farigiraf"
+  },
+  {
+    "id": "dudunsparce",
+    "pokedexId": 982,
+    "name": "Deusolourdo"
+  },
+  {
+    "id": "kingambit",
+    "pokedexId": 983,
+    "name": "Scalpereur"
+  },
+  {
+    "id": "great-tusk",
+    "pokedexId": 984,
+    "name": "Fort-Ivoire"
+  },
+  {
+    "id": "scream-tail",
+    "pokedexId": 985,
+    "name": "Hurle-Queue"
+  },
+  {
+    "id": "brute-bonnet",
+    "pokedexId": 986,
+    "name": "Fongus-Furie"
+  },
+  {
+    "id": "flutter-mane",
+    "pokedexId": 987,
+    "name": "Flotte-Mèche"
+  },
+  {
+    "id": "slither-wing",
+    "pokedexId": 988,
+    "name": "Rampe-Ailes"
+  },
+  {
+    "id": "sandy-shocks",
+    "pokedexId": 989,
+    "name": "Pelage-Sablé"
+  },
+  {
+    "id": "iron-treads",
+    "pokedexId": 990,
+    "name": "Roue-de-Fer"
+  },
+  {
+    "id": "iron-bundle",
+    "pokedexId": 991,
+    "name": "Hotte-de-Fer"
+  },
+  {
+    "id": "iron-hands",
+    "pokedexId": 992,
+    "name": "Paume-de-Fer"
+  },
+  {
+    "id": "iron-jugulis",
+    "pokedexId": 993,
+    "name": "Têtes-de-Fer"
+  },
+  {
+    "id": "iron-moth",
+    "pokedexId": 994,
+    "name": "Mite-de-Fer"
+  },
+  {
+    "id": "iron-thorns",
+    "pokedexId": 995,
+    "name": "Épine-de-Fer"
+  },
+  {
+    "id": "frigibax",
+    "pokedexId": 996,
+    "name": "Frigodo"
+  },
+  {
+    "id": "arctibax",
+    "pokedexId": 997,
+    "name": "Cryodo"
+  },
+  {
+    "id": "baxcalibur",
+    "pokedexId": 998,
+    "name": "Glaivodo"
+  },
+  {
+    "id": "gimmighoul",
+    "pokedexId": 999,
+    "name": "Mordudor"
+  },
+  {
+    "id": "gholdengo",
+    "pokedexId": 1000,
+    "name": "Gromago"
+  },
+  {
+    "id": "wo-chien",
+    "pokedexId": 1001,
+    "name": "Chongjian"
+  },
+  {
+    "id": "chien-pao",
+    "pokedexId": 1002,
+    "name": "Baojian"
+  },
+  {
+    "id": "ting-lu",
+    "pokedexId": 1003,
+    "name": "Dinglu"
+  },
+  {
+    "id": "chi-yu",
+    "pokedexId": 1004,
+    "name": "Yuyu"
+  },
+  {
+    "id": "roaring-moon",
+    "pokedexId": 1005,
+    "name": "Rugit-Lune"
+  },
+  {
+    "id": "iron-valiant",
+    "pokedexId": 1006,
+    "name": "Garde-de-Fer"
+  },
+  {
+    "id": "koraidon",
+    "pokedexId": 1007,
+    "name": "Koraidon"
+  },
+  {
+    "id": "miraidon",
+    "pokedexId": 1008,
+    "name": "Miraidon"
+  },
+  {
+    "id": "walking-wake",
+    "pokedexId": 1009,
+    "name": "Serpente-Eau"
+  },
+  {
+    "id": "iron-leaves",
+    "pokedexId": 1010,
+    "name": "Vert-de-Fer"
+  },
+  {
+    "id": "dipplin",
+    "pokedexId": 1011,
+    "name": "Pomdramour"
+  },
+  {
+    "id": "poltchageist",
+    "pokedexId": 1012,
+    "name": "Poltchageist"
+  },
+  {
+    "id": "sinistcha",
+    "pokedexId": 1013,
+    "name": "Théffroyable"
+  },
+  {
+    "id": "okidogi",
+    "pokedexId": 1014,
+    "name": "Félicanis"
+  },
+  {
+    "id": "munkidori",
+    "pokedexId": 1015,
+    "name": "Fortusimia"
+  },
+  {
+    "id": "ogerpon",
+    "pokedexId": 1017,
+    "name": "Ogerpon"
+  },
+  {
+    "id": "archaludon",
+    "pokedexId": 1018,
+    "name": "Pondralugon"
+  },
+  {
+    "id": "hydrapple",
+    "pokedexId": 1019,
+    "name": "Pomdorochi"
+  },
+  {
+    "id": "gouging-fire",
+    "pokedexId": 1020,
+    "name": "Feu-Perçant"
+  },
+  {
+    "id": "raging-bolt",
+    "pokedexId": 1021,
+    "name": "Ire-Foudre"
+  },
+  {
+    "id": "iron-boulder",
+    "pokedexId": 1022,
+    "name": "Roc-de-Fer"
+  },
+  {
+    "id": "iron-crown",
+    "pokedexId": 1023,
+    "name": "Chef-de-Fer"
+  },
+  {
+    "id": "terapagos",
+    "pokedexId": 1024,
+    "name": "Terapagos"
+  },
+  {
+    "id": "pecharunt",
+    "pokedexId": 1025,
+    "name": "Pêchaminus"
+  }
+]

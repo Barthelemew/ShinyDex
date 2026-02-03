@@ -1,0 +1,60 @@
+{
+  "methods": {
+    "Masuda": { "base_rate": 683, "with_charm": 512 },
+    "Rencontres": { "base_rate": 4096, "with_charm": 1365 },
+    "SOS Battle": {
+      "base_rate": 4096,
+      "chains": [
+        { "min": 0, "rate": 4096 },
+        { "min": 11, "rate": 1024 },
+        { "min": 21, "rate": 512 },
+        { "min": 31, "rate": 273 }
+      ]
+    },
+    "Hordes": { "base_rate": 4096, "per_encounter": 5 },
+    "Sandwich": { "base_rate": 4096, "with_charm": 1365, "lvl3": 683 },
+    "Recherche": {
+      "base_rate": 4096,
+      "levels": {
+        "base": 0,
+        "completed": 1,
+        "perfect": 3
+      }
+    },
+    "Combo Capture": {
+      "base_rate": 4096,
+      "chains": [
+        { "min": 0, "rate": 4096 },
+        { "min": 11, "rate": 1024 },
+        { "min": 21, "rate": 512 },
+        { "min": 31, "rate": 273 }
+      ]
+    },
+    "Reset": { "base_rate": 4096 },
+    "Raids": { "base_rate": 4103 },
+    "Dynamax": { "base_rate": 300, "with_charm": 100 }
+  },
+  "games": {
+    "Légendes Z-A": { "gen": 9, "base_shiny_rate": 4096, "has_sandwich": true },
+    "Écarlate/Violet": { "gen": 9, "base_shiny_rate": 4096, "has_sandwich": true },
+    "Légendes Arceus": { "gen": 8, "base_shiny_rate": 4096, "has_research": true },
+    "DEPS (Diamant/Perle)": { "gen": 8, "base_shiny_rate": 4096 },
+    "Épée/Bouclier": { "gen": 8, "base_shiny_rate": 4096, "has_battles": true },
+    "Let's Go P/E": { "gen": 7, "base_shiny_rate": 4096, "has_lure": true },
+    "Ultra-Soleil/Lune": { "gen": 7, "base_shiny_rate": 4096, "has_sos": true },
+    "Soleil/Lune": { "gen": 7, "base_shiny_rate": 4096, "has_sos": true },
+    "ROSA": { "gen": 6, "base_shiny_rate": 4096, "has_dexnav": true },
+    "X/Y": { "gen": 6, "base_shiny_rate": 4096, "has_hordes": true },
+    "Noir 2/Blanc 2": { "gen": 5, "base_shiny_rate": 8192, "has_charm": true },
+    "Noir/Blanc": { "gen": 5, "base_shiny_rate": 8192 },
+    "HGSS": { "gen": 4, "base_shiny_rate": 8192 },
+    "Platine": { "gen": 4, "base_shiny_rate": 8192, "has_radar": true },
+    "Diamant/Perle": { "gen": 4, "base_shiny_rate": 8192, "has_radar": true },
+    "RF/VF": { "gen": 3, "base_shiny_rate": 8192 },
+    "Émeraude": { "gen": 3, "base_shiny_rate": 8192 },
+    "Rubis/Saphir": { "gen": 3, "base_shiny_rate": 8192 },
+    "Cristal": { "gen": 2, "base_shiny_rate": 8192, "breeding_shiny": true },
+    "Or/Argent": { "gen": 2, "base_shiny_rate": 8192 },
+    "Jaune/Bleu/Rouge": { "gen": 1, "base_shiny_rate": 0, "note": "Pas de shiny" }
+  }
+}

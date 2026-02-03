@@ -1,0 +1,42 @@
+[
+  {
+    "id": "first_shiny",
+    "code": "FIRST_SHINY",
+    "title": "Première Étoile",
+    "description": "Capturer votre tout premier Pokémon chromatique.",
+    "icon": "✨",
+    "secret": false
+  },
+  {
+    "id": "kanto_master",
+    "code": "KANTO_MASTER",
+    "title": "Maître de Kanto",
+    "description": "Compléter le Pokédex chromatique de Kanto (151).",
+    "icon": "🔴",
+    "secret": false
+  },
+  {
+    "id": "centurion",
+    "code": "CENTURION",
+    "title": "Le Centurion",
+    "description": "Atteindre 100 Pokémon chromatiques dans la collection.",
+    "icon": "🏆",
+    "secret": false
+  },
+  {
+    "id": "masuda_expert",
+    "code": "MASUDA_EXPERT",
+    "title": "Disciple de Masuda",
+    "description": "Obtenir 50 chromatiques via la méthode Masuda.",
+    "icon": "🥚",
+    "secret": false
+  },
+  {
+    "id": "shiny_hunter_god",
+    "code": "SHINY_HUNTER_GOD",
+    "title": "Dieu des Chasseurs",
+    "description": "Atteindre 1000 Pokémon chromatiques.",
+    "icon": "👑",
+    "secret": true
+  }
+]
