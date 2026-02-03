@@ -8,9 +8,9 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'ShinyDex v1.1',
-        short_name: 'ShinyDex v1.1',
-        description: 'Compagnon de chasse Pokémon Chromatique - Version Optimisée',
+        name: 'ShinyDex v1.4',
+        short_name: 'ShinyDex v1.4',
+        description: 'Compagnon de chasse Pokémon Chromatique - UI & Icons Update',
         theme_color: '#0f172a',
         background_color: '#0f172a',
         display: 'standalone',
