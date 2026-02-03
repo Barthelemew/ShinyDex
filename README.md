@@ -16,6 +16,7 @@
 - **Gestion Multi-Spécimens** : Enregistrez plusieurs exemplaires d'un même Pokémon avec leurs détails propres (version, méthode, rencontres).
 - **Import/Export CSV** : Ne perdez jamais vos données. Importez vos anciennes collections ou sauvegardez la vôtre localement.
 - **Multi-sélection** : Ajoutez ou modifiez plusieurs Pokémon simultanément.
+- **Affichage** : Usage d'une API externe pour les numéro de Pokédex, les noms (usage d'un script Python pour traduction française et harmonisation), l'affichage des sprites des Pokémons originaux et Chromatiques.
 
 ### ⏱️ Compteur de Chasse Intelligent
 - **Calculateur de Probabilités** : Estimation des chances en temps réel selon le jeu, la méthode et les objets (Charme Chroma, Aura Brillance).
@@ -78,8 +79,8 @@
 ---
 
 ## 📄 Licence
-Projet réalisé par **Nico** dans le cadre du projet ShinyDex. Tous droits réservés.
+Projet réalisé par **Nicolas** dans le cadre du projet ShinyDex. Tous droits réservés.
 
 ---
 
-*Fait avec ❤️ pour la communauté des Shasseurs.*
+*Pensé et élaboré pour la communauté des Shasseurs.*
