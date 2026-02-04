@@ -116,8 +116,9 @@ function App() {
       }
       if (event === 'shiny_found') {
         if (payload.userId === user.id) return;
+        const pokemonName = payload.pokemonName || staticData.find(p => p.id === payload.pokemonId)?.name || 'un Pokémon';
         confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
-        setToast({ message: `INCROYABLE ! ${payload.trainerName} a trouvé ${payload.pokemonName} !`, type: 'success' });
+        setToast({ message: `INCROYABLE ! ${payload.trainerName} a trouvé ${pokemonName} !`, type: 'success' });
       }
     });
     return () => { channel.unsubscribe(); };

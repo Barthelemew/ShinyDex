@@ -21,6 +21,20 @@ export const realtimeService = {
       .on('broadcast', { event: 'shiny_found' }, ({ payload }) => {
         onEvent('shiny_found', payload);
       })
+      .on('postgres_changes', { 
+        event: 'INSERT', 
+        schema: 'public', 
+        table: 'collection' 
+      }, (payload) => {
+        onEvent('collection_updated', payload.new);
+        if (payload.new.is_shiny) {
+          onEvent('shiny_found', {
+            userId: payload.new.user_id,
+            pokemonId: payload.new.pokemon_id,
+            trainerName: 'Un coéquipier'
+          });
+        }
+      })
       .subscribe();
 
     return channel;

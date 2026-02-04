@@ -78,3 +78,40 @@ using (invited_user_id = auth.uid() or inviter_user_id = auth.uid());
 
 
 -- [Sections 9 à 11: Triggers et Fonctions de recherche - Inchangées]
+
+
+
+
+
+-- --- TABLE: COLLECTION (AJOUT POLITIQUES ÉQUIPE) ---
+
+
+-- Autoriser la lecture des Pokémons si l'utilisateur appartient à la même équipe que le propriétaire du Pokémon.
+
+
+create policy "team_read_collection_policy" on collection for select 
+
+
+using (
+
+
+  user_id in (
+
+
+    select tm2.user_id 
+
+
+    from team_members tm1
+
+
+    join team_members tm2 on tm1.team_id = tm2.team_id
+
+
+    where tm1.user_id = auth.uid()
+
+
+  )
+
+
+);
+
