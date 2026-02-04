@@ -144,8 +144,14 @@ export default function PokemonCard({ pokemon, viewMode, isSelected, onClick }) 
           </div>
         )}
         {trainer && (
-          <div className="absolute bottom-0 right-0 px-1.5 sm:px-2 py-0.5 bg-twilight-950/80 backdrop-blur-sm border border-twilight-800 rounded-lg shadow-lg">
-            <p className="text-[7px] sm:text-[8px] font-black text-gold-champagne uppercase truncate max-w-[40px] sm:max-w-[60px]">{trainer.username}</p>
+          <div className="absolute -bottom-1 -right-1 w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 border-twilight-800 overflow-hidden bg-twilight-900 shadow-lg z-20">
+            {trainer.avatar_url ? (
+              <img src={trainer.avatar_url} alt={trainer.username} className="w-full h-full object-cover" />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center text-[6px] sm:text-[8px] font-black text-white bg-twilight-700 uppercase">
+                {trainer.username?.slice(0, 1)}
+              </div>
+            )}
           </div>
         )}
       </div>

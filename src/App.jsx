@@ -131,8 +131,8 @@ function App() {
   }, []);
 
   const fullCollection = useMemo(() => {
-    // Fusion intelligente : si on est en mode équipe, on s'assure d'avoir au moins nos données perso
-    // plus celles de l'équipe (qui normalement incluent les nôtres)
+    // Fusion intelligente
+    console.log("[App] dbCollection:", dbCollection.length, "teamCollection:", teamCollection.length);
     let activeDbCollection = [];
     if (dexMode === 'personal') {
       activeDbCollection = dbCollection;
@@ -167,7 +167,7 @@ function App() {
         captured: isCaptured,
         totalCount: entries.length,
         entries: entries,
-        trainer: isCaptured ? entries[0].profiles : null,
+        trainer: isCaptured ? entries.find(e => e.profiles)?.profiles : null,
         details: isCaptured ? {
           encounters: entries.reduce((sum, e) => sum + (e.count || 0), 0),
           version: entries[0].game_id,
