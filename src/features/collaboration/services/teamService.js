@@ -110,6 +110,8 @@ export const teamService = {
    * Récupère la collection consolidée de tous les membres de l'équipe.
    */
   async getTeamCollection(teamId) {
+    if (!teamId) return [];
+    
     // 1. Récupérer les IDs des membres
     const { data: memberData, error: memberError } = await supabase
       .from('team_members')
@@ -126,6 +128,8 @@ export const teamService = {
       .in('user_id', memberIds);
     
     if (collectionError) throw collectionError;
+    
+    console.log(`[TeamMode] ${collection.length} Pokémons récupérés pour l'équipe ${teamId}`);
     return collection;
   }
 };

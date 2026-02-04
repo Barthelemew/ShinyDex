@@ -5,6 +5,9 @@ export const realtimeService = {
    * Rejoint le canal d'une équipe pour écouter les événements Broadcast.
    */
   subscribeToTeam(teamId, onEvent) {
+    // Nettoyer les anciens canaux pour cette équipe si nécessaire
+    supabase.removeAllChannels();
+
     const channel = supabase.channel(`team:${teamId}`, {
       config: {
         broadcast: { self: true },

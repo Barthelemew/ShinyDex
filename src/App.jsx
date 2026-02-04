@@ -131,7 +131,20 @@ function App() {
   }, []);
 
   const fullCollection = useMemo(() => {
-    const activeDbCollection = dexMode === 'personal' ? dbCollection : teamCollection;
+    // Fusion intelligente : si on est en mode équipe, on s'assure d'avoir au moins nos données perso
+    // plus celles de l'équipe (qui normalement incluent les nôtres)
+    let activeDbCollection = [];
+    if (dexMode === 'personal') {
+      activeDbCollection = dbCollection;
+    } else {
+      // En mode équipe, on fusionne les deux pour éviter les "trous" visuels
+      const teamMap = new Map();
+      [...teamCollection, ...dbCollection].forEach(item => {
+        teamMap.set(item.id, item);
+      });
+      activeDbCollection = Array.from(teamMap.values());
+    }
+
     return staticData.map(p => {
       const entries = activeDbCollection.filter(d => d.pokemon_id === p.id);
       const isCaptured = entries.length > 0;
