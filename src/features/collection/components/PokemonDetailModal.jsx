@@ -47,7 +47,7 @@ const PokemonForm = ({ pokemon, selectedEntryId, setSelectedEntryId, onClose, on
   const [method, setMethod] = useState(currentEntry?.method_id || 'Masuda');
 
   const versions = [
-    "Légendes Z-A", "Écarlate", "Violet", "Légendes Arceus", "DEPS", "Épée", "Bouclier", 
+    "Légendes Z-A", "Écarlate", "Violet", "Pokémon GO", "Légendes Arceus", "DEPS", "Épée", "Bouclier", 
     "Let's Go P/E", "Ultra-Soleil", "Ultra-Lune", "Soleil", "Lune", "ROSA", "X", "Y", 
     "Noir 2", "Blanc 2", "Noir", "Blanc", "HGSS", "Platine", "Diamant", "Perle", 
     "RFVF", "Émeraude", "Rubis", "Saphir", "Cristal", "Or", "Argent", "Jaune", "Bleu", "Rouge"
@@ -105,9 +105,9 @@ const PokemonForm = ({ pokemon, selectedEntryId, setSelectedEntryId, onClose, on
         <div className="flex items-center justify-between bg-twilight-950 p-2.5 sm:p-4 rounded-xl sm:rounded-2xl border border-twilight-800">
           <span className="text-[8px] sm:text-[10px] font-black text-twilight-400 uppercase">Compteur</span>
           <div className="flex items-center gap-3">
-            <button onClick={() => setEncounters(Math.max(0, encounters - 1))} className="w-7 h-7 rounded-lg bg-twilight-800 text-sm">-</button>
+            <button onClick={() => { trigger('MEDIUM'); setEncounters(Math.max(0, encounters - 1)); }} className="w-7 h-7 rounded-lg bg-twilight-800 text-sm">-</button>
             <span className="text-base sm:text-xl font-black text-amber-500">{encounters}</span>
-            <button onClick={() => setEncounters(encounters + 1)} className="w-7 h-7 rounded-lg bg-amber-500 text-twilight-950 text-sm">+</button>
+            <button onClick={() => { trigger('MEDIUM'); setEncounters(encounters + 1); }} className="w-7 h-7 rounded-lg bg-amber-500 text-twilight-950 text-sm">+</button>
           </div>
         </div>
 

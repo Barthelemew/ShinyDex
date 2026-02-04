@@ -4,16 +4,16 @@ export function useHapticFeedback() {
 
     switch (pattern) {
       case 'LIGHT':
-        navigator.vibrate(10);
+        navigator.vibrate(15);
         break;
       case 'MEDIUM':
-        navigator.vibrate(50);
+        navigator.vibrate(80);
         break;
       case 'SUCCESS':
-        navigator.vibrate([20, 50, 20]);
+        navigator.vibrate([30, 60, 30]);
         break;
       case 'ERROR':
-        navigator.vibrate([100, 50, 100]);
+        navigator.vibrate([150, 50, 150]);
         break;
       default:
         navigator.vibrate(pattern);

@@ -14,6 +14,7 @@ export default function PokemonCard({ pokemon, viewMode, isSelected, onClick }) 
     const v = version.toLowerCase();
     if (v.includes('violet')) return 'text-violet-400';
     if (v.includes('écarlate') || v.includes('scarlet')) return 'text-red-500';
+    if (v.includes('go')) return 'text-cyan-400';
     if (v.includes('épée') || v.includes('sword')) return 'text-cyan-400';
     if (v.includes('bouclier') || v.includes('shield')) return 'text-magenta-500';
     if (v.includes('diamant') || v.includes('diamond')) return 'text-blue-300';
