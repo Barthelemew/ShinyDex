@@ -16,6 +16,9 @@ begin
     drop policy if exists "Owners can select teams" on teams;
     drop policy if exists "Members can select teams" on teams;
     drop policy if exists "Owners can update teams" on teams;
+    drop policy if exists "teams_select_policy" on teams;
+    drop policy if exists "teams_insert_policy" on teams;
+    drop policy if exists "teams_update_policy" on teams;
     
     -- Team Members
     drop policy if exists "Membres voient la liste des membres" on team_members;
@@ -24,8 +27,14 @@ begin
     drop policy if exists "See own membership" on team_members;
     drop policy if exists "See team members" on team_members;
     drop policy if exists "Owners manage members" on team_members;
-    drop policy if exists "Public read for members" on team_members;
-    drop policy if exists "Users can join teams" on team_members;
+    drop policy if exists "members_select_policy" on team_members;
+    drop policy if exists "members_insert_policy" on team_members;
+    drop policy if exists "members_delete_policy" on team_members;
+
+    -- Collection & Profiles
+    drop policy if exists "team_read_collection_policy" on collection;
+    drop policy if exists "profiles_select_policy" on profiles;
+    drop policy if exists "team_members_read_collection" on collection;
 end $$;
 
 -- 8. NOUVELLES POLITIQUES "PLATES" (Zéro récursion)
