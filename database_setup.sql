@@ -35,6 +35,12 @@ begin
     drop policy if exists "team_read_collection_policy" on collection;
     drop policy if exists "profiles_select_policy" on profiles;
     drop policy if exists "team_members_read_collection" on collection;
+
+    -- Team Invitations
+    drop policy if exists "invites_select_policy" on team_invitations;
+    drop policy if exists "invites_insert_policy" on team_invitations;
+    drop policy if exists "invites_update_policy" on team_invitations;
+    drop policy if exists "invites_delete_policy" on team_invitations;
 end $$;
 
 -- 8. NOUVELLES POLITIQUES "PLATES" (Zéro récursion)
