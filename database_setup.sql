@@ -83,6 +83,10 @@ using (invited_user_id = auth.uid() or inviter_user_id = auth.uid());
 
 
 
+-- --- TABLE: PROFILES ---
+drop policy if exists "Profils publics" on profiles;
+create policy "profiles_select_policy" on profiles for select using (true);
+
 -- --- TABLE: COLLECTION (AJOUT POLITIQUES ÉQUIPE) ---
 
 

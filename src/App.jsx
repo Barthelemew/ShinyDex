@@ -154,6 +154,7 @@ function App() {
         captured: isCaptured,
         totalCount: entries.length,
         entries: entries,
+        trainer: isCaptured ? entries[0].profiles : null,
         details: isCaptured ? {
           encounters: entries.reduce((sum, e) => sum + (e.count || 0), 0),
           version: entries[0].game_id,
@@ -224,7 +225,8 @@ function App() {
             userId={user.id}
             onNewHunt={() => setIsConfiguringNewHunt(true)}
             onFound={async (session) => {
-              upsertPokemon({ pokemon_id: session.pokemonId, is_shiny: true, count: session.count, game_id: session.gameId, method_id: session.methodId });
+              await upsertPokemon({ pokemon_id: session.pokemonId, is_shiny: true, count: session.count, game_id: session.gameId, method_id: session.methodId });
+              if (team) queryClient.invalidateQueries({ queryKey: ['teamCollection', team.id] });
               confetti({ particleCount: 200, spread: 90 });
               setToast({ message: `${session.pokemonName} trouvé !`, type: 'success' });
               stopSession(session.id);
@@ -377,11 +379,16 @@ function App() {
         <PokemonDetailModal 
           pokemon={liveSelectedPokemon} 
           onClose={() => setSelectedPokemonId(null)} 
-          onSave={(pokemonId, details) => {
-            upsertPokemon({ id: details.id, pokemon_id: pokemonId, is_shiny: true, count: details.encounters, game_id: details.version, method_id: details.origin });
+          onSave={async (pokemonId, details) => {
+            await upsertPokemon({ id: details.id, pokemon_id: pokemonId, is_shiny: true, count: details.encounters, game_id: details.version, method_id: details.origin });
+            if (team) queryClient.invalidateQueries({ queryKey: ['teamCollection', team.id] });
             setToast({ message: "Enregistré !", type: 'success' });
           }}
-          onDelete={(entryId) => { deletePokemon(entryId); setSelectedPokemonId(null); }}
+          onDelete={async (entryId) => { 
+            await deletePokemon(entryId); 
+            if (team) queryClient.invalidateQueries({ queryKey: ['teamCollection', team.id] });
+            setSelectedPokemonId(null); 
+          }}
         />
       )}
 
