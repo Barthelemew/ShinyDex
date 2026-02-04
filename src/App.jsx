@@ -24,6 +24,8 @@ import HuntingSession from './features/hunting/components/HuntingSession';
 import TeamManager from './features/collaboration/components/TeamManager';
 import StatsDashboard from './features/stats/components/StatsDashboard';
 import AchievementsGallery from './features/achievements/components/AchievementsGallery';
+import { useAchievements } from './features/achievements/hooks/useAchievements';
+import { checkAchievements } from './features/achievements/logic/achievements';
 import { realtimeService } from './features/collaboration/services/realtimeService';
 
 function App() {
@@ -47,10 +49,37 @@ function App() {
   const { collection: dbCollection, upsertPokemon, deletePokemon, importCollection, isSyncing } = useCollection(user?.id);
   const { team } = useTeam(user?.id);
   const { teamCollection } = useTeamCollection(team?.id);
+  const { achievements, unlockAchievement } = useAchievements(user?.id);
 
   useEffect(() => {
     if (authSession) queryClient.setQueryData(['auth-session'], authSession);
   }, [authSession, queryClient]);
+
+  // Surveillance des succès
+  useEffect(() => {
+    if (!user || !dbCollection.length) return;
+
+    // On calcule les succès basés sur la collection personnelle
+    const personalCaptured = staticData.map(p => {
+      const entries = dbCollection.filter(d => d.pokemon_id === p.id);
+      const isCaptured = entries.length > 0;
+      return { ...p, captured: isCaptured };
+    });
+
+    const potentialUnlocks = checkAchievements(personalCaptured);
+    
+    potentialUnlocks.forEach(async (achId) => {
+      const isAlreadyUnlocked = achievements.find(a => a.id === achId)?.unlocked;
+      if (!isAlreadyUnlocked) {
+        try {
+          await unlockAchievement(achId);
+          setToast({ message: `Succès débloqué ! 🏆`, type: 'success' });
+        } catch (err) {
+          console.error("Erreur déblocage auto :", err);
+        }
+      }
+    });
+  }, [dbCollection, user, achievements, unlockAchievement]);
 
   useEffect(() => {
     if (user) fetchProfile(user.id);
@@ -370,7 +399,7 @@ function App() {
       </AnimatePresence>
 
       {/* BOTTOM NAVIGATION MOBILE */}
-      {!selectedPokemonId && !selectionMode && (
+      {!selectedPokemonId && (
         <div className="sm:hidden fixed bottom-0 left-0 right-0 z-[100] bg-twilight-900/95 backdrop-blur-xl border-t border-twilight-800 px-4 py-3 pb-safe-bottom flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
           <button onClick={() => { setView('dex'); setIsConfiguringNewHunt(false); }} className={`flex flex-col items-center gap-1 min-w-[50px] ${view === 'dex' ? 'text-amber-500' : 'text-twilight-500'}`}>
             <LayoutGrid size={20} />
@@ -378,7 +407,7 @@ function App() {
           </button>
           <button onClick={() => handleRestrictedAction('hunting')} className={`flex flex-col items-center gap-1 min-w-[50px] ${view === 'hunting' ? 'text-amber-500' : 'text-twilight-500'}`}>
             <Zap size={20} className={sessions.length > 0 ? 'animate-pulse fill-current' : ''} />
-            <span className="text-[8px] font-black uppercase tracking-tighter">Hunt</span>
+            <span className="text-[8px] font-black uppercase tracking-tighter">Compteur</span>
           </button>
           <button onClick={() => handleRestrictedAction('achievements')} className={`flex flex-col items-center gap-1 min-w-[50px] ${view === 'achievements' ? 'text-amber-500' : 'text-twilight-500'}`}>
             <Trophy size={20} />
