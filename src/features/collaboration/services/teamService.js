@@ -127,7 +127,7 @@ export const teamService = {
       .from('collection')
       .select('*')
       .in('user_id', memberIds)
-      .range(0, 5000); // Supporte jusqu'Ã  5000 spécimens d'équipe
+      .limit(5000); // Supporte jusqu'Ã  5000 spécimens d'équipe
     
     if (collectionError) throw collectionError;
     

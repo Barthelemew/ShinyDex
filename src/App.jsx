@@ -161,11 +161,16 @@ function App() {
     }
 
     return staticData.map(p => {
-      // Filtrage rÃ©silient : accepte l'ID texte OU le numÃ©ro PokÃ©dex
-      const entries = activeDbCollection.filter(d => 
-        String(d.pokemon_id) === String(p.id) || 
-        String(d.pokemon_id) === String(p.pokedexId)
-      );
+      // Filtrage ultra-rÃ©silient : ID texte, numÃ©ro PokÃ©dex, ou NOM (casse insensible)
+      const entries = activeDbCollection.filter(d => {
+        const dId = String(d.pokemon_id).toLowerCase().trim();
+        const pId = String(p.id).toLowerCase().trim();
+        const pName = String(p.name).toLowerCase().trim();
+        
+        return dId === pId || 
+               dId === String(p.pokedexId) || 
+               dId === pName;
+      });
       const isCaptured = entries.length > 0;
       
       // Déterminer la génération
