@@ -47,7 +47,7 @@ function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   const { collection: dbCollection, upsertPokemon, deletePokemon, importCollection, isSyncing } = useCollection(user?.id);
-  const { team } = useTeam(user?.id);
+  const { team, members } = useTeam(user?.id);
   const { teamCollection } = useTeamCollection(team?.id);
   const { achievements, unlockAchievement } = useAchievements(user?.id);
 
@@ -197,7 +197,7 @@ function App() {
         } : null
       };
     });
-  }, [dbCollection, teamCollection, dexMode]);
+  }, [dbCollection, teamCollection, dexMode, members]);
 
   const liveSelectedPokemon = useMemo(() => {
     return selectedPokemonId ? fullCollection.find(p => p.id === selectedPokemonId) : null;
