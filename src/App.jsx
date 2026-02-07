@@ -138,23 +138,16 @@ function App() {
       activeDbCollection = dbCollection;
     } else {
       // En mode équipe, on fusionne les deux
-      // teamCollection contient déjà nos propres données si on est dans l'équipe
-      // mais on fusionne avec dbCollection au cas où pour l'aspect temps réel/optimiste
       const teamMap = new Map();
       
-      // On traite d'abord la collection d'équipe (prioritaire car contient les profils)
-      if (Array.isArray(teamCollection)) {
-        teamCollection.forEach(item => teamMap.set(item.id, item));
+      // On remplit d'abord avec les données personnelles (toujours dispos)
+      if (Array.isArray(dbCollection)) {
+        dbCollection.forEach(item => teamMap.set(item.id, item));
       }
       
-      // On ajoute les items perso s'ils ne sont pas déjà là (ou pour mettre à jour)
-      if (Array.isArray(dbCollection)) {
-        dbCollection.forEach(item => {
-          // Si l'item perso n'est pas dans teamMap, ou s'il est plus récent (optimistic update)
-          if (!teamMap.has(item.id)) {
-            teamMap.set(item.id, item);
-          }
-        });
+      // On complète/écrase avec les données d'équipe (qui incluent les nôtres avec profils)
+      if (Array.isArray(teamCollection)) {
+        teamCollection.forEach(item => teamMap.set(item.id, item));
       }
       
       activeDbCollection = Array.from(teamMap.values());

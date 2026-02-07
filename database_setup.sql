@@ -83,10 +83,9 @@ create policy "collection_select_policy" on collection for select
 using (
   auth.uid() = user_id 
   or 
-  exists (
-    select 1 from team_members tm1
-    join team_members tm2 on tm1.team_id = tm2.team_id
-    where tm1.user_id = auth.uid() and tm2.user_id = collection.user_id
+  user_id in (
+    select user_id from team_members 
+    where team_id in (select team_id from team_members where user_id = auth.uid())
   )
 );
 

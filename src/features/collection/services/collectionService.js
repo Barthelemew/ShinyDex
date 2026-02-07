@@ -6,7 +6,7 @@ export const collectionService = {
       .from('collection')
       .select(`
         *,
-        profiles (
+        profiles:user_id (
           username,
           avatar_url
         )
