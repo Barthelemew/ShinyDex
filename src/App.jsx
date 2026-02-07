@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Fuse from 'fuse.js';
 import confetti from 'canvas-confetti';
 import { useQueryClient } from '@tanstack/react-query';
@@ -139,7 +139,7 @@ function App() {
     } else {
       // En mode équipe, on fusionne les deux pour éviter les "trous" visuels
       const teamMap = new Map();
-      [...teamCollection, ...dbCollection].forEach(item => {
+      [...dbCollection, ...teamCollection].forEach(item => {
         teamMap.set(item.id, item);
       });
       activeDbCollection = Array.from(teamMap.values());

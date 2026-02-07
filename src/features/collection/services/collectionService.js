@@ -4,7 +4,13 @@ export const collectionService = {
   async getCollection(userId) {
     const { data, error } = await supabase
       .from('collection')
-      .select('*')
+      .select(`
+        *,
+        profiles:user_id (
+          username,
+          avatar_url
+        )
+      `)
       .eq('user_id', userId);
     
     if (error) throw error;

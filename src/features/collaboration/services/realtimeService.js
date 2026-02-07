@@ -5,9 +5,6 @@ export const realtimeService = {
    * Rejoint le canal d'une équipe pour écouter les événements Broadcast.
    */
   subscribeToTeam(teamId, onEvent) {
-    // Nettoyer les anciens canaux pour cette équipe si nécessaire
-    supabase.removeAllChannels();
-
     const channel = supabase.channel(`team:${teamId}`, {
       config: {
         broadcast: { self: true },
@@ -25,12 +22,14 @@ export const realtimeService = {
         onEvent('shiny_found', payload);
       })
       .on('postgres_changes', { 
-        event: 'INSERT', 
+        event: '*', 
         schema: 'public', 
         table: 'collection' 
       }, (payload) => {
-        onEvent('collection_updated', payload.new);
-        if (payload.new.is_shiny) {
+        // En cas de DELETE, payload.new est null, on utilise payload.old
+        onEvent('collection_updated', payload.new || payload.old);
+        
+        if (payload.eventType === 'INSERT' && payload.new?.is_shiny) {
           onEvent('shiny_found', {
             userId: payload.new.user_id,
             pokemonId: payload.new.pokemon_id,

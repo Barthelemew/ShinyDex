@@ -5,10 +5,6 @@ import achievementDefinitions from '../data/achievements.json';
 export function useAchievements(userId) {
   const queryClient = useQueryClient();
 
-  // On récupère la session pour savoir si on est en mode démo
-  const { data: session } = useQuery({ queryKey: ['auth-session'], enabled: false });
-
-
   // Requête pour les succès débloqués
   const { data: userAchievements = [], isLoading } = useQuery({
     queryKey: ['userAchievements', userId],

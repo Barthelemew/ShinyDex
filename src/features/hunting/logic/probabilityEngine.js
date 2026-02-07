@@ -31,7 +31,7 @@ export const calculateCurrentRate = (session) => {
       if (modifiers.massiveOutbreak) rolls += 25;
       return Math.floor(4096 / rolls);
 
-    case 'SOS Battle':
+    case 'SOS':
     case 'Combo Capture': {
       const chain = method.chains.slice().reverse().find(c => count >= c.min);
       return chain ? chain.rate : method.base_rate;

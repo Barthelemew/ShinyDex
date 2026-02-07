@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useTeam } from '../hooks/useTeam';
 import { invitationService } from '../services/invitationService';
-import { Users, Plus, UserPlus, Copy, LogOut, Shield, Search, Send, Check, X, Mail, Sparkles } from 'lucide-react';
+import { Users, Plus, UserPlus, Copy, LogOut, Shield, Search, Send, Mail, Sparkles } from 'lucide-react';
 import { useHapticFeedback } from '../../../hooks/useHapticFeedback';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConfirmModal from '../../../components/ConfirmModal';

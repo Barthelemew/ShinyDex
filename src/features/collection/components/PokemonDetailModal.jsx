@@ -53,7 +53,7 @@ const PokemonForm = ({ pokemon, selectedEntryId, setSelectedEntryId, onClose, on
     "RFVF", "Émeraude", "Rubis", "Saphir", "Cristal", "Or", "Argent", "Jaune", "Bleu", "Rouge"
   ];
 
-  const methods = ["Masuda", "Rencontres", "Reset", "Raids", "Hordes", "Chaine", "Éclosion", "Dynamax", "Expédition"];
+  const methods = ["Masuda", "Rencontres", "Reset", "Raids", "Hordes", "Chaine", "SOS", "Éclosion", "Dynamax", "Expédition"];
   const shinySpriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${pokemon.pokedexId}.png`;
 
   const handleSave = () => {

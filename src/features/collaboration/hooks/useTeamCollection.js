@@ -16,7 +16,7 @@ export function useTeamCollection(teamId) {
   useEffect(() => {
     if (!teamId) return;
 
-    const channel = realtimeService.subscribeToTeam(teamId, (event, payload) => {
+    const channel = realtimeService.subscribeToTeam(teamId, (event) => {
       if (event === 'collection_updated' || event === 'shiny_found') {
         queryClient.invalidateQueries({ queryKey: ['teamCollection', teamId] });
       }

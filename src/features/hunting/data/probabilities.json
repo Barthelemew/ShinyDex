@@ -2,7 +2,7 @@
   "methods": {
     "Masuda": { "base_rate": 683, "with_charm": 512 },
     "Rencontres": { "base_rate": 4096, "with_charm": 1365 },
-    "SOS Battle": {
+    "SOS": {
       "base_rate": 4096,
       "chains": [
         { "min": 0, "rate": 4096 },
