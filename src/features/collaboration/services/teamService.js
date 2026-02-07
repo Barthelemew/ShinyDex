@@ -48,7 +48,8 @@ export const teamService = {
     if (!teamId) return [];
     
     const { data: memberData, error: memberError } = await supabase
-      .from('team_members').select('user_id').eq('team_id', teamId);
+      .from('team_members').select('user_id').eq('team_id', teamId)
+      .limit(1000);
     
     if (memberError) throw memberError;
     const memberIds = (memberData || []).map(m => m.user_id);

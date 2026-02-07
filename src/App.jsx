@@ -28,15 +28,10 @@ import { useAchievements } from './features/achievements/hooks/useAchievements';
 import { checkAchievements } from './features/achievements/logic/achievements';
 import { realtimeService } from './features/collaboration/services/realtimeService';
 
-// Fonction de normalisation ultra-robuste (supprime accents et caractères spéciaux)
+// Normalisation sécurisée
 const normalize = (str) => {
   if (!str) return "";
-  return String(str)
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // Supprime les accents
-    .replace(/[^a-z0-9]/g, "") // Garde uniquement lettres et chiffres
-    .trim();
+  return String(str).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "").trim();
 };
 
 function App() {
@@ -57,9 +52,9 @@ function App() {
   const [isConfiguringNewHunt, setIsConfiguringNewHunt] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  const { collection: dbCollection, upsertPokemon, deletePokemon, importCollection, isSyncing } = useCollection(user?.id);
-  const { team, members } = useTeam(user?.id);
-  const { teamCollection } = useTeamCollection(team?.id);
+  const { collection: dbCollection = [], upsertPokemon, deletePokemon, importCollection, isSyncing } = useCollection(user?.id);
+  const { team, members = [] } = useTeam(user?.id);
+  const { teamCollection = [] } = useTeamCollection(team?.id);
   const { achievements, unlockAchievement } = useAchievements(user?.id);
 
   useEffect(() => {
@@ -82,36 +77,38 @@ function App() {
   }, []);
 
   const fullCollection = useMemo(() => {
-    console.log(`[Sync] Perso: ${dbCollection?.length || 0} | Équipe: ${teamCollection?.length || 0}`);
+    // DIAGNOSTIC : Affiche le volume de données brut dans la console
+    console.log(`[SyncCheck] Raw DB: ${dbCollection?.length || 0} | Raw Team: ${teamCollection?.length || 0}`);
     
     let activeRawCollection = [];
     if (dexMode === 'personal') {
-      activeRawCollection = Array.isArray(dbCollection) ? dbCollection : [];
+      activeRawCollection = dbCollection;
     } else {
+      // Fusion simple et robuste (ID technique de ligne)
       const teamMap = new Map();
-      const combined = [
-        ...(Array.isArray(teamCollection) ? teamCollection : []), 
-        ...(Array.isArray(dbCollection) ? dbCollection : [])
-      ];
-      combined.forEach(item => {
+      [...dbCollection, ...teamCollection].forEach(item => {
         if (item && item.id) teamMap.set(item.id, item);
       });
       activeRawCollection = Array.from(teamMap.values());
     }
 
+    const trainersSet = new Set(activeRawCollection.map(d => d.user_id));
+    console.log(`[SyncCheck] Dresseurs détectés: ${trainersSet.size} | Total lignes après fusion: ${activeRawCollection.length}`);
+
     return staticData.map(p => {
-      // Filtrage par normalisation totale
-      const pIdNorm = normalize(p.id);
-      const pNameNorm = normalize(p.name);
+      // Filtrage cumulatif (Strict + Normalisé)
+      const pId = String(p.id).toLowerCase();
       const pNum = String(p.pokedexId);
+      const pNameNorm = normalize(p.name);
 
       const entries = activeRawCollection.filter(d => {
-        const dId = String(d.pokemon_id);
-        const dIdNorm = normalize(dId);
+        if (!d.pokemon_id) return false;
+        const dId = String(d.pokemon_id).toLowerCase().trim();
         
-        return dIdNorm === pIdNorm || 
-               dId === pNum || 
-               dIdNorm === pNameNorm;
+        return dId === pId || // Match exact (slug)
+               dId === pNum || // Match numéro
+               normalize(dId) === pNameNorm || // Match nom FR normalisé
+               normalize(dId) === normalize(pId); // Match slug normalisé
       });
       
       const isCaptured = entries.length > 0;
@@ -128,7 +125,7 @@ function App() {
 
       const getTrainerInfo = (item) => {
         if (item.profiles) return item.profiles;
-        const member = (members || []).find(m => m.user_id === item.user_id);
+        const member = members.find(m => m.user_id === item.user_id);
         return member?.profiles || { username: 'Dresseur' };
       };
 
@@ -148,7 +145,7 @@ function App() {
     });
   }, [dbCollection, teamCollection, dexMode, members]);
 
-  // Surveillance des succès après calcul de la collection
+  // Surveillance des succès
   useEffect(() => {
     if (!user || !fullCollection.some(p => p.captured)) return;
     const potentialUnlocks = checkAchievements(fullCollection);
