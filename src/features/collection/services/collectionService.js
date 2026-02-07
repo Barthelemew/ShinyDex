@@ -4,9 +4,15 @@ export const collectionService = {
   async getCollection(userId) {
     const { data, error } = await supabase
       .from('collection')
-      .select('*')
+      .select(`
+        *,
+        profiles:user_id (
+          username,
+          avatar_url
+        )
+      `)
       .eq('user_id', userId)
-      .limit(5000); // Augmente la limite de 1000 Ã  5000 lignes
+      .limit(5000);
     
     if (error) throw error;
     return data;

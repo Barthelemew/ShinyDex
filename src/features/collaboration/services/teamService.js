@@ -66,13 +66,17 @@ export const teamService = {
     if (memberIds.length === 0) return [];
 
     // 2. Récupérer TOUTE la collection pour TOUS les IDs trouvés
-    // On utilise une limite très haute et on s'assure que memberIds est propre
     const { data: collection, error: collectionError } = await supabase
       .from('collection')
-      .select('*')
+      .select(`
+        *,
+        profiles:user_id (
+          username,
+          avatar_url
+        )
+      `)
       .in('user_id', memberIds)
-      .order('created_at', { ascending: false })
-      .limit(10000); // Sécurité maximale
+      .limit(10000);
     
     if (collectionError) throw collectionError;
     return collection || [];
