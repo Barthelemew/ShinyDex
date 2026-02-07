@@ -176,13 +176,20 @@ function App() {
       else if (n <= 809) gen = 7;
       else if (n <= 905) gen = 8;
 
+      // Injection manuelle du profil dresseur depuis la liste des membres
+      const getTrainerInfo = (item) => {
+        if (item.profiles) return item.profiles;
+        const member = members.find(m => m.user_id === item.user_id);
+        return member?.profiles || { username: 'Dresseur' };
+      };
+
       return { 
         ...p, 
         gen,
         captured: isCaptured,
         totalCount: entries.length,
         entries: entries,
-        trainer: entries.length > 0 ? (entries[0].profiles || { username: 'Dresseur' }) : null,
+        trainer: entries.length > 0 ? getTrainerInfo(entries[0]) : null,
         details: isCaptured ? {
           encounters: entries.reduce((sum, e) => sum + (e.count || 0), 0),
           version: entries[0].game_id,

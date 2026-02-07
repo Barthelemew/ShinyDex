@@ -2,22 +2,12 @@ import { supabase } from '../../../services/supabaseClient';
 
 export const collectionService = {
   async getCollection(userId) {
-    // On revient au SELECT avec profil pour l'identité visuelle
     const { data, error } = await supabase
       .from('collection')
-      .select(`
-        *,
-        profiles:user_id (
-          username,
-          avatar_url
-        )
-      `)
+      .select('*')
       .eq('user_id', userId);
     
-    if (error) {
-      console.error("Erreur critique getCollection:", error);
-      throw error;
-    }
+    if (error) throw error;
     return data;
   },
 

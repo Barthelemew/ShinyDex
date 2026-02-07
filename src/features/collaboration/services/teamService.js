@@ -125,13 +125,7 @@ export const teamService = {
     // 2. Récupérer toutes les captures de ces membres
     const { data: collection, error: collectionError } = await supabase
       .from('collection')
-      .select(`
-        *,
-        profiles:user_id (
-          username,
-          avatar_url
-        )
-      `)
+      .select('*')
       .in('user_id', memberIds);
     
     if (collectionError) throw collectionError;
