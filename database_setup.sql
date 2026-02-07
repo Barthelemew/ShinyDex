@@ -78,16 +78,15 @@ create policy "profiles_select_policy" on profiles for select using (true);
 -- --- TABLE: COLLECTION ---
 alter table collection enable row level security;
 
--- Lecture : Soi-même OU son équipe
+-- Lecture : Soi-mÃªme OU son Ã©quipe
 create policy "collection_select_policy" on collection for select
 using (
   auth.uid() = user_id 
   or 
-  user_id in (
-    select tm2.user_id
-    from team_members tm1
+  exists (
+    select 1 from team_members tm1
     join team_members tm2 on tm1.team_id = tm2.team_id
-    where tm1.user_id = auth.uid()
+    where tm1.user_id = auth.uid() and tm2.user_id = collection.user_id
   )
 );
 

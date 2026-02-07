@@ -137,11 +137,26 @@ function App() {
     if (dexMode === 'personal') {
       activeDbCollection = dbCollection;
     } else {
-      // En mode équipe, on fusionne les deux pour éviter les "trous" visuels
+      // En mode équipe, on fusionne les deux
+      // teamCollection contient déjà nos propres données si on est dans l'équipe
+      // mais on fusionne avec dbCollection au cas où pour l'aspect temps réel/optimiste
       const teamMap = new Map();
-      [...dbCollection, ...teamCollection].forEach(item => {
-        teamMap.set(item.id, item);
-      });
+      
+      // On traite d'abord la collection d'équipe (prioritaire car contient les profils)
+      if (Array.isArray(teamCollection)) {
+        teamCollection.forEach(item => teamMap.set(item.id, item));
+      }
+      
+      // On ajoute les items perso s'ils ne sont pas déjà là (ou pour mettre à jour)
+      if (Array.isArray(dbCollection)) {
+        dbCollection.forEach(item => {
+          // Si l'item perso n'est pas dans teamMap, ou s'il est plus récent (optimistic update)
+          if (!teamMap.has(item.id)) {
+            teamMap.set(item.id, item);
+          }
+        });
+      }
+      
       activeDbCollection = Array.from(teamMap.values());
     }
 
@@ -167,7 +182,7 @@ function App() {
         captured: isCaptured,
         totalCount: entries.length,
         entries: entries,
-        trainer: isCaptured ? entries.find(e => e.profiles)?.profiles : null,
+        trainer: entries.length > 0 ? (entries[0].profiles || null) : null,
         details: isCaptured ? {
           encounters: entries.reduce((sum, e) => sum + (e.count || 0), 0),
           version: entries[0].game_id,
