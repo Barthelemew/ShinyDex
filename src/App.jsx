@@ -161,7 +161,11 @@ function App() {
     }
 
     return staticData.map(p => {
-      const entries = activeDbCollection.filter(d => d.pokemon_id === p.id);
+      // Filtrage rÃ©silient : accepte l'ID texte OU le numÃ©ro PokÃ©dex
+      const entries = activeDbCollection.filter(d => 
+        String(d.pokemon_id) === String(p.id) || 
+        String(d.pokemon_id) === String(p.pokedexId)
+      );
       const isCaptured = entries.length > 0;
       
       // Déterminer la génération

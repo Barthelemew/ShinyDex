@@ -34,7 +34,7 @@ export default function HuntingConfig({ onBack, userId }) {
     if (!selectedPkmn) return;
     
     const config = {
-      pokemonId: selectedPkmn.pokedexId || selectedPkmn.id,
+      pokemonId: selectedPkmn.id, // Utiliser l'ID texte unique
       pokemonName: selectedPkmn.name,
       gameId: selectedGame,
       methodId: selectedMethod,
