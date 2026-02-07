@@ -28,6 +28,17 @@ import { useAchievements } from './features/achievements/hooks/useAchievements';
 import { checkAchievements } from './features/achievements/logic/achievements';
 import { realtimeService } from './features/collaboration/services/realtimeService';
 
+// Fonction de normalisation ultra-robuste (supprime accents et caractères spéciaux)
+const normalize = (str) => {
+  if (!str) return "";
+  return String(str)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // Supprime les accents
+    .replace(/[^a-z0-9]/g, "") // Garde uniquement lettres et chiffres
+    .trim();
+};
+
 function App() {
   const { user, loading: authLoading, session: authSession } = useAuth();
   const queryClient = useQueryClient();
@@ -46,7 +57,6 @@ function App() {
   const [isConfiguringNewHunt, setIsConfiguringNewHunt] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // RÉCUPÉRATION DES DONNÉES
   const { collection: dbCollection, upsertPokemon, deletePokemon, importCollection, isSyncing } = useCollection(user?.id);
   const { team, members } = useTeam(user?.id);
   const { teamCollection } = useTeamCollection(team?.id);
@@ -55,27 +65,6 @@ function App() {
   useEffect(() => {
     if (authSession) queryClient.setQueryData(['auth-session'], authSession);
   }, [authSession, queryClient]);
-
-  // Surveillance des succès (basée sur la collection personnelle)
-  useEffect(() => {
-    if (!user || !dbCollection.length) return;
-    const personalCaptured = staticData.map(p => {
-      const isCaptured = dbCollection.some(d => String(d.pokemon_id) === String(p.id) || String(d.pokemon_id) === String(p.pokedexId));
-      return { ...p, captured: isCaptured };
-    });
-    const potentialUnlocks = checkAchievements(personalCaptured);
-    potentialUnlocks.forEach(async (achId) => {
-      const isAlreadyUnlocked = achievements.find(a => a.id === achId)?.unlocked;
-      if (!isAlreadyUnlocked) {
-        try {
-          await unlockAchievement(achId);
-          setToast({ message: `Succès débloqué ! 🏆`, type: 'success' });
-        } catch (err) {
-          console.error("Erreur déblocage auto :", err);
-        }
-      }
-    });
-  }, [dbCollection, user, achievements, unlockAchievement]);
 
   useEffect(() => {
     if (user) fetchProfile(user.id);
@@ -92,15 +81,13 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // FUSION ET FILTRAGE DES DONNÉES (CŒUR DE L'APPLI)
   const fullCollection = useMemo(() => {
-    console.log(`[SyncCheck] Perso: ${dbCollection.length} | Équipe: ${teamCollection.length} | Membres: ${members?.length || 0}`);
+    console.log(`[Sync] Perso: ${dbCollection?.length || 0} | Équipe: ${teamCollection?.length || 0}`);
     
     let activeRawCollection = [];
     if (dexMode === 'personal') {
       activeRawCollection = Array.isArray(dbCollection) ? dbCollection : [];
     } else {
-      // Fusion exhaustive sans perte par ID technique unique
       const teamMap = new Map();
       const combined = [
         ...(Array.isArray(teamCollection) ? teamCollection : []), 
@@ -112,14 +99,19 @@ function App() {
       activeRawCollection = Array.from(teamMap.values());
     }
 
-    // Association avec les données statiques (Pokédex)
     return staticData.map(p => {
-      // Filtrage ultra-résilient (ID texte, numéro ou nom)
+      // Filtrage par normalisation totale
+      const pIdNorm = normalize(p.id);
+      const pNameNorm = normalize(p.name);
+      const pNum = String(p.pokedexId);
+
       const entries = activeRawCollection.filter(d => {
-        const dId = String(d.pokemon_id).toLowerCase().trim();
-        const pId = String(p.id).toLowerCase().trim();
-        const pNum = String(p.pokedexId).trim();
-        return dId === pId || dId === pNum || dId === String(p.name).toLowerCase().trim();
+        const dId = String(d.pokemon_id);
+        const dIdNorm = normalize(dId);
+        
+        return dIdNorm === pIdNorm || 
+               dId === pNum || 
+               dIdNorm === pNameNorm;
       });
       
       const isCaptured = entries.length > 0;
@@ -134,9 +126,8 @@ function App() {
       else if (n <= 809) gen = 7;
       else if (n <= 905) gen = 8;
 
-      // Injection de l'identité (Nom/Avatar) côté client
       const getTrainerInfo = (item) => {
-        if (item.profiles) return item.profiles; // Fallback si jointure active
+        if (item.profiles) return item.profiles;
         const member = (members || []).find(m => m.user_id === item.user_id);
         return member?.profiles || { username: 'Dresseur' };
       };
@@ -156,6 +147,23 @@ function App() {
       };
     });
   }, [dbCollection, teamCollection, dexMode, members]);
+
+  // Surveillance des succès après calcul de la collection
+  useEffect(() => {
+    if (!user || !fullCollection.some(p => p.captured)) return;
+    const potentialUnlocks = checkAchievements(fullCollection);
+    potentialUnlocks.forEach(async (achId) => {
+      const isAlreadyUnlocked = achievements.find(a => a.id === achId)?.unlocked;
+      if (!isAlreadyUnlocked) {
+        try {
+          await unlockAchievement(achId);
+          setToast({ message: `Succès débloqué ! 🏆`, type: 'success' });
+        } catch (err) {
+          console.error("Erreur déblocage auto :", err);
+        }
+      }
+    });
+  }, [fullCollection, user, achievements, unlockAchievement]);
 
   const liveSelectedPokemon = useMemo(() => {
     return selectedPokemonId ? fullCollection.find(p => p.id === selectedPokemonId) : null;
