@@ -541,6 +541,12 @@
     "name": "Canarticho"
   },
   {
+    "id": "farfetchd-galar",
+    "pokedexId": 83,
+    "apiId": 10166,
+    "name": "Canarticho de Galar"
+  },
+  {
     "id": "doduo",
     "pokedexId": 84,
     "name": "Doduo"
