@@ -175,7 +175,7 @@ function App() {
         captured: isCaptured,
         totalCount: entries.length,
         entries: entries,
-        trainer: entries.length > 0 ? (entries[0].profiles || null) : null,
+        trainer: entries.length > 0 ? (entries[0].profiles || { username: 'Dresseur' }) : null,
         details: isCaptured ? {
           encounters: entries.reduce((sum, e) => sum + (e.count || 0), 0),
           version: entries[0].game_id,

@@ -2,18 +2,16 @@ import { supabase } from '../../../services/supabaseClient';
 
 export const collectionService = {
   async getCollection(userId) {
+    // On revient au SELECT le plus simple possible pour restaurer la visibilité
     const { data, error } = await supabase
       .from('collection')
-      .select(`
-        *,
-        profiles:user_id (
-          username,
-          avatar_url
-        )
-      `)
+      .select('*')
       .eq('user_id', userId);
     
-    if (error) throw error;
+    if (error) {
+      console.error("Erreur critique getCollection:", error);
+      throw error;
+    }
     return data;
   },
 

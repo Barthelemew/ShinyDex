@@ -122,16 +122,10 @@ export const teamService = {
     const memberIds = memberData.map(m => m.user_id);
     console.log("[TeamService] Membres détectés pour l'équipe:", memberIds);
 
-    // 2. Récupérer toutes les captures de ces membres
+    // 2. RÃ©cupÃ©rer toutes les captures de ces membres
     const { data: collection, error: collectionError } = await supabase
       .from('collection')
-      .select(`
-        *,
-        profiles:user_id (
-          username,
-          avatar_url
-        )
-      `)
+      .select('*')
       .in('user_id', memberIds);
     
     if (collectionError) throw collectionError;
