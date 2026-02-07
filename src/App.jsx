@@ -137,25 +137,14 @@ function App() {
     if (dexMode === 'personal') {
       activeDbCollection = dbCollection;
     } else {
-      // En mode équipe, on fusionne les deux de manière exhaustive
+      // Fusion totale sans perte
+      const combined = [...(Array.isArray(teamCollection) ? teamCollection : []), ...(Array.isArray(dbCollection) ? dbCollection : [])];
+      
+      // On utilise un Map pour dédoublonner par ID de ligne unique en base (PK)
       const teamMap = new Map();
-      
-      // On ajoute TOUS les items de la collection d'équipe (inclut nos propres items synchro)
-      if (Array.isArray(teamCollection)) {
-        teamCollection.forEach(item => {
-          teamMap.set(item.id, item);
-        });
-      }
-      
-      // On ajoute nos items personnels (dbCollection) s'ils ne sont pas déjà présents
-      // (Sécurité pour les "upserts" récents pas encore propagés par Supabase)
-      if (Array.isArray(dbCollection)) {
-        dbCollection.forEach(item => {
-          if (!teamMap.has(item.id)) {
-            teamMap.set(item.id, item);
-          }
-        });
-      }
+      combined.forEach(item => {
+        if (item && item.id) teamMap.set(item.id, item);
+      });
       
       activeDbCollection = Array.from(teamMap.values());
     }
