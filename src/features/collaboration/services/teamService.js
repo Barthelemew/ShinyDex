@@ -59,6 +59,7 @@ export const teamService = {
       .from('collection')
       .select('*')
       .in('user_id', memberIds)
+      .order('id', { ascending: true })
       .limit(10000);
     
     if (collectionError) throw collectionError;

@@ -10,7 +10,7 @@ export function useTeamCollection(teamId) {
     queryKey: ['teamCollection', teamId],
     queryFn: () => teamService.getTeamCollection(teamId),
     enabled: !!teamId,
-    staleTime: 1000 * 30, // 30 secondes au lieu de 5 minutes
+    staleTime: 0, // Force le rafraîchissement à chaque montage pour éviter les désynchronisations
   });
 
   useEffect(() => {

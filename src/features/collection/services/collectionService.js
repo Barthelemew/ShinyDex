@@ -6,7 +6,8 @@ export const collectionService = {
       .from('collection')
       .select('*')
       .eq('user_id', userId)
-      .limit(5000);
+      .order('id', { ascending: true })
+      .limit(10000);
     
     if (error) throw error;
     return data || [];
@@ -14,7 +15,6 @@ export const collectionService = {
 
   async upsertPokemon(pokemonData) {
     const isArray = Array.isArray(pokemonData);
-    
     if (isArray) {
       const payload = pokemonData.map(p => {
         const item = { ...p };
