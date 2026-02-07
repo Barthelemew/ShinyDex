@@ -47,7 +47,7 @@ const PokemonForm = ({ pokemon, selectedEntryId, setSelectedEntryId, onClose, on
   const [method, setMethod] = useState(currentEntry?.method_id || 'Masuda');
 
   const versions = [
-    "Légendes Z-A", "Écarlate", "Violet", "Pokémon GO", "Légendes Arceus", "DEPS", "Épée", "Bouclier", 
+    "Pokémon Home", "Évènements", "Légendes Z-A", "Écarlate", "Violet", "Pokémon GO", "Légendes Arceus", "DEPS", "Épée", "Bouclier", 
     "Let's Go P/E", "Ultra-Soleil", "Ultra-Lune", "Soleil", "Lune", "ROSA", "X", "Y", 
     "Noir 2", "Blanc 2", "Noir", "Blanc", "HGSS", "Platine", "Diamant", "Perle", 
     "RFVF", "Émeraude", "Rubis", "Saphir", "Cristal", "Or", "Argent", "Jaune", "Bleu", "Rouge"

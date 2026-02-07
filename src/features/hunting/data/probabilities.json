@@ -35,6 +35,8 @@
     "Dynamax": { "base_rate": 300, "with_charm": 100 }
   },
   "games": {
+    "Pokémon Home": { "gen": 9, "base_shiny_rate": 1 },
+    "Évènements": { "gen": 9, "base_shiny_rate": 1 },
     "Légendes Z-A": { "gen": 9, "base_shiny_rate": 4096, "has_sandwich": true },
     "Écarlate/Violet": { "gen": 9, "base_shiny_rate": 4096, "has_sandwich": true },
     "Légendes Arceus": { "gen": 8, "base_shiny_rate": 4096, "has_research": true },
