@@ -126,7 +126,8 @@ export const teamService = {
     const { data: collection, error: collectionError } = await supabase
       .from('collection')
       .select('*')
-      .in('user_id', memberIds);
+      .in('user_id', memberIds)
+      .range(0, 5000); // Supporte jusqu'Ã  5000 spécimens d'équipe
     
     if (collectionError) throw collectionError;
     

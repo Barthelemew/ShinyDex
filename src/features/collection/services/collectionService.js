@@ -5,7 +5,8 @@ export const collectionService = {
     const { data, error } = await supabase
       .from('collection')
       .select('*')
-      .eq('user_id', userId);
+      .eq('user_id', userId)
+      .range(0, 5000); // Augmente la limite de 1000 Ã  5000 lignes
     
     if (error) throw error;
     return data;
