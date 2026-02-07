@@ -268,17 +268,25 @@ function App() {
           </div>
           
           <div className="flex flex-col gap-1 w-full sm:max-w-xs sm:ml-auto">
-             <div className="flex justify-between w-full text-[10px] font-black uppercase tracking-widest italic">
-               <span className="text-twilight-500">Progression {dexMode === 'personal' ? 'Perso' : 'Équipe'}</span>
-               <span className="text-amber-500">{fullCollection.filter(p => p.captured).length} / {fullCollection.length}</span>
-             </div>
-             <div className="w-full h-1.5 bg-twilight-950 rounded-full overflow-hidden border border-twilight-800">
-               <motion.div 
-                 initial={{ width: 0 }}
-                 animate={{ width: `${(fullCollection.filter(p => p.captured).length / fullCollection.length) * 100}%` }}
-                 className="h-full bg-gradient-to-r from-amber-500 to-orange-600 shadow-[0_0_10px_rgba(245,158,11,0.3)]"
-               />
-             </div>
+             {(() => {
+               const legitTotalCount = staticData.filter(p => !p.shinyLocked).length;
+               const legitCapturedCount = fullCollection.filter(p => p.captured && !p.shinyLocked).length;
+               return (
+                 <>
+                   <div className="flex justify-between w-full text-[10px] font-black uppercase tracking-widest italic">
+                     <span className="text-twilight-500">Progression {dexMode === 'personal' ? 'Perso' : 'Équipe'}</span>
+                     <span className="text-amber-500">{legitCapturedCount} / {legitTotalCount}</span>
+                   </div>
+                   <div className="w-full h-1.5 bg-twilight-950 rounded-full overflow-hidden border border-twilight-800">
+                     <motion.div 
+                       initial={{ width: 0 }}
+                       animate={{ width: `${(legitCapturedCount / legitTotalCount) * 100}%` }}
+                       className="h-full bg-gradient-to-r from-amber-500 to-orange-600 shadow-[0_0_10px_rgba(245,158,11,0.3)]"
+                     />
+                   </div>
+                 </>
+               );
+             })()}
           </div>
         </div>
 
@@ -291,7 +299,7 @@ function App() {
                 </h2>
                 <div className="h-px flex-1 bg-gradient-to-r from-amber-500/20 to-transparent ml-8 hidden md:block"></div>
                 <span className="text-[10px] font-black text-twilight-600 uppercase tracking-widest ml-4">
-                  {pokemons.filter(p => p.captured).length} / {pokemons.length} capturés
+                  {pokemons.filter(p => p.captured && !p.shinyLocked).length} / {pokemons.filter(p => !p.shinyLocked).length} capturés
                 </span>
               </div>
 

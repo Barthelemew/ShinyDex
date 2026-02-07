@@ -2719,7 +2719,8 @@
   {
     "id": "victini",
     "pokedexId": 494,
-    "name": "Victini"
+    "name": "Victini",
+    "shinyLocked": true
   },
   {
     "id": "snivy",

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Ban } from 'lucide-react';
 
 export default function PokemonCard({ pokemon, viewMode, isSelected, onClick }) {
   const vId = pokemon.pokedexId || pokemon.id;
@@ -77,6 +77,11 @@ export default function PokemonCard({ pokemon, viewMode, isSelected, onClick }) 
             <h3 className={`font-black uppercase italic truncate ${isSelected ? 'text-gold-champagne' : pokemon.captured ? 'text-gold-champagne' : 'text-twilight-400'}`}>
               {pokemon.name}
             </h3>
+            {pokemon.shinyLocked && (
+              <span className="flex items-center gap-1 px-1.5 py-0.5 rounded bg-red-500/10 border border-red-500/20 text-red-500 text-[7px] font-black uppercase tracking-tighter italic">
+                <Ban size={8} /> Shiny Lock
+              </span>
+            )}
           </div>
           {pokemon.captured && (
             <div className="flex flex-wrap gap-2 mt-1">
@@ -124,6 +129,11 @@ export default function PokemonCard({ pokemon, viewMode, isSelected, onClick }) 
       {pokemon.totalCount > 1 && (
         <div className="absolute top-2 left-2 z-10 bg-amber-500 text-twilight-950 text-[8px] sm:text-[10px] font-black px-1.5 sm:px-2 py-0.5 rounded-md sm:rounded-lg italic shadow-lg">
           x{pokemon.totalCount}
+        </div>
+      )}
+      {pokemon.shinyLocked && (
+        <div className="absolute top-2 right-2 z-10 text-red-500 bg-red-500/10 p-1 rounded-full border border-red-500/20 backdrop-blur-sm" title="Shiny Lock">
+          <Ban size={12} />
         </div>
       )}
       <div className="aspect-square flex items-center justify-center mb-1 sm:mb-2 p-1 sm:p-2 relative">
