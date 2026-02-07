@@ -2,10 +2,16 @@ import { supabase } from '../../../services/supabaseClient';
 
 export const collectionService = {
   async getCollection(userId) {
-    // On revient au SELECT le plus simple possible pour restaurer la visibilité
+    // On revient au SELECT avec profil pour l'identité visuelle
     const { data, error } = await supabase
       .from('collection')
-      .select('*')
+      .select(`
+        *,
+        profiles:user_id (
+          username,
+          avatar_url
+        )
+      `)
       .eq('user_id', userId);
     
     if (error) {
