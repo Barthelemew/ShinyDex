@@ -3922,12 +3922,14 @@
   {
     "id": "hoopa",
     "pokedexId": 720,
-    "name": "Hoopa"
+    "name": "Hoopa",
+    "shinyLocked": true
   },
   {
     "id": "volcanion",
     "pokedexId": 721,
-    "name": "Volcanion"
+    "name": "Volcanion",
+    "shinyLocked": true
   },
   {
     "id": "rowlet",
@@ -4273,12 +4275,14 @@
   {
     "id": "cosmog",
     "pokedexId": 789,
-    "name": "Cosmog"
+    "name": "Cosmog",
+    "shinyLocked": true
   },
   {
     "id": "cosmoem",
     "pokedexId": 790,
-    "name": "Cosmovum"
+    "name": "Cosmovum",
+    "shinyLocked": true
   },
   {
     "id": "solgaleo",
@@ -4333,12 +4337,14 @@
   {
     "id": "magearna",
     "pokedexId": 801,
-    "name": "Magearna"
+    "name": "Magearna",
+    "shinyLocked": true
   },
   {
     "id": "marshadow",
     "pokedexId": 802,
-    "name": "Marshadow"
+    "name": "Marshadow",
+    "shinyLocked": true
   },
   {
     "id": "poipole",
@@ -4783,17 +4789,20 @@
   {
     "id": "kubfu",
     "pokedexId": 891,
-    "name": "Wushours"
+    "name": "Wushours",
+    "shinyLocked": true
   },
   {
     "id": "urshifu",
     "pokedexId": 892,
-    "name": "Shifours"
+    "name": "Shifours",
+    "shinyLocked": true
   },
   {
     "id": "zarude",
     "pokedexId": 893,
-    "name": "Zarude"
+    "name": "Zarude",
+    "shinyLocked": true
   },
   {
     "id": "regieleki",
@@ -4808,17 +4817,20 @@
   {
     "id": "glastrier",
     "pokedexId": 896,
-    "name": "Blizzeval"
+    "name": "Blizzeval",
+    "shinyLocked": true
   },
   {
     "id": "spectrier",
     "pokedexId": 897,
-    "name": "Spectreval"
+    "name": "Spectreval",
+    "shinyLocked": true
   },
   {
     "id": "calyrex",
     "pokedexId": 898,
-    "name": "Sylveroy"
+    "name": "Sylveroy",
+    "shinyLocked": true
   },
   {
     "id": "wyrdeer",
@@ -5373,12 +5385,14 @@
   {
     "id": "walking-wake",
     "pokedexId": 1009,
-    "name": "Serpente-Eau"
+    "name": "Serpente-Eau",
+    "shinyLocked": true
   },
   {
     "id": "iron-leaves",
     "pokedexId": 1010,
-    "name": "Vert-de-Fer"
+    "name": "Vert-de-Fer",
+    "shinyLocked": true
   },
   {
     "id": "dipplin",
@@ -5398,17 +5412,20 @@
   {
     "id": "okidogi",
     "pokedexId": 1014,
-    "name": "Félicanis"
+    "name": "Félicanis",
+    "shinyLocked": true
   },
   {
     "id": "munkidori",
     "pokedexId": 1015,
-    "name": "Fortusimia"
+    "name": "Fortusimia",
+    "shinyLocked": true
   },
   {
     "id": "ogerpon",
     "pokedexId": 1017,
-    "name": "Ogerpon"
+    "name": "Ogerpon",
+    "shinyLocked": true
   },
   {
     "id": "archaludon",
@@ -5423,31 +5440,37 @@
   {
     "id": "gouging-fire",
     "pokedexId": 1020,
-    "name": "Feu-Perçant"
+    "name": "Feu-Perçant",
+    "shinyLocked": true
   },
   {
     "id": "raging-bolt",
     "pokedexId": 1021,
-    "name": "Ire-Foudre"
+    "name": "Ire-Foudre",
+    "shinyLocked": true
   },
   {
     "id": "iron-boulder",
     "pokedexId": 1022,
-    "name": "Roc-de-Fer"
+    "name": "Roc-de-Fer",
+    "shinyLocked": true
   },
   {
     "id": "iron-crown",
     "pokedexId": 1023,
-    "name": "Chef-de-Fer"
+    "name": "Chef-de-Fer",
+    "shinyLocked": true
   },
   {
     "id": "terapagos",
     "pokedexId": 1024,
-    "name": "Terapagos"
+    "name": "Terapagos",
+    "shinyLocked": true
   },
   {
     "id": "pecharunt",
     "pokedexId": 1025,
-    "name": "Pêchaminus"
+    "name": "Pêchaminus",
+    "shinyLocked": true
   }
 ]
