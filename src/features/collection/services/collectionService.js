@@ -4,18 +4,12 @@ export const collectionService = {
   async getCollection(userId) {
     const { data, error } = await supabase
       .from('collection')
-      .select(`
-        *,
-        profiles:user_id (
-          username,
-          avatar_url
-        )
-      `)
+      .select('*')
       .eq('user_id', userId)
       .limit(5000);
     
     if (error) throw error;
-    return data;
+    return data || [];
   },
 
   async upsertPokemon(pokemonData) {

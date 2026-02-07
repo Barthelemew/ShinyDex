@@ -15,14 +15,11 @@ export const teamService = {
   async createTeam(userId, teamName) {
     const inviteCode = Math.random().toString(36).substring(2, 10).toUpperCase();
     const { data: team, error: teamError } = await supabase
-      .from('teams')
-      .insert({ name: teamName, owner_id: userId, invite_code: inviteCode })
-      .select().single();
+      .from('teams').insert({ name: teamName, owner_id: userId, invite_code: inviteCode }).select().single();
     if (teamError) throw teamError;
 
     const { error: memberError } = await supabase
-      .from('team_members')
-      .insert({ team_id: team.id, user_id: userId, role: 'admin' });
+      .from('team_members').insert({ team_id: team.id, user_id: userId, role: 'admin' });
     if (memberError) throw memberError;
     return team;
   },
@@ -39,42 +36,28 @@ export const teamService = {
   async joinTeam(userId, inviteCode) {
     const { data: team, error: teamError } = await supabase
       .from('teams').select('id').eq('invite_code', inviteCode).single();
-    if (teamError) throw new Error("Code d'invitation invalide.");
+    if (teamError) throw new Error("Code invalide.");
 
     const { error: memberError } = await supabase
-      .from('team_members')
-      .insert({ team_id: team.id, user_id: userId, role: 'member' });
-    if (memberError) {
-      if (memberError.code === '23505') throw new Error("Déjà membre.");
-      throw memberError;
-    }
+      .from('team_members').insert({ team_id: team.id, user_id: userId, role: 'member' });
+    if (memberError) throw memberError;
     return team;
   },
 
   async getTeamCollection(teamId) {
     if (!teamId) return [];
     
-    // 1. Récupérer TOUS les membres sans exception
     const { data: memberData, error: memberError } = await supabase
-      .from('team_members')
-      .select('user_id')
-      .eq('team_id', teamId);
+      .from('team_members').select('user_id').eq('team_id', teamId);
     
     if (memberError) throw memberError;
     const memberIds = (memberData || []).map(m => m.user_id);
 
     if (memberIds.length === 0) return [];
 
-    // 2. Récupérer TOUTE la collection pour TOUS les IDs trouvés
     const { data: collection, error: collectionError } = await supabase
       .from('collection')
-      .select(`
-        *,
-        profiles:user_id (
-          username,
-          avatar_url
-        )
-      `)
+      .select('*')
       .in('user_id', memberIds)
       .limit(10000);
     

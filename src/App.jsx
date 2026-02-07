@@ -55,114 +55,45 @@ function App() {
     if (authSession) queryClient.setQueryData(['auth-session'], authSession);
   }, [authSession, queryClient]);
 
-  // Surveillance des succès
-  useEffect(() => {
-    if (!user || !dbCollection.length) return;
-
-    // On calcule les succès basés sur la collection personnelle
-    const personalCaptured = staticData.map(p => {
-      const entries = dbCollection.filter(d => d.pokemon_id === p.id);
-      const isCaptured = entries.length > 0;
-      return { ...p, captured: isCaptured };
-    });
-
-    const potentialUnlocks = checkAchievements(personalCaptured);
-    
-    potentialUnlocks.forEach(async (achId) => {
-      const isAlreadyUnlocked = achievements.find(a => a.id === achId)?.unlocked;
-      if (!isAlreadyUnlocked) {
-        try {
-          await unlockAchievement(achId);
-          setToast({ message: `Succès débloqué ! 🏆`, type: 'success' });
-        } catch (err) {
-          console.error("Erreur déblocage auto :", err);
-        }
-      }
-    });
-  }, [dbCollection, user, achievements, unlockAchievement]);
-
   useEffect(() => {
     if (user) fetchProfile(user.id);
   }, [user, fetchProfile]);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Infinite scroll
       if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 200) {
         setDisplayLimit(prev => prev + 100);
       }
-      // Show/Hide Scroll to top
       setShowScrollTop(window.scrollY > 1000);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (!user || !team) return;
-    const channel = realtimeService.subscribeToTeam(team.id, (event, payload) => {
-      if (event === 'shared_hunt_started') {
-        const active = getActiveSession();
-        if (active || payload.trainerId === user.id) return;
-        setToast({
-          message: `${payload.trainerName} lance une session !`,
-          type: 'info',
-          duration: 8000,
-          onAction: () => {
-            startSession({ ...payload, isGroupHunt: true, teamId: team.id });
-            setView('hunting');
-          }
-        });
-      }
-      if (event === 'shiny_found') {
-        if (payload.userId === user.id) return;
-        const pokemonName = payload.pokemonName || staticData.find(p => p.id === payload.pokemonId)?.name || 'un Pokémon';
-        confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
-        setToast({ message: `INCROYABLE ! ${payload.trainerName} a trouvé ${pokemonName} !`, type: 'success' });
-      }
-    });
-    return () => { channel.unsubscribe(); };
-  }, [user, team, startSession, getActiveSession]);
-
-  useEffect(() => {
-    const handleNav = () => setView('dex');
-    window.addEventListener('nav-to-dex', handleNav);
-    return () => window.removeEventListener('nav-to-dex', handleNav);
-  }, []);
-
   const fullCollection = useMemo(() => {
-    // Fusion intelligente
-    console.log("[App] dbCollection:", dbCollection.length, "teamCollection:", teamCollection.length);
     let activeDbCollection = [];
     if (dexMode === 'personal') {
-      activeDbCollection = dbCollection;
+      activeDbCollection = Array.isArray(dbCollection) ? dbCollection : [];
     } else {
-      // Fusion totale sans perte
-      const combined = [...(Array.isArray(teamCollection) ? teamCollection : []), ...(Array.isArray(dbCollection) ? dbCollection : [])];
-      
-      // On utilise un Map pour dédoublonner par ID de ligne unique en base (PK)
       const teamMap = new Map();
+      const combined = [
+        ...(Array.isArray(teamCollection) ? teamCollection : []), 
+        ...(Array.isArray(dbCollection) ? dbCollection : [])
+      ];
       combined.forEach(item => {
         if (item && item.id) teamMap.set(item.id, item);
       });
-      
       activeDbCollection = Array.from(teamMap.values());
     }
 
     return staticData.map(p => {
-      // Filtrage ultra-rÃ©silient : ID texte, numÃ©ro PokÃ©dex, ou NOM (casse insensible)
       const entries = activeDbCollection.filter(d => {
         const dId = String(d.pokemon_id).toLowerCase().trim();
         const pId = String(p.id).toLowerCase().trim();
-        const pName = String(p.name).toLowerCase().trim();
-        
-        return dId === pId || 
-               dId === String(p.pokedexId) || 
-               dId === pName;
+        return dId === pId || dId === String(p.pokedexId);
       });
-      const isCaptured = entries.length > 0;
       
-      // Déterminer la génération
+      const isCaptured = entries.length > 0;
       const n = parseInt(p.pokedexId || p.id);
       let gen = 9;
       if (n <= 151) gen = 1;
@@ -174,10 +105,10 @@ function App() {
       else if (n <= 809) gen = 7;
       else if (n <= 905) gen = 8;
 
-      // Injection manuelle du profil dresseur depuis la liste des membres
+      // Injection manuelle de l'identité du dresseur
       const getTrainerInfo = (item) => {
         if (item.profiles) return item.profiles;
-        const member = members.find(m => m.user_id === item.user_id);
+        const member = (members || []).find(m => m.user_id === item.user_id);
         return member?.profiles || { username: 'Dresseur' };
       };
 
@@ -187,7 +118,7 @@ function App() {
         captured: isCaptured,
         totalCount: entries.length,
         entries: entries,
-        trainer: entries.length > 0 ? getTrainerInfo(entries[0]) : null,
+        trainer: isCaptured ? getTrainerInfo(entries[0]) : null,
         details: isCaptured ? {
           encounters: entries.reduce((sum, e) => sum + (e.count || 0), 0),
           version: entries[0].game_id,
@@ -208,7 +139,6 @@ function App() {
     return results.slice(0, displayLimit);
   }, [searchQuery, fuse, fullCollection, displayLimit]);
 
-  // Groupement par génération pour les bandeaux
   const pokemonByGen = useMemo(() => {
     const groups = {};
     displayedPokemon.forEach(p => {
@@ -285,7 +215,6 @@ function App() {
 
     return (
       <div className="max-w-7xl mx-auto p-4 space-y-6 sm:space-y-8">
-        {/* BARRE D'ACTIONS (IMPORT/EXPORT + VIEW TOGGLE) */}
         <div className="flex flex-col gap-4 bg-twilight-900/50 p-4 sm:p-6 rounded-3xl sm:rounded-[2rem] border border-twilight-800 shadow-xl backdrop-blur-sm">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-2 sm:gap-4 overflow-x-auto pb-2 sm:pb-0 scrollbar-hide">
@@ -319,7 +248,6 @@ function App() {
           </div>
         </div>
 
-        {/* LISTE DES POKEMON AVEC GÉNÉRATIONS */}
         <div className="space-y-12 pb-32">
           {Object.entries(pokemonByGen).sort((a, b) => a[0] - b[0]).map(([gen, pokemons]) => (
             <div key={gen} className="space-y-6">
@@ -393,7 +321,6 @@ function App() {
 
       {mainContent()}
 
-      {/* BOUTON SCROLL TO TOP */}
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
@@ -439,7 +366,6 @@ function App() {
         )}
       </AnimatePresence>
 
-      {/* BOTTOM NAVIGATION MOBILE */}
       {!selectedPokemonId && (
         <div className="sm:hidden fixed bottom-0 left-0 right-0 z-[100] bg-twilight-900/95 backdrop-blur-xl border-t border-twilight-800 px-4 py-3 pb-safe-bottom flex justify-between items-center shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
           <button onClick={() => { setView('dex'); setIsConfiguringNewHunt(false); }} className={`flex flex-col items-center gap-1 min-w-[50px] ${view === 'dex' ? 'text-amber-500' : 'text-twilight-500'}`}>
